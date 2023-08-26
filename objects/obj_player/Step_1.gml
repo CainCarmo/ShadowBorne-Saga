@@ -12,9 +12,4 @@ if (!_ground) {
 
 speed_horizontal = (_right - _left) * speed_horizontal_max;
 
-stateMachine(obj_player, _right, _left, _jump, _ground);	
-
-show_debug_message("VEL H: " + string(speed_horizontal));
-show_debug_message("VEL V: " + string(speed_vertical));
-show_debug_message("VEL MAX H: " + string(speed_horizontal_max));
-show_debug_message("VEL MAX V: " + string(speed_vertical_max));
+stateMachine(obj_player, _right, _left, _jump, _ground);

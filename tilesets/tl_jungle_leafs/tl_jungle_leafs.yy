@@ -15,10 +15,7 @@
     "name": "Jungle",
     "path": "folders/Conjuntos de tiles/Maps/Jungle.yy",
   },
-  "spriteId": {
-    "name": "spr_tile_jungle_leafs",
-    "path": "sprites/spr_tile_jungle_leafs/spr_tile_jungle_leafs.yy",
-  },
+  "spriteId": null,
   "spriteNoExport": true,
   "textureGroupId": {
     "name": "Default",

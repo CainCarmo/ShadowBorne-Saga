@@ -3,7 +3,7 @@ function stateMachine(_obj_person, right, left, jump, ground) {
 		case "idle":
 			sprite_index = spr_warrior_idle_sheathed;
 			
-			if (right || left)
+			if (right != left)
 				_obj_person.state = "run";
 			else if (jump) {
 				_obj_person.state = "jump";
@@ -39,6 +39,9 @@ function stateMachine(_obj_person, right, left, jump, ground) {
 				_obj_person.speed_vertical   = 0;
 				_obj_person.speed_horizontal = 0;
 			}
+			
+			break;
+		case "attack":
 			
 			break;
 	}
