@@ -13,15 +13,38 @@ bulk = 1;
 
 #endregion
 
+#region Information
+
+brood = undefined;
+state = undefined;
+type  = undefined;
+class = undefined;
+
+
+#endregion
+
+#region Movimentation
+
+left  = false; 
+right = false;
+jump  = false;
+
+attack = false;
+groundCollided = false;
+
+#endregion
+
 #region Combat
 
 damage = 1;
+
+comboState = false;
+comboIndex = undefined;
 
 #endregion
 
 #region Model
 
-state = "idle";
 scale_x = 1;
 
 #endregion
