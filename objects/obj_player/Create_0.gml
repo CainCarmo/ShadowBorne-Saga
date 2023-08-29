@@ -23,3 +23,9 @@ class = Class.Warrior;
 damage = 1;
 
 #endregion
+
+#region Control
+
+click = false;
+
+#endregion

@@ -13,13 +13,17 @@ function stateSprite(_obj_entity) {
 				else
 					return spr_warrior_jump;
 			case State.Attack:
-				if (_obj_entity.comboState) {
+				if (_obj_entity.groundCollided) {
+					if (_obj_entity.comboState) {
 					return _obj_entity.comboIndex == Combo.First
 						? spr_warrior_attack_mid_combo_first
 						: spr_warrior_attack_mid_combo_second;
+					}
+					else
+						return spr_warrior_attack_mid_normal;
 				}
 				else
-					return spr_warrior_attack_mid_normal;
+					return spr_warrior_attack_air_floor
 			case State.Hit:
 				return spr_warrior_hit;
 			case State.Die:
@@ -61,7 +65,6 @@ function stateSprite(_obj_entity) {
 				return spr_evilEye_hit;
 			case State.Die:
 				return spr_evilEye_die;
-				break;
 		}
 	}
 	
