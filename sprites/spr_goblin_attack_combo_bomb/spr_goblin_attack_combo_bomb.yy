@@ -44,7 +44,7 @@
   "origin": 7,
   "parent": {
     "name": "Second",
-    "path": "folders/Sprites/Monsters/Goblin/Attack/Mid/Combo/Second.yy",
+    "path": "folders/Sprites/Monsters/Minion/Goblin/Attack/Mid/Combo/Second.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

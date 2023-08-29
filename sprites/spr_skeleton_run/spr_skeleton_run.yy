@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Run",
-    "path": "folders/Sprites/Monsters/Skeleton/Move/Run.yy",
+    "path": "folders/Sprites/Monsters/Minion/Skeleton/Move/Run.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

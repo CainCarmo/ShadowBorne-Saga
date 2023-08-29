@@ -33,7 +33,7 @@
   "origin": 0,
   "parent": {
     "name": "Normal",
-    "path": "folders/Sprites/Monsters/EvilEye/Attack/Air/Normal.yy",
+    "path": "folders/Sprites/Monsters/Minion/EvilEye/Attack/Air/Normal.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

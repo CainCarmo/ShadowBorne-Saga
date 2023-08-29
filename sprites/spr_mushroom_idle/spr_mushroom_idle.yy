@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Idle",
-    "path": "folders/Sprites/Monsters/Mushroom/Move/Idle.yy",
+    "path": "folders/Sprites/Monsters/Minion/Mushroom/Move/Idle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

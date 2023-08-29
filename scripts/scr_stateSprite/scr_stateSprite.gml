@@ -15,9 +15,9 @@ function stateSprite(_obj_entity) {
 			case State.Attack:
 				if (_obj_entity.groundCollided) {
 					if (_obj_entity.comboState) {
-					return _obj_entity.comboIndex == Combo.First
-						? spr_warrior_attack_mid_combo_first
-						: spr_warrior_attack_mid_combo_second;
+						return _obj_entity.comboIndex == Combo.First
+							? spr_warrior_attack_mid_combo_first
+							: spr_warrior_attack_mid_combo_second;
 					}
 					else
 						return spr_warrior_attack_mid_normal;

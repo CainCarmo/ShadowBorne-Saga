@@ -33,7 +33,7 @@
   "origin": 7,
   "parent": {
     "name": "First",
-    "path": "folders/Sprites/Monsters/Skeleton/Attack/Mid/Combo/First.yy",
+    "path": "folders/Sprites/Monsters/Minion/Skeleton/Attack/Mid/Combo/First.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

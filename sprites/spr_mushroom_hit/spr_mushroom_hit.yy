@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Hit",
-    "path": "folders/Sprites/Monsters/Mushroom/Move/Hit.yy",
+    "path": "folders/Sprites/Monsters/Minion/Mushroom/Move/Hit.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
