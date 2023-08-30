@@ -36,7 +36,7 @@
   "origin": 0,
   "parent": {
     "name": "Second",
-    "path": "folders/Sprites/Monsters/Mushroom/Attack/Mid/Combo/Second.yy",
+    "path": "folders/Sprites/Monsters/Minion/Mushroom/Attack/Mid/Combo/Second.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -33,7 +33,7 @@
   "origin": 7,
   "parent": {
     "name": "Run",
-    "path": "folders/Sprites/Monsters/Goblin/Move/Run.yy",
+    "path": "folders/Sprites/Monsters/Minion/Goblin/Move/Run.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

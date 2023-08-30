@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Sheathed",
-    "path": "folders/Sprites/Player/Warrior/Idle/Sheathed.yy",
+    "path": "folders/Sprites/Player/Warrior/Move/Idle/Sheathed.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

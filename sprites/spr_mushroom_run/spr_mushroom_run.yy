@@ -33,7 +33,7 @@
   "origin": 7,
   "parent": {
     "name": "Run",
-    "path": "folders/Sprites/Monsters/Mushroom/Move/Run.yy",
+    "path": "folders/Sprites/Monsters/Minion/Mushroom/Move/Run.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

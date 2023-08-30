@@ -1,48 +1,58 @@
-function stateMachine(_obj_person, right, left, jump, ground) {
-	switch(_obj_person.state) {
-		case "idle":
-			sprite_index = spr_warrior_idle_sheathed;
-			
-			if (right != left)
-				_obj_person.state = "run";
-			else if (jump) {
-				_obj_person.state = "jump";
-				_obj_person.speed_vertical = -_obj_person.speed_vertical_max;
-			}
+function stateMachine(_obj_entity) {
+	switch (_obj_entity.state) {
+		case State.Idle:
+			_ = _obj_entity.brood == Brood.Human
+				? playerIdle(_obj_entity)
+				: monsterIdle(_obj_entity);
 				
 			break;
-		case "run":
-			sprite_index = spr_warrior_run;
-			
-			if (abs(_obj_person.speed_horizontal) < .1) {
-				_obj_person.state = "idle";
-				_obj_person.speed_horizontal = 0;
-			}
-			else if (jump) {
-				_obj_person.state = "jump";
-				_obj_person.speed_vertical = -_obj_person.speed_vertical_max;
-			}
+		case State.Run:
+			_ = _obj_entity.brood == Brood.Human
+				? playerRun(_obj_entity)
+				: monsterRun(_obj_entity);
 				
 			break;
-		case "jump":
-			if (_obj_person.speed_vertical > 0)
-				sprite_index = spr_warrior_fall;
-			else {
-				sprite_index = spr_warrior_jump;
+		case State.Jump:
+			_ = _obj_entity.brood == Brood.Human
+				? playerJump(_obj_entity)
+				: monsterJump(_obj_entity);
 				
-				if (image_index >= image_number)
-					image_index = image_number - 1;
-			}
-				
-			if (ground) {
-				_obj_person.state = "idle";
-				_obj_person.speed_vertical   = 0;
-				_obj_person.speed_horizontal = 0;
-			}
-			
 			break;
-		case "attack":
-			
+		case State.Fly:
+			_ = _obj_entity.brood == Brood.Human
+				? playerFly(_obj_entity)
+				: monsterFly(_obj_entity);
+				
+			break;
+		case State.Attack:
+			_ = _obj_entity.brood == Brood.Human
+				? playerAttack(_obj_entity)
+				: monsterAttack(_obj_entity);
+				
+			break;
+		case State.Hit:
+			_ = _obj_entity.brood == Brood.Human
+				? playerHit(_obj_entity)
+				: monsterHit(_obj_entity);
+				
+			break;
+		case State.Die:
+			_ = _obj_entity.brood == Brood.Human
+				? playerDie(_obj_entity)
+				: monsterDie(_obj_entity);
+				
+			break;
+		case State.Berseker:
+			_ = _obj_entity.brood == Brood.Human
+				? playerBerseker(_obj_entity)
+				: monsterBerseker(_obj_entity);
+				
+			break;
+		case State.Cutscene:
+			_ = _obj_entity.brood == Brood.Human
+				? playerCutscene(_obj_entity)
+				: monsterCutscene(_obj_entity);
+				
 			break;
 	}
 }
