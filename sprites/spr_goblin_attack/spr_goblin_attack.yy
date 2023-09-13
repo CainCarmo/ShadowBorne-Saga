@@ -7,7 +7,7 @@
   "bbox_right": 118,
   "bbox_top": 55,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -32,8 +32,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "Normal",
-    "path": "folders/Sprites/Monsters/Minion/Goblin/Attack/Mid/Normal.yy",
+    "name": "Mid",
+    "path": "folders/Sprites/Characters/Monsters/Minion/Goblin/Attack/Mid.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

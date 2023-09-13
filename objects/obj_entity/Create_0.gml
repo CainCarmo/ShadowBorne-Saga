@@ -1,56 +1,67 @@
-#region Status
+#region [Default]
 
-life_max   = 1;
-life_atual = life_max;
-
-speed_horizontal = 0;
 speed_vertical   = 0;
+speed_horizontal = 0;
 
-speed_horizontal_max = 1;
-speed_vertical_max   = 1;
+speed_vertical_max   = 0;
+speed_horizontal_max = 0;
 
-bulk = 1;
+bulk = 0;
+
+hadGroundCollised = false;
 
 #endregion
 
-#region Information
+#region [Status]
+
+life_max = 0;
+life_now = life_max;
+life_regen = 0;
+
+mana_max = 0;
+mana_now = mana_max;
+
+damage_max = 1;
+damage_now = 1;
+
+armor = 0;
+level = 0;
+
+#endregion
+
+#region [Information]
 
 brood = undefined;
-state = undefined;
-type  = undefined;
 class = undefined;
+state = undefined;
 
+identity = undefined;
 
 #endregion
 
-#region Movimentation
+#region [Movimentation]
 
-left  = false; 
+left  = false;
 right = false;
 jump  = false;
 
+#endregion
+
+#region [Fighting]
+
 attack = false;
-groundCollided = false;
+attackStyle = undefined;
 
 #endregion
 
-#region Combat
-
-damage = 1;
-
-comboState = false;
-comboIndex = undefined;
-
-#endregion
-
-#region Model
+#region [Direction]
 
 scale_x = 1;
 
 #endregion
 
-#region Debug
+#region [Debug]
 
-view_state = true;
+view_debugger = true;
 
 #endregion

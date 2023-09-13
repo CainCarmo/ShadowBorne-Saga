@@ -1,15 +1,24 @@
-left  = keyboard_check(ord("A"));
-right = keyboard_check(ord("D"));
-jump  = keyboard_check_pressed(vk_space);
+#region [Controller Check]
 
-attack = mouse_check_button(mb_left);
-groundCollided = place_meeting(x, y + 1, obj_block_player_collider);
+/// @Default
+left  = new ControllerMappingCommands(obj_player).Moves(PlayerActions.Left);
+right = new ControllerMappingCommands(obj_player).Moves(PlayerActions.Right);
+jump  = new ControllerMappingCommands(obj_player).Moves(PlayerActions.Jump);
 
-if (!groundCollided) {
-	if (speed_vertical < speed_vertical_max * 2)
-		speed_vertical += GRAVITY * bulk;
-}
+/// @Warrior
 
-speed_horizontal = (right - left) * speed_horizontal_max;
+dash   = new ControllerMappingCommands(obj_player).Moves(PlayerActions.Dash);
+wield  = new ControllerMappingCommands(obj_player).Moves(PlayerActions.Wield);
+attack = new ControllerMappingCommands(obj_player).Attack();
 
-stateMachine(obj_player);
+/// @Wizard
+
+
+//dash   = PlayerControllerMap(PlayerActions.Dash);
+//left   = PlayerControllerMap(PlayerActions.Left);
+//right  = PlayerControllerMap(PlayerActions.Right);
+//jump   = PlayerControllerMap(PlayerActions.Jump);
+//wield  = PlayerControllerMap(PlayerActions.Wield);
+//attack = PlayerControllerMap(PlayerActions.Attack);
+
+#endregion

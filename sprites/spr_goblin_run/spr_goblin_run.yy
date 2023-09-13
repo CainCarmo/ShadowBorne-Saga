@@ -7,7 +7,7 @@
   "bbox_right": 93,
   "bbox_top": 63,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -33,7 +33,7 @@
   "origin": 7,
   "parent": {
     "name": "Run",
-    "path": "folders/Sprites/Monsters/Minion/Goblin/Move/Run.yy",
+    "path": "folders/Sprites/Characters/Monsters/Minion/Goblin/Move/Run.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

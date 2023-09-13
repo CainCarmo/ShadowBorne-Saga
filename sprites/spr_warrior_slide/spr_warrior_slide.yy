@@ -7,7 +7,7 @@
   "bbox_right": 93,
   "bbox_top": 46,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -30,7 +30,7 @@
   "origin": 7,
   "parent": {
     "name": "Slide",
-    "path": "folders/Sprites/Player/Warrior/Move/Slide.yy",
+    "path": "folders/Sprites/Characters/Player/Warrior/Move/Slide.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

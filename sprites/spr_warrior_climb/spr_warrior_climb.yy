@@ -7,7 +7,7 @@
   "bbox_right": 76,
   "bbox_top": 10,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -28,7 +28,7 @@
   "origin": 7,
   "parent": {
     "name": "Climb",
-    "path": "folders/Sprites/Player/Warrior/Move/Climb.yy",
+    "path": "folders/Sprites/Characters/Player/Warrior/Move/Climb.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

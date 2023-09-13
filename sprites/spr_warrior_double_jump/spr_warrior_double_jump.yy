@@ -7,7 +7,7 @@
   "bbox_right": 90,
   "bbox_top": 19,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Jump",
-    "path": "folders/Sprites/Player/Warrior/Move/Jump.yy",
+    "path": "folders/Sprites/Characters/Player/Warrior/Move/Jump.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

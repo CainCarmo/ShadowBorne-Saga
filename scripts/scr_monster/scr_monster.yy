@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Monsters",
-    "path": "folders/Scripts/Persons/Monsters.yy",
+    "name": "Enimies",
+    "path": "folders/Scripts/Mechanics/Characters/Enimies.yy",
   },
 }

@@ -7,7 +7,7 @@
   "bbox_right": 81,
   "bbox_top": 14,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Sheathed",
-    "path": "folders/Sprites/Player/Warrior/Move/Idle/Sheathed.yy",
+    "path": "folders/Sprites/Characters/Player/Warrior/Move/Idle/Sheathed.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -50,7 +50,7 @@
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
-    "playbackSpeed": 6.0,
+    "playbackSpeed": 8.0,
     "playbackSpeedType": 0,
     "showBackdrop": true,
     "showBackdropImage": false,

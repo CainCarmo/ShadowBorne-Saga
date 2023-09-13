@@ -7,7 +7,7 @@
   "bbox_right": 104,
   "bbox_top": 50,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Run",
-    "path": "folders/Sprites/Monsters/Minion/Skeleton/Move/Run.yy",
+    "path": "folders/Sprites/Characters/Monsters/Minion/Skeleton/Move/Run.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

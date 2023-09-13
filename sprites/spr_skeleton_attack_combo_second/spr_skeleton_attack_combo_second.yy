@@ -7,7 +7,7 @@
   "bbox_right": 105,
   "bbox_top": 47,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -30,8 +30,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "Second",
-    "path": "folders/Sprites/Monsters/Minion/Skeleton/Attack/Mid/Combo/Second.yy",
+    "name": "Mid",
+    "path": "folders/Sprites/Characters/Monsters/Minion/Skeleton/Attack/Mid.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

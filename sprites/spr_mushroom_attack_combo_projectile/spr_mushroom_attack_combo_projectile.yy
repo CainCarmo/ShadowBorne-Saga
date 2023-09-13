@@ -32,8 +32,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "Second",
-    "path": "folders/Sprites/Monsters/Minion/Mushroom/Attack/Mid/Combo/Second.yy",
+    "name": "Mid",
+    "path": "folders/Sprites/Characters/Monsters/Minion/Mushroom/Attack/Mid.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

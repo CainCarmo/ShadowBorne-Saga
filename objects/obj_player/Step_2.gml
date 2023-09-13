@@ -1,3 +1,3 @@
 event_inherited();
 
-move_and_collide(speed_horizontal, speed_vertical, obj_block_player_collider);
+move_and_collide(obj_player.speed_horizontal, obj_player.speed_vertical, obj_block_collisor);

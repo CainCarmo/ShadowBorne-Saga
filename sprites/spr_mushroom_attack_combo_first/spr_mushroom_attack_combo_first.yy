@@ -7,7 +7,7 @@
   "bbox_right": 121,
   "bbox_top": 55,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -32,8 +32,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "First",
-    "path": "folders/Sprites/Monsters/Minion/Mushroom/Attack/Mid/Combo/First.yy",
+    "name": "Mid",
+    "path": "folders/Sprites/Characters/Monsters/Minion/Mushroom/Attack/Mid.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

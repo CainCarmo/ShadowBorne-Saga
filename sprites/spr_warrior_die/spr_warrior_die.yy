@@ -7,7 +7,7 @@
   "bbox_right": 90,
   "bbox_top": 29,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -32,7 +32,7 @@
   "origin": 7,
   "parent": {
     "name": "Die",
-    "path": "folders/Sprites/Player/Warrior/Move/Die.yy",
+    "path": "folders/Sprites/Characters/Player/Warrior/Move/Die.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -53,7 +53,7 @@
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
-    "playbackSpeed": 8.0,
+    "playbackSpeed": 7.0,
     "playbackSpeedType": 0,
     "showBackdrop": true,
     "showBackdropImage": false,

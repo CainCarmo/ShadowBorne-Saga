@@ -7,7 +7,7 @@
   "bbox_right": 95,
   "bbox_top": 64,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Hit",
-    "path": "folders/Sprites/Monsters/Minion/Goblin/Move/Hit.yy",
+    "path": "folders/Sprites/Characters/Monsters/Minion/Goblin/Move/Hit.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

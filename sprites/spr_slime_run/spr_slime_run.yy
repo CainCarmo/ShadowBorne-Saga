@@ -26,10 +26,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b2f169ed-8bfb-4c90-a77c-5f7885448c6e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 0,
+  "origin": 7,
   "parent": {
     "name": "Run",
-    "path": "folders/Sprites/Monsters/Minion/Slime/Move/Run.yy",
+    "path": "folders/Sprites/Characters/Monsters/Minion/Slime/Move/Run.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -65,8 +65,8 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 0,
-    "yorigin": 0,
+    "xorigin": 16,
+    "yorigin": 32,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

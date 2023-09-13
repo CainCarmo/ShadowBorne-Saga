@@ -1,58 +1,46 @@
-function stateMachine(_obj_entity) {
+/// @function							StateMachine(_obj_entity)
+/// @description						Modifica o estado do objeto passado por parâmetro
+/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
+function StateMachine (_obj_entity) {
+	_obj_entity.sprite_index = SpriteMachine(_obj_entity);
+	
 	switch (_obj_entity.state) {
-		case State.Idle:
-			_ = _obj_entity.brood == Brood.Human
-				? playerIdle(_obj_entity)
-				: monsterIdle(_obj_entity);
-				
-			break;
-		case State.Run:
-			_ = _obj_entity.brood == Brood.Human
-				? playerRun(_obj_entity)
-				: monsterRun(_obj_entity);
-				
-			break;
-		case State.Jump:
-			_ = _obj_entity.brood == Brood.Human
-				? playerJump(_obj_entity)
-				: monsterJump(_obj_entity);
-				
+		case State.Die:
+			if (_obj_entity.identity == Identity.Player) new PlayerStates().Die(_obj_entity);
 			break;
 		case State.Fly:
-			_ = _obj_entity.brood == Brood.Human
-				? playerFly(_obj_entity)
-				: monsterFly(_obj_entity);
-				
-			break;
-		case State.Attack:
-			_ = _obj_entity.brood == Brood.Human
-				? playerAttack(_obj_entity)
-				: monsterAttack(_obj_entity);
-				
+			if (_obj_entity.identity == Identity.Player) new PlayerStates().Fly(_obj_entity);
 			break;
 		case State.Hit:
-			_ = _obj_entity.brood == Brood.Human
-				? playerHit(_obj_entity)
-				: monsterHit(_obj_entity);
-				
+			if (_obj_entity.identity == Identity.Player) new PlayerStates().Hit(_obj_entity);
 			break;
-		case State.Die:
-			_ = _obj_entity.brood == Brood.Human
-				? playerDie(_obj_entity)
-				: monsterDie(_obj_entity);
-				
+		case State.Run:
+			if (_obj_entity.identity == Identity.Player) new PlayerStates().Run(_obj_entity);
 			break;
-		case State.Berseker:
-			_ = _obj_entity.brood == Brood.Human
-				? playerBerseker(_obj_entity)
-				: monsterBerseker(_obj_entity);
-				
+		case State.Dash:
+			if (_obj_entity.identity == Identity.Player) new PlayerStates().Dash(_obj_entity);
+			break;
+		case State.Idle:
+			if (_obj_entity.identity == Identity.Player) new PlayerStates().Idle(_obj_entity);
+			break;
+		case State.Jump:
+			if (_obj_entity.identity == Identity.Player) new PlayerStates().Jump(_obj_entity);
+			break;
+		case State.Walk:
+			if (_obj_entity.identity == Identity.Player) new PlayerStates().Walk(_obj_entity);
+		case State.Break:
+			break;
+		case State.Climb:
+			if (_obj_entity.identity == Identity.Player) new PlayerStates().Climb(_obj_entity);
+			break;
+		case State.Wield:
+			if (_obj_entity.identity == Identity.Player) new PlayerStates().Wield(_obj_entity);
+			break;
+		case State.Attack:
+			if (_obj_entity.identity == Identity.Player) new PlayerStates().Attack(_obj_entity);
 			break;
 		case State.Cutscene:
-			_ = _obj_entity.brood == Brood.Human
-				? playerCutscene(_obj_entity)
-				: monsterCutscene(_obj_entity);
-				
+			if (_obj_entity.identity == Identity.Player) new PlayerStates().Cutscene(_obj_entity);
 			break;
 	}
 }

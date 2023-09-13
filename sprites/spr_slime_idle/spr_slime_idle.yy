@@ -26,10 +26,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d0171a1e-2039-4b58-84aa-3b70f9a5670f","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 0,
+  "origin": 7,
   "parent": {
     "name": "Idle",
-    "path": "folders/Sprites/Monsters/Minion/Slime/Move/Idle.yy",
+    "path": "folders/Sprites/Characters/Monsters/Minion/Slime/Move/Idle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -65,8 +65,8 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 0,
-    "yorigin": 0,
+    "xorigin": 16,
+    "yorigin": 32,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

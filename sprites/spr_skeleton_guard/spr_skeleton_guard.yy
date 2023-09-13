@@ -7,7 +7,7 @@
   "bbox_right": 108,
   "bbox_top": 55,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Guard",
-    "path": "folders/Sprites/Monsters/Minion/Skeleton/Move/Guard.yy",
+    "path": "folders/Sprites/Characters/Monsters/Minion/Skeleton/Move/Guard.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

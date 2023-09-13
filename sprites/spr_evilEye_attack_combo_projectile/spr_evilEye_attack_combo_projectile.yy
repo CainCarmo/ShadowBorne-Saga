@@ -32,8 +32,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "Second",
-    "path": "folders/Sprites/Monsters/Minion/EvilEye/Attack/Air/Combo/Second.yy",
+    "name": "Air",
+    "path": "folders/Sprites/Characters/Monsters/Minion/EvilEye/Attack/Air.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

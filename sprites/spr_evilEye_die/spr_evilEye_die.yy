@@ -7,7 +7,7 @@
   "bbox_right": 105,
   "bbox_top": 61,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Die",
-    "path": "folders/Sprites/Monsters/Minion/EvilEye/Move/Die.yy",
+    "path": "folders/Sprites/Characters/Monsters/Minion/EvilEye/Move/Die.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -7,7 +7,7 @@
   "bbox_right": 103,
   "bbox_top": 49,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -32,8 +32,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "First",
-    "path": "folders/Sprites/Monsters/Minion/EvilEye/Attack/Air/Combo/First.yy",
+    "name": "Air",
+    "path": "folders/Sprites/Characters/Monsters/Minion/EvilEye/Attack/Air.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

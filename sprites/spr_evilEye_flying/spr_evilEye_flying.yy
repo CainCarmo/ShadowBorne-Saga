@@ -7,7 +7,7 @@
   "bbox_right": 97,
   "bbox_top": 60,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -33,7 +33,7 @@
   "origin": 7,
   "parent": {
     "name": "Flying",
-    "path": "folders/Sprites/Monsters/Minion/EvilEye/Move/Flying.yy",
+    "path": "folders/Sprites/Characters/Monsters/Minion/EvilEye/Move/Flying.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
