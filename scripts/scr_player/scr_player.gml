@@ -1,13 +1,20 @@
 /// @function		PlayerStates()
 /// @description	Atribui as características dos estados do player
 function PlayerStates () constructor {
+	
+	/// @function							Idle(_obj_entity)
+	/// @description						Implementa o estado Idle (Parado) no player
+	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Idle = function (_obj_entity) {
-		if (_obj_entity.left != _obj_entity.right)
+		if (_obj_entity.left != _obj_entity.right) {
 			_obj_entity = AlterPlayerDefault(,,, State.Walk);
-		else if (_obj_entity.jump && _obj_entity.hadGroundCollised)
+		}
+		else if (_obj_entity.jump && _obj_entity.hadGroundCollised) {
 			_obj_entity = AlterPlayerDefault(, -_obj_entity.speed_vertical_max,, State.Jump, true);
-		else if (_obj_entity.attack)
-			_obj_entity = AlterPlayerDefault(,,, State.Attack, true);
+		}
+		else if (_obj_entity.attack) {
+			_obj_entity = AlterPlayerDefault(0, 0,, State.Attack, true);
+		}
 		
 		switch (_obj_entity.class) {
 			case Class.Warrior:
@@ -15,50 +22,70 @@ function PlayerStates () constructor {
 				break;
 		}
 	}
+	
+	/// @function							Die(_obj_entity)
+	/// @description						Implementa o estado Die (Morto) no player
+	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Die = function (_obj_entity) {
 		switch (_obj_entity.class) {
 			case Class.Warrior:
-				
 				break;
 		}
 	}
+	
+	/// @function							Fly(_obj_entity)
+	/// @description						Implementa o estado Fly (Voando) no player
+	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Fly = function (_obj_entity) {
 		switch (_obj_entity.class) {
 			case Class.Warrior:
 				break;
 		}
 	}
+	
+	/// @function							Hit(_obj_entity)
+	/// @description						Implementa o estado Hit (Dano) no player
+	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Hit = function (_obj_entity) {
 		switch (_obj_entity.class) {
 			case Class.Warrior:
-				
 				break;
 		}
 	}
+	
+	/// @function							Run(_obj_entity)
+	/// @description						Implementa o estado Run (Correndo) no player
+	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Run = function (_obj_entity) {
 		switch (_obj_entity.class) {
 			case Class.Warrior:
-				
 				break;
 		}
 	}
+	
+	/// @function							Dash(_obj_entity)
+	/// @description						Implementa o estado Dash no player
+	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Dash = function (_obj_entity) {
-		AlterPlayerDefault(_obj_entity.speed_horizontal + (_obj_entity.dashDistance * _obj_entity.scale_x));
+		_obj_entity = AlterPlayerDefault(_obj_entity.speed_horizontal + (_obj_entity.dashDistance * _obj_entity.scale_x));
 		
 		switch (_obj_entity.class) {
 			case Class.Warrior:
 				new WarriorStates().Dash(_obj_entity);
 				break;
 		}
-		
-		if (new Utils(_obj_entity).ListenerSpriteIndex(1))
-			_obj_entity = AlterPlayerDefault(0, 0,, State.Idle, true);
 	}
+	
+	/// @function							Jump(_obj_entity)
+	/// @description						Implementa o estado Jump (Pulando) no player
+	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Jump = function (_obj_entity) {
-		if (_obj_entity.hadGroundCollised)
+		if (_obj_entity.hadGroundCollised) {
 			_obj_entity = AlterPlayerDefault(0, 0,, State.Idle);
-		else if (_obj_entity.attack)
-			_obj_entity = AlterPlayerDefault(,,, State.Attack, true);
+		}
+		else if (_obj_entity.attack) {
+			_obj_entity = AlterPlayerDefault(0, 0,, State.Attack, true);
+		}
 		
 		switch (_obj_entity.class) {
 			case Class.Warrior:
@@ -66,13 +93,17 @@ function PlayerStates () constructor {
 				break;
 		}
 	}
+	
+	/// @function							Walk(_obj_entity)
+	/// @description						Implementa o estado Walk (Andando) no player
+	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Walk = function (_obj_entity) {
 		if (abs(_obj_entity.speed_horizontal) < .1)
 			_obj_entity = AlterPlayerDefault(0, 0,, State.Idle);
 		else if (_obj_entity.jump)
 			_obj_entity = AlterPlayerDefault(, -_obj_entity.speed_vertical_max,, State.Jump);
 		else if (_obj_entity.attack)
-			_obj_entity = AlterPlayerDefault(,,, State.Attack, true);
+			_obj_entity = AlterPlayerDefault(0, 0,, State.Attack, true);
 
 		switch (_obj_entity.class) {
 			case Class.Warrior:
@@ -80,13 +111,10 @@ function PlayerStates () constructor {
 				break;
 		}
 	}
-	static Break = function (_obj_entity) {
-		switch (_obj_entity.class) {
-			case Class.Warrior:
-				
-				break;
-		}
-	}
+	
+	/// @function							Climb(_obj_entity)
+	/// @description						Implementa o estado Climb (Escalando) no player
+	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Climb = function (_obj_entity) {
 		switch (_obj_entity.class) {
 			case Class.Warrior:
@@ -94,18 +122,23 @@ function PlayerStates () constructor {
 				break;
 		}
 	}
+	
+	/// @function							Wield(_obj_entity)
+	/// @description						Implementa o estado Wield (Empunhar) no player
+	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Wield = function (_obj_entity) {
 		_obj_entity = AlterPlayerDefault(0, 0);
 		
-		//switch (_obj_entity.class) {
-		//	case Class.Warrior:
-		//		new WarriorStates().Wield(_obj_entity); 
-		//		break;
-		//}
-		
-		if (new Utils(_obj_entity).ListenerSpriteIndex(1))
-			_obj_entity = AlterPlayerDefault(0, 0,, State.Idle, true);
+		switch (_obj_entity.class) {
+			case Class.Warrior:
+				new WarriorStates().Wield(_obj_entity); 
+				break;
+		}
 	}
+	
+	/// @function							Attack(_obj_entity)
+	/// @description						Implementa o estado Attack (Atacar) no player
+	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Attack = function (_obj_entity) {
 		switch (_obj_entity.class) {
 			case Class.Warrior:
@@ -113,10 +146,13 @@ function PlayerStates () constructor {
 				break;
 		}
 	}
+	
+	/// @function							Cutscene(_obj_entity)
+	/// @description						Implementa o estado Cutscene no player
+	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Cutscene = function (_obj_entity) {
 		switch (_obj_entity.class) {
 			case Class.Warrior:
-				
 				break;
 		}
 	}

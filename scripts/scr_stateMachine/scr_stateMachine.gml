@@ -2,8 +2,6 @@
 /// @description						Modifica o estado do objeto passado por parâmetro
 /// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 function StateMachine (_obj_entity) {
-	_obj_entity.sprite_index = SpriteMachine(_obj_entity);
-	
 	switch (_obj_entity.state) {
 		case State.Die:
 			if (_obj_entity.identity == Identity.Player) new PlayerStates().Die(_obj_entity);
@@ -28,8 +26,6 @@ function StateMachine (_obj_entity) {
 			break;
 		case State.Walk:
 			if (_obj_entity.identity == Identity.Player) new PlayerStates().Walk(_obj_entity);
-		case State.Break:
-			break;
 		case State.Climb:
 			if (_obj_entity.identity == Identity.Player) new PlayerStates().Climb(_obj_entity);
 			break;

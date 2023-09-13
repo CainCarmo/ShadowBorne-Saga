@@ -17,8 +17,8 @@ enum PlayerActions {
 
 #region Functions [Return Device Controller] & [Mapping Controller Commands]
 
-/// @function		GetDeviceController()
-/// @description	Retorna o dispositivo controlador escolhido pelo jogador
+/// @function	 GetDeviceController()
+/// @description Retorna o dispositivo controlador escolhido pelo jogador
 function GetDeviceController () {
 	return DeviceController.Keyboard;
 }

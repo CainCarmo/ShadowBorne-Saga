@@ -12,7 +12,7 @@ function SpriteMachine (_obj_entity) {
 			case State.Die:
 				return spr_warrior_die;
 			case State.Hit:
-				return _obj_entity.warriorStyleAttack == 0
+				return _obj_entity.warriorStyleAttack == WarriorStyleAttack.Hand
 					? spr_warrior_hit_sheathed
 					: spr_warrior_hit_wielded;
 			case State.Run:
@@ -20,7 +20,7 @@ function SpriteMachine (_obj_entity) {
 			case State.Dash:
 				return spr_warrior_dash;
 			case State.Idle:
-				return _obj_entity.warriorStyleAttack == 0
+				return _obj_entity.warriorStyleAttack == WarriorStyleAttack.Hand
 					? spr_warrior_idle_sheathed
 					: spr_warrior_idle_wielded;
 			case State.Jump:
@@ -28,13 +28,13 @@ function SpriteMachine (_obj_entity) {
 					? spr_warrior_fall
 					: spr_warrior_jump;
 			case State.Walk:
-				return _obj_entity.warriorStyleAttack == 0
+				return _obj_entity.warriorStyleAttack == WarriorStyleAttack.Hand
 					? spr_warrior_walk_sheathed
 					: spr_warrior_walk_wielded;
 			case State.Climb:
 				return ;
 			case State.Wield:
-				return _obj_entity.warriorStyleAttack == 0
+				return _obj_entity.warriorStyleAttack == WarriorStyleAttack.Hand
 					? spr_warrior_sheathe
 					: spr_warrior_wield;
 			case State.Attack:
@@ -42,29 +42,26 @@ function SpriteMachine (_obj_entity) {
 				
 				switch (_obj_entity.warriorTypeAttack) {
 					case WarriorTypeAttack.Break:
-						if (_obj_entity.hadGroundCollised) 
-							attackSprite = spr_warrior_break;
-						else 
-							attackSprite = _obj_entity.sprite_index;
+						attackSprite = spr_warrior_break;
 						break;
 					case WarriorTypeAttack.Normal:
 						if (_obj_entity.hadGroundCollised) {
 							if (_obj_entity.comboState) {
 								switch (_obj_entity.comboIndex) {
 									case WarriorComboIndex.First:
-										attackSprite = _obj_entity.warriorStyleAttack == 0
+										attackSprite = _obj_entity.warriorStyleAttack == WarriorStyleAttack.Hand
 											? spr_warrior_attack_sheathed_combo_1
-											: spr_warrior_attack_mid_wielded_combo_1;
+											: spr_warrior_attack_wielded_combo_1;
 										break;
 									case WarriorComboIndex.Second:
-										attackSprite = _obj_entity.warriorStyleAttack == 0
+										attackSprite = _obj_entity.warriorStyleAttack == WarriorStyleAttack.Hand
 											? spr_warrior_attack_sheathed_combo_2
-											: spr_warrior_attack_mid_wielded_combo_2;
+											: spr_warrior_attack_wielded_combo_2;
 										break;
 								}
 							}
 							else {
-								attackSprite = _obj_entity.warriorStyleAttack == 0
+								attackSprite = _obj_entity.warriorStyleAttack == WarriorStyleAttack.Hand
 									? spr_warrior_attack_sheathed
 									: spr_warrior_attack_wielded;
 							}
@@ -85,10 +82,7 @@ function SpriteMachine (_obj_entity) {
 						}
 						break;
 					case WarriorTypeAttack.JumpAttackSpecial:
-						if (!_obj_entity.hadGroundCollised && _obj_entity.warriorStyleAttack == WarriorStyleAttack.Sword)
-							attackSprite = spr_warrior_attack_air_wielded_floor;
-						else 
-							attackSprite = _obj_entity.sprite_index;
+						attackSprite = spr_warrior_attack_air_wielded_floor;
 						break;
 				}
 				

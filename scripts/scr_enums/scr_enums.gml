@@ -30,7 +30,6 @@ enum State {
 	Idle,
 	Jump,
 	Walk,
-	Break,
 	Climb,
 	Wield,
 	Attack,
