@@ -26,7 +26,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"815599c4-07b4-46fc-bc42-1b1e9a64f79e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 9,
+  "origin": 7,
   "parent": {
     "name": "Jump",
     "path": "folders/Sprites/Characters/Player/Warrior/Move/Jump.yy",
@@ -66,7 +66,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 60,
-    "yorigin": 88,
+    "yorigin": 89,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,
