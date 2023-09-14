@@ -1,1 +1,1 @@
-CreateMenu().Initial();
+new CreateMenu().Initial();

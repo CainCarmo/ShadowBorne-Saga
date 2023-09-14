@@ -1,15 +1,15 @@
 #region [Controller Check]
 
 /// @Default
-left  = ControllerMappingCommands(obj_player).Moves(PlayerActions.Left);
-right = ControllerMappingCommands(obj_player).Moves(PlayerActions.Right);
-jump  = ControllerMappingCommands(obj_player).Moves(PlayerActions.Jump);
+left  = new ControllerMappingCommands(obj_player).Moves(PlayerActions.Left);
+right = new ControllerMappingCommands(obj_player).Moves(PlayerActions.Right);
+jump  = new ControllerMappingCommands(obj_player).Moves(PlayerActions.Jump);
 
 /// @Warrior
 
-dash   = ControllerMappingCommands(obj_player).Moves(PlayerActions.Dash);
-wield  = ControllerMappingCommands(obj_player).Moves(PlayerActions.Wield);
-attack = ControllerMappingCommands(obj_player).Attack();
+dash   = new ControllerMappingCommands(obj_player).Moves(PlayerActions.Dash);
+wield  = new ControllerMappingCommands(obj_player).Moves(PlayerActions.Wield);
+attack = new ControllerMappingCommands(obj_player).Attack();
 
 /// @Wizard
 

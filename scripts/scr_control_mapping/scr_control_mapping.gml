@@ -26,7 +26,7 @@ function GetDeviceController () {
 /// @function							ControllerMappingCommands(_obj_entity)
 /// @description						Mapea os comandos para cada dispositivo suportado
 /// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
-function ControllerMappingCommands (_obj_entity) {
+function ControllerMappingCommands (_obj_entity) constructor {
 	_obj = _obj_entity;
 	
 	JoystickCommands = {}

@@ -6,7 +6,7 @@ hadGroundCollised = place_meeting(obj_player.x, obj_player.y + 1, obj_block_coll
 
 #region [Apply Gravity]
 
-Utils(obj_player).ApplyGravity();
+new Utils(obj_player).ApplyGravity();
 
 #endregion
 
