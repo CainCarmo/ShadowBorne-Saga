@@ -23,7 +23,7 @@ enum WarriorTypeAttack {
 
 /// @function	 WarriorCommands()
 /// @description Implementa os comandos únicos da classe Warrior (Guerreiro)
-function WarriorCommands () constructor {
+function WarriorCommands () {
 	
 	/// @function							Dash(_obj_entity)
 	/// @description						Implementa o comando Dash na classe Warrior (Guerreiro)
@@ -36,23 +36,23 @@ function WarriorCommands () constructor {
 	/// @description						Implementa o comando Wield na classe Warrior (Guerreiro)
 	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Wield = function (_obj_entity) {
-		_obj_entity = new AlterWarrior(AlterPlayerDefault(0,0,, State.Wield, true)).Move(_obj_entity.warriorStyleAttack == WarriorStyleAttack.Hand ? WarriorStyleAttack.Sword : WarriorStyleAttack.Hand);
+		_obj_entity = AlterWarrior(AlterPlayerDefault(0,0,, State.Wield, true)).Move(_obj_entity.warriorStyleAttack == WarriorStyleAttack.Hand ? WarriorStyleAttack.Sword : WarriorStyleAttack.Hand);
 	}
 	
 	/// @function							BreakGuard(_obj_entity)
 	/// @description						Implementa o comando BreakGuard na classe Warrior (Guerreiro)
 	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static BreakGuard = function (_obj_entity) {
-		new Utils(_obj_entity).AssignSpriteToObject();
+		Utils(_obj_entity).AssignSpriteToObject();
 	}
 	
 	/// @function							JumpAttackSpecial(_obj_entity)
 	/// @description						Implementa o comando JumpAttackSpecial na classe Warrior (Guerreiro)
 	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static JumpAttackSpecial = function (_obj_entity) {
-		new Utils(_obj_entity).AssignSpriteToObject();
+		Utils(_obj_entity).AssignSpriteToObject();
 		
-		new SpriteControl(_obj_entity).StopIn(3);
+		SpriteControl(_obj_entity).StopIn(3);
 	} 
 	
 }
@@ -63,55 +63,55 @@ function WarriorCommands () constructor {
 
 /// @function	 WarriorStates()
 /// @description Atribui as características dos estados para a classe Warrior (Guerreiro)
-function WarriorStates () constructor {
+function WarriorStates (): PlayerStates() constructor {
 	
 	/// @function							Idle(_obj_entity)
 	/// @description						Implementa o estado Idle (Parado) para a classe Warrior (Guerreiro)
 	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Idle = function (_obj_entity) {
-		new Utils(_obj_entity).AssignSpriteToObject();
+		Utils(_obj_entity).AssignSpriteToObject();
 		
 		if (_obj_entity.dash)
-			new WarriorCommands().Dash(_obj_entity);
+			WarriorCommands().Dash(_obj_entity);
 		else if (_obj_entity.wield)
-			new WarriorCommands().Wield(_obj_entity);
+			WarriorCommands().Wield(_obj_entity);
 	}
 	
 	/// @function							Die(_obj_entity)
 	/// @description						Implementa o estado Die (Morto) para a classe Warrior (Guerreiro)
 	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Die = function (_obj_entity) {
-		new Utils(_obj_entity).AssignSpriteToObject();
+		Utils(_obj_entity).AssignSpriteToObject();
 	}
 	
 	/// @function							Hit(_obj_entity)
 	/// @description						Implementa o estado Hit (Dano) para a classe Warrior (Guerreiro)
 	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Hit = function (_obj_entity) {
-		new Utils(_obj_entity).AssignSpriteToObject();
+		Utils(_obj_entity).AssignSpriteToObject();
 	}
 	
 	/// @function							Run(_obj_entity)
 	/// @description						Implementa o estado Run (Correndo) para a classe Warrior (Guerreiro)
 	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Run = function (_obj_entity) {
-		new Utils(_obj_entity).AssignSpriteToObject();
+		Utils(_obj_entity).AssignSpriteToObject();
 	}
 	
 	/// @function							Dash(_obj_entity)
 	/// @description						Implementa o estado Dash para a classe Warrior (Guerreiro)
 	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Dash = function (_obj_entity) {
-		new Utils(_obj_entity).AssignSpriteToObject();
+		Utils(_obj_entity).AssignSpriteToObject();
 		
-		if (new Utils(_obj_entity).ListenerSpriteIndex(1)) _obj_entity = AlterPlayerDefault(0, 0,, State.Idle, true);
+		if (Utils(_obj_entity).ListenerSpriteIndex(1)) _obj_entity = AlterPlayerDefault(0, 0,, State.Idle, true);
 	}
 	
 	/// @function							Jump(_obj_entity)
 	/// @description						Implementa o estado Jump (Pulando) para a classe Warrior (Guerreiro)
 	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Jump = function (_obj_entity) {
-		new Utils(_obj_entity).AssignSpriteToObject();
+		Utils(_obj_entity).AssignSpriteToObject();
 		
 		if (_obj_entity.hadGroundCollised) _obj_entity.jumpAttack = false;
 	}
@@ -120,19 +120,19 @@ function WarriorStates () constructor {
 	/// @description						Implementa o estado Walk (Andando) para a classe Warrior (Guerreiro)
 	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Walk = function (_obj_entity) {
-		new Utils(_obj_entity).AssignSpriteToObject();
+		Utils(_obj_entity).AssignSpriteToObject();
 		
 		if (_obj_entity.dash)
-			new WarriorCommands().Dash(_obj_entity);
+			WarriorCommands().Dash(_obj_entity);
 		else if (_obj_entity.wield)
-			new WarriorCommands().Wield(_obj_entity);
+			WarriorCommands().Wield(_obj_entity);
 	}
 	
 	/// @function							Climb(_obj_entity)
 	/// @description						Implementa o estado Climb (Escala) para a classe Warrior (Guerreiro)
 	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Climb = function (_obj_entity) {
-		new Utils(_obj_entity).AssignSpriteToObject();
+		Utils(_obj_entity).AssignSpriteToObject();
 	}
 	
 	/// @function							Wield(_obj_entity)
@@ -141,9 +141,9 @@ function WarriorStates () constructor {
 	static Wield = function (_obj_entity) {
 		_obj_entity = AlterPlayerDefault(0,0);
 		
-		new Utils(_obj_entity).AssignSpriteToObject();
+		Utils(_obj_entity).AssignSpriteToObject();
 		
-		if (new Utils(_obj_entity).ListenerSpriteIndex(1))
+		if (Utils(_obj_entity).ListenerSpriteIndex(1))
 			_obj_entity = AlterPlayerDefault(0, 0,, State.Idle, true);
 	}
 	
@@ -154,17 +154,17 @@ function WarriorStates () constructor {
 		switch (_obj_entity.warriorTypeAttack) {
 			case WarriorTypeAttack.Break:
 				if (_obj_entity.hadGroundCollised)
-					new WarriorCommands().BreakGuard(_obj_entity);
+					WarriorCommands().BreakGuard(_obj_entity);
 				break;
 			case WarriorTypeAttack.Normal:
 				if (!_obj_entity.hadGroundCollised)
-					new WarriorAttack(_obj_entity).Air();
+					WarriorAttack(_obj_entity).Air();
 				else
-					new WarriorAttack(_obj_entity).Ground();
+					WarriorAttack(_obj_entity).Ground();
 				break;
 			case WarriorTypeAttack.JumpAttackSpecial:
 				if (!_obj_entity.hadGroundCollised && _obj_entity.warriorStyleAttack == WarriorStyleAttack.Sword) 
-					new WarriorCommands().JumpAttackSpecial(_obj_entity);
+					WarriorCommands().JumpAttackSpecial(_obj_entity);
 				else
 					_obj_entity = AlterPlayerDefault(,,, State.Idle);
 				
@@ -184,16 +184,16 @@ function WarriorStates () constructor {
 
 /// @function	 WarriorAttack()
 /// @description Implementa as mecânicas de ataque para a classe Warrior (Guerreiro)
-function WarriorAttack (_obj_entity) constructor {
+function WarriorAttack (_obj_entity) {
 	_obj = _obj_entity;
 	
 	/// @function	 Air()
 	/// @description Implementa a lógica dos ataques no ar para a classe Warrior (Guerreiro)
 	static Air = function () {
-		new Utils(_obj).AssignSpriteToObject();
+		Utils(_obj).AssignSpriteToObject();
 		
-		if (new Utils(_obj).ListenerSpriteIndex(1) || _obj.jumpAttack) 
-			_obj = new AlterWarrior(AlterPlayerDefault(,,, State.Jump, false)).Attack(,, true);
+		if (Utils(_obj).ListenerSpriteIndex(1) || _obj.jumpAttack) 
+			_obj = AlterWarrior(AlterPlayerDefault(,,, State.Jump, false)).Attack(,, true);
 	}
 	
 	/// @function	 Ground()
@@ -201,23 +201,23 @@ function WarriorAttack (_obj_entity) constructor {
 	static Ground = function () {
 		_obj = AlterPlayerDefault(0,0);
 		
-		new Utils(_obj).AssignSpriteToObject();
+		Utils(_obj).AssignSpriteToObject();
 		
 		var isComboIndexValid = _obj.comboIndex <= WarriorComboIndex.Second;
-		var isFrameComboValid = new Utils(_obj).ListenerSpriteIndex(2);
+		var isFrameComboValid = Utils(_obj).ListenerSpriteIndex(2);
 		
 		if (_obj.attack && isFrameComboValid)
-			_obj = new AlterWarrior(AlterPlayerDefault(0,0)).Attack(true, WarriorComboIndex.First);
-		else if (new Utils(_obj).ListenerSpriteIndex(1))
-			_obj = new AlterWarrior(AlterPlayerDefault(,,, State.Idle, true)).Attack(false, WarriorComboIndex.None);
+			_obj = AlterWarrior(AlterPlayerDefault(0,0)).Attack(true, WarriorComboIndex.First);
+		else if (Utils(_obj).ListenerSpriteIndex(1))
+			_obj = AlterWarrior(AlterPlayerDefault(,,, State.Idle, true)).Attack(false, WarriorComboIndex.None);
 		
-		if (isComboIndexValid && new Utils(_obj).ListenerSpriteIndex(1)) {
+		if (isComboIndexValid && Utils(_obj).ListenerSpriteIndex(1)) {
 			switch (_obj.comboIndex) {
 				case WarriorComboIndex.First:
-					_obj = new AlterWarrior(AlterPlayerDefault(,,,, true)).Attack(, WarriorComboIndex.Second);
+					_obj = AlterWarrior(AlterPlayerDefault(,,,, true)).Attack(, WarriorComboIndex.Second);
 					break;
 				case WarriorComboIndex.Second:
-					_obj = new AlterWarrior(AlterPlayerDefault(,,,, true)).Attack(false, WarriorComboIndex.None);
+					_obj = AlterWarrior(AlterPlayerDefault(,,,, true)).Attack(false, WarriorComboIndex.None);
 					break;
 			}
 		}
@@ -231,7 +231,7 @@ function WarriorAttack (_obj_entity) constructor {
 /// @function							AlterWarrior(_obj_entity)
 /// @description						Altera as propriedades do player (Classe Guerreiro)
 /// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
-function AlterWarrior (_obj_entity) constructor {
+function AlterWarrior (_obj_entity) {
 	_obj = _obj_entity;
 	
 	/// @function											Move(warriorStyleAttack)

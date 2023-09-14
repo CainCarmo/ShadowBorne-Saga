@@ -2,7 +2,7 @@
 
 /// @function	 DrawGUI(_obj_entity)
 /// @description Funções para desenhar no evento Draw GUI (Desenha na Tela)
-function DrawGUI () constructor {
+function DrawGUI () {
 	
 	/// @function						Text(_obj_entity)
 	/// @description					Desenha o texto passado na tela

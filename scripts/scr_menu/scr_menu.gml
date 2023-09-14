@@ -2,7 +2,7 @@
 
 /// @function	 Create()
 /// @description Funções para criações de menu
-function CreateMenu () constructor {
+function CreateMenu () {
 	
 	/// @function	 Initial(_obj_entity)
 	/// @description Cria o menu principal
@@ -34,7 +34,7 @@ function CreateMenu () constructor {
 		
 		#region Draw [Title]
 		
-		new DrawGUI()
+		DrawGUI()
 			.Text(
 				ft_menu_initial_title,
 				fa_center,
@@ -81,7 +81,7 @@ function CreateMenu () constructor {
 				optionSelection[i] = lerp(optionSelection[i], 1, .05);
 			}
 			
-			new DrawGUI()
+			DrawGUI()
 				.Text(
 					ft_menu_initial_options,
 					fa_center,

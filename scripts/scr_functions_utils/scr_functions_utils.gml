@@ -1,7 +1,7 @@
 /// @function							Utils(_obj_entity)
 /// @description						Funções utéis no geral
 /// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
-function Utils (_obj_entity) constructor {
+function Utils (_obj_entity) {
 	_obj = _obj_entity;
 	
 	/// @function	 ApplyGravity()
