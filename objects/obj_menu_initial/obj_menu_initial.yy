@@ -3,14 +3,13 @@
   "resourceVersion": "1.0",
   "name": "obj_menu_initial",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu",
-    "path": "folders/Objetos/Miscellaneous/Menu.yy",
+    "name": "Initial",
+    "path": "folders/Objetos/Miscellaneous/Menu/Initial.yy",
   },
   "parentObjectId": null,
   "persistent": false,

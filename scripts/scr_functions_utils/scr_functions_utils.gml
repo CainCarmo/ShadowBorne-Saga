@@ -21,7 +21,7 @@ function Utils (_obj_entity) constructor {
 		return _obj.image_index >= _obj.image_number - _amount;
 	}
 	
-	/// @function	 AssignSpriteToObjeto()
+	/// @function	 AssignSpriteToObject()
 	/// @description Aplica a sprite no objeto passado
 	static AssignSpriteToObject = function () {
 		_obj.sprite_index = SpriteMachine(_obj);
