@@ -63,7 +63,7 @@ function WarriorCommands () constructor {
 
 /// @function	 WarriorStates()
 /// @description Atribui as características dos estados para a classe Warrior (Guerreiro)
-function WarriorStates () constructor {
+function WarriorStates (): PlayerStates() constructor {
 	
 	/// @function							Idle(_obj_entity)
 	/// @description						Implementa o estado Idle (Parado) para a classe Warrior (Guerreiro)
@@ -104,6 +104,8 @@ function WarriorStates () constructor {
 	static Dash = function (_obj_entity) {
 		new Utils(_obj_entity).AssignSpriteToObject();
 		
+		_obj_entity = AlterPlayerDefault(_obj_entity.speed_horizontal + (_obj_entity.dashDistance * _obj_entity.scale_x));
+		
 		if (new Utils(_obj_entity).ListenerSpriteIndex(1)) _obj_entity = AlterPlayerDefault(0, 0,, State.Idle, true);
 	}
 	
@@ -111,9 +113,10 @@ function WarriorStates () constructor {
 	/// @description						Implementa o estado Jump (Pulando) para a classe Warrior (Guerreiro)
 	/// @param {Asset.GMObject} _obj_entity Objeto entidade (Herda de obj_entity)
 	static Jump = function (_obj_entity) {
-		new Utils(_obj_entity).AssignSpriteToObject();
+		if (_obj_entity.hadGroundCollised)
+			_obj_entity = new AlterWarrior(AlterPlayerDefault()).Attack(,, false);
 		
-		if (_obj_entity.hadGroundCollised) _obj_entity.jumpAttack = false;
+		new Utils(_obj_entity).AssignSpriteToObject();
 	}
 	
 	/// @function							Walk(_obj_entity)
@@ -190,10 +193,13 @@ function WarriorAttack (_obj_entity) constructor {
 	/// @function	 Air()
 	/// @description Implementa a lógica dos ataques no ar para a classe Warrior (Guerreiro)
 	static Air = function () {
-		new Utils(_obj).AssignSpriteToObject();
+		if (!_obj.jumpAttack) {
+			new Utils(_obj).AssignSpriteToObject();
+			_obj = new AlterWarrior(AlterPlayerDefault()).Attack(,, true);
+		}
 		
-		if (new Utils(_obj).ListenerSpriteIndex(1) || _obj.jumpAttack) 
-			_obj = new AlterWarrior(AlterPlayerDefault(,,, State.Jump, false)).Attack(,, true);
+		if (new Utils(_obj).ListenerSpriteIndex(1)) 
+			_obj = new AlterWarrior(AlterPlayerDefault(,,, State.Jump, false));
 	}
 	
 	/// @function	 Ground()
@@ -243,7 +249,7 @@ function AlterWarrior (_obj_entity) constructor {
 		return _obj;
 	}
 	
-	/// @function											Attack(comboState, comboIndex, warriorTypeAttack)
+	/// @function											Attack(comboState, comboIndex, jumpAttack, warriorTypeAttack)
 	/// @description										Altera as propriedades do player (Classe Guerreiro)
 	/// @param {Bool}					comboState			
 	/// @param {Enum.WarriorComboIndex}	comboIndex			

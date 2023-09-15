@@ -69,7 +69,7 @@ function SpriteMachine (_obj_entity) {
 						else {
 							var playerOriginCenter = _obj_entity.y - _obj_entity.sprite_height * .5;
 							
-							switch (_obj_entity.warriorTypeAttack) {
+							switch (_obj_entity.warriorStyleAttack) {
 								case WarriorStyleAttack.Hand:
 									attackSprite = spr_warrior_attack_air_sheathed_floor;
 									break;

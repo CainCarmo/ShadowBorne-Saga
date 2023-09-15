@@ -35,7 +35,7 @@ function ControllerMappingCommands (_obj_entity) constructor {
 		Dash:   keyboard_check_released(ord("S")),
 		Left:   keyboard_check(ord("A")),
 		Right:  keyboard_check(ord("D")),
-		Jump:   keyboard_check(vk_space),
+		Jump:   keyboard_check_pressed(vk_space),
 		Wield:  keyboard_check_released(ord("E")),
 		Attack: mouse_check_button(mb_left),
 		#endregion
