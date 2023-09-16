@@ -31,7 +31,7 @@
   "origin": 0,
   "parent": {
     "name": "Initial",
-    "path": "folders/Sprites/Miscellaneous/Menu/Initial.yy",
+    "path": "folders/Sprites/Miscellaneous/UI/Menu/Initial.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

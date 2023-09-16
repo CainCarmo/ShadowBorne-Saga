@@ -33,7 +33,7 @@
   "origin": 0,
   "parent": {
     "name": "Attack",
-    "path": "folders/Sprites/Characters/Monsters/MiniBoss/Evil-Wizard/Attack.yy",
+    "path": "folders/Sprites/Entities/Enimies/MiniBoss/Evil-Wizard/Attack.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

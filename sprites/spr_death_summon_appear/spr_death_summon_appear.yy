@@ -31,7 +31,7 @@
   "origin": 7,
   "parent": {
     "name": "Appear",
-    "path": "folders/Sprites/Characters/Monsters/Boss/Death/Move/Summon/Appear.yy",
+    "path": "folders/Sprites/Entities/Enimies/Boss/Death/Move/Summon/Appear.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

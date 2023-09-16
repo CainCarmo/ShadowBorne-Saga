@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Player",
-    "path": "folders/Objetos/Characters/Player.yy",
+    "path": "folders/Objetos/Entities/Player.yy",
   },
   "parentObjectId": {
     "name": "obj_entity",

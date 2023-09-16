@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Initial",
-    "path": "folders/Objetos/Miscellaneous/Menu/Initial.yy",
+    "path": "folders/Objetos/Interfaces/Menu/Initial.yy",
   },
   "parentObjectId": null,
   "persistent": false,

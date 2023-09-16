@@ -43,7 +43,7 @@
   "origin": 7,
   "parent": {
     "name": "Cutscene",
-    "path": "folders/Sprites/Characters/Monsters/Boss/Demon-Skeleton/Move/Cutscene.yy",
+    "path": "folders/Sprites/Entities/Enimies/Boss/Demon-Skeleton/Move/Cutscene.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -33,7 +33,7 @@
   "origin": 0,
   "parent": {
     "name": "Idle",
-    "path": "folders/Sprites/Characters/Monsters/MiniBoss/Evil-Wizard/Move/Idle.yy",
+    "path": "folders/Sprites/Entities/Enimies/MiniBoss/Evil-Wizard/Move/Idle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

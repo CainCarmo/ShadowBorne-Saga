@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Enimies",
-    "path": "folders/Scripts/Mechanics/Characters/Enimies.yy",
+    "path": "folders/Scripts/Mechanics/Entities/Enimies.yy",
   },
 }

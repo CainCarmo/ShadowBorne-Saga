@@ -32,7 +32,7 @@
   "origin": 0,
   "parent": {
     "name": "Die",
-    "path": "folders/Sprites/Characters/Monsters/MiniBoss/Evil-Wizard/Move/Die.yy",
+    "path": "folders/Sprites/Entities/Enimies/MiniBoss/Evil-Wizard/Move/Die.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

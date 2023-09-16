@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Layers",
-    "path": "folders/Sprites/Backgrounds/City/Ruin/Layers.yy",
+    "path": "folders/Sprites/Maps/Backgrounds/City/Ruin/Layers.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

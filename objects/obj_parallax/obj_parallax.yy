@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Parallax",
-    "path": "folders/Objetos/Miscellaneous/Parallax.yy",
+    "path": "folders/Objetos/Environment/Parallax.yy",
   },
   "parentObjectId": null,
   "persistent": false,

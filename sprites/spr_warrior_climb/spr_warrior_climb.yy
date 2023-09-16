@@ -28,7 +28,7 @@
   "origin": 7,
   "parent": {
     "name": "Climb",
-    "path": "folders/Sprites/Characters/Player/Warrior/Move/Climb.yy",
+    "path": "folders/Sprites/Entities/Characters/Warrior/Move/Climb.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

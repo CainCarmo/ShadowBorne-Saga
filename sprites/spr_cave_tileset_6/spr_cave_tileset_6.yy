@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Cave",
-    "path": "folders/Sprites/Miscellaneous/Tilesets/Cave.yy",
+    "path": "folders/Sprites/Maps/Tilesets/Cave.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

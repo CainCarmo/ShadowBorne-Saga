@@ -31,7 +31,7 @@
   "origin": 0,
   "parent": {
     "name": "Attack",
-    "path": "folders/Sprites/Characters/Monsters/Minion/Hound/Attack.yy",
+    "path": "folders/Sprites/Entities/Enimies/Minion/Hound/Attack.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

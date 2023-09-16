@@ -31,7 +31,7 @@
   "origin": 7,
   "parent": {
     "name": "Sheathed",
-    "path": "folders/Sprites/Characters/Player/Warrior/Move/Walk/Sheathed.yy",
+    "path": "folders/Sprites/Entities/Characters/Warrior/Move/Walk/Sheathed.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

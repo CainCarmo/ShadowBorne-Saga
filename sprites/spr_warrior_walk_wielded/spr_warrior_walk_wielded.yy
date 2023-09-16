@@ -31,7 +31,7 @@
   "origin": 7,
   "parent": {
     "name": "Wielded",
-    "path": "folders/Sprites/Characters/Player/Warrior/Move/Walk/Wielded.yy",
+    "path": "folders/Sprites/Entities/Characters/Warrior/Move/Walk/Wielded.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

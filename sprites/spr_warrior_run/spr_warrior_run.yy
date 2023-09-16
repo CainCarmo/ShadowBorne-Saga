@@ -31,7 +31,7 @@
   "origin": 7,
   "parent": {
     "name": "Run",
-    "path": "folders/Sprites/Characters/Player/Warrior/Move/Run.yy",
+    "path": "folders/Sprites/Entities/Characters/Warrior/Move/Run.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

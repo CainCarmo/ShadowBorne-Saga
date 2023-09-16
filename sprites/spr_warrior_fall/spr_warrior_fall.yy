@@ -27,7 +27,7 @@
   "origin": 7,
   "parent": {
     "name": "Fall",
-    "path": "folders/Sprites/Characters/Player/Warrior/Move/Fall.yy",
+    "path": "folders/Sprites/Entities/Characters/Warrior/Move/Fall.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

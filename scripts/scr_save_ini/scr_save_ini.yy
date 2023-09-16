@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Saves",
-    "path": "folders/Scripts/Settings/Saves.yy",
+    "path": "folders/Scripts/Settings/Preferences/Saves.yy",
   },
 }

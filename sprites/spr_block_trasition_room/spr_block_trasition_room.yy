@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Colliders",
-    "path": "folders/Sprites/Miscellaneous/Colliders.yy",
+    "path": "folders/Sprites/Miscellaneous/Blocks/Colliders.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Sandy",
-    "path": "folders/Sprites/Backgrounds/Montain/Sandy.yy",
+    "path": "folders/Sprites/Maps/Backgrounds/Montain/Sandy.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

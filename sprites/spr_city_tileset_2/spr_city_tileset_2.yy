@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "City",
-    "path": "folders/Sprites/Miscellaneous/Tilesets/City.yy",
+    "path": "folders/Sprites/Maps/Tilesets/City.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

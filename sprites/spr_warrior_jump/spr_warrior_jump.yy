@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Jump",
-    "path": "folders/Sprites/Characters/Player/Warrior/Move/Jump.yy",
+    "path": "folders/Sprites/Entities/Characters/Warrior/Move/Jump.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

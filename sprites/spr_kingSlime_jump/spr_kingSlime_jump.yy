@@ -28,7 +28,7 @@
   "origin": 7,
   "parent": {
     "name": "Jump",
-    "path": "folders/Sprites/Characters/Monsters/Boss/King-Slime/Move/Jump.yy",
+    "path": "folders/Sprites/Entities/Enimies/Boss/King-Slime/Move/Jump.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

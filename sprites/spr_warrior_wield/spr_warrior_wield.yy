@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Wield",
-    "path": "folders/Sprites/Characters/Player/Warrior/Move/Wield.yy",
+    "path": "folders/Sprites/Entities/Characters/Warrior/Move/Wield.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

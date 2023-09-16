@@ -33,7 +33,7 @@
   "origin": 7,
   "parent": {
     "name": "Disappear",
-    "path": "folders/Sprites/Characters/NPC/Leoric Emberforge/Move/Disappear.yy",
+    "path": "folders/Sprites/Entities/Npc/Leoric Emberforge/Move/Disappear.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

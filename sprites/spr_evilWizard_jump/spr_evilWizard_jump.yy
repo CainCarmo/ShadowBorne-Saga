@@ -27,7 +27,7 @@
   "origin": 0,
   "parent": {
     "name": "Jump",
-    "path": "folders/Sprites/Characters/Monsters/MiniBoss/Evil-Wizard/Move/Jump.yy",
+    "path": "folders/Sprites/Entities/Enimies/MiniBoss/Evil-Wizard/Move/Jump.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

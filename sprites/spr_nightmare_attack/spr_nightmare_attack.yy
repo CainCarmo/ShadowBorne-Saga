@@ -29,7 +29,7 @@
   "origin": 0,
   "parent": {
     "name": "Attack",
-    "path": "folders/Sprites/Characters/Monsters/MiniBoss/Nightmare/Attack.yy",
+    "path": "folders/Sprites/Entities/Enimies/MiniBoss/Nightmare/Attack.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

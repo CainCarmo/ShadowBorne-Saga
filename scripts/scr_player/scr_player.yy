@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Player",
-    "path": "folders/Scripts/Mechanics/Characters/Player.yy",
+    "name": "Characters",
+    "path": "folders/Scripts/Mechanics/Entities/Characters.yy",
   },
 }

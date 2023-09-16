@@ -37,7 +37,7 @@
   "origin": 0,
   "parent": {
     "name": "Walk",
-    "path": "folders/Sprites/Characters/Monsters/Minion/Hound/Move/Walk.yy",
+    "path": "folders/Sprites/Entities/Enimies/Minion/Hound/Move/Walk.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

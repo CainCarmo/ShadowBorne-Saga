@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Dash",
-    "path": "folders/Sprites/Characters/Player/Warrior/Move/Dash.yy",
+    "path": "folders/Sprites/Entities/Characters/Warrior/Move/Dash.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

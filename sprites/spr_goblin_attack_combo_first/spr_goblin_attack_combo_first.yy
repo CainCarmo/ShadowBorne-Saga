@@ -33,7 +33,7 @@
   "origin": 0,
   "parent": {
     "name": "Mid",
-    "path": "folders/Sprites/Characters/Monsters/Minion/Goblin/Attack/Mid.yy",
+    "path": "folders/Sprites/Entities/Enimies/Minion/Goblin/Attack/Mid.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

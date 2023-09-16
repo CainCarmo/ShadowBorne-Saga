@@ -30,7 +30,7 @@
   "origin": 7,
   "parent": {
     "name": "Attack",
-    "path": "folders/Sprites/Characters/Monsters/Boss/King-Slime/Attack.yy",
+    "path": "folders/Sprites/Entities/Enimies/Boss/King-Slime/Attack.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

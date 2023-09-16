@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Wielded",
-    "path": "folders/Sprites/Characters/Player/Warrior/Move/Idle/Wielded.yy",
+    "path": "folders/Sprites/Entities/Characters/Warrior/Move/Idle/Wielded.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

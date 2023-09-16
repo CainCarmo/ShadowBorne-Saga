@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Thicket",
-    "path": "folders/Sprites/Backgrounds/Florest/Thicket.yy",
+    "path": "folders/Sprites/Maps/Backgrounds/Florest/Thicket.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

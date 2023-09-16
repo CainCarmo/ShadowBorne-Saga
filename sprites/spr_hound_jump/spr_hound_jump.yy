@@ -31,7 +31,7 @@
   "origin": 0,
   "parent": {
     "name": "Jump",
-    "path": "folders/Sprites/Characters/Monsters/Minion/Hound/Move/Jump.yy",
+    "path": "folders/Sprites/Entities/Enimies/Minion/Hound/Move/Jump.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Castle",
-    "path": "folders/Sprites/Backgrounds/City/Castle.yy",
+    "path": "folders/Sprites/Maps/Backgrounds/City/Castle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

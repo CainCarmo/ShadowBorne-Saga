@@ -28,7 +28,7 @@
   "origin": 0,
   "parent": {
     "name": "Hit",
-    "path": "folders/Sprites/Characters/Monsters/MiniBoss/Evil-Wizard/Move/Hit.yy",
+    "path": "folders/Sprites/Entities/Enimies/MiniBoss/Evil-Wizard/Move/Hit.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

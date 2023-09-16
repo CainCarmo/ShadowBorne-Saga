@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Gothic-Castle",
-    "path": "folders/Sprites/Backgrounds/City/Gothic-Castle.yy",
+    "path": "folders/Sprites/Maps/Backgrounds/City/Gothic-Castle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

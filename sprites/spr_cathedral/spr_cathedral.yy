@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Cathedral",
-    "path": "folders/Sprites/Backgrounds/City/Cathedral.yy",
+    "path": "folders/Sprites/Maps/Backgrounds/City/Cathedral.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

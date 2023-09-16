@@ -35,7 +35,7 @@
   "origin": 7,
   "parent": {
     "name": "Die",
-    "path": "folders/Sprites/Characters/Monsters/Boss/Death/Move/Die.yy",
+    "path": "folders/Sprites/Entities/Enimies/Boss/Death/Move/Die.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Collisors",
-    "path": "folders/Objetos/Miscellaneous/Collisors.yy",
+    "name": "Colliders",
+    "path": "folders/Objetos/Miscellaneous/Blocks/Colliders.yy",
   },
   "parentObjectId": null,
   "persistent": false,

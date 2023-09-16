@@ -36,7 +36,7 @@
   "origin": 0,
   "parent": {
     "name": "Idle",
-    "path": "folders/Sprites/Characters/Monsters/Minion/Hound/Move/Idle.yy",
+    "path": "folders/Sprites/Entities/Enimies/Minion/Hound/Move/Idle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

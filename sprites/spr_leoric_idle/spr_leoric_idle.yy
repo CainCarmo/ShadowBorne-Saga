@@ -32,7 +32,7 @@
   "origin": 7,
   "parent": {
     "name": "Idle",
-    "path": "folders/Sprites/Characters/NPC/Leoric Emberforge/Move/Idle.yy",
+    "path": "folders/Sprites/Entities/Npc/Leoric Emberforge/Move/Idle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

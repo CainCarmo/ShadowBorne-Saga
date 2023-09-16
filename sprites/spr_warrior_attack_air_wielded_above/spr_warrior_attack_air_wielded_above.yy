@@ -51,7 +51,7 @@
   "origin": 7,
   "parent": {
     "name": "Wielded",
-    "path": "folders/Sprites/Characters/Player/Warrior/Attack/Air/Wielded.yy",
+    "path": "folders/Sprites/Entities/Characters/Warrior/Attack/Air/Wielded.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

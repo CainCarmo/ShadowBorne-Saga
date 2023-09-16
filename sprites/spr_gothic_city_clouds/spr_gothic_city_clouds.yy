@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Ghotic-City",
-    "path": "folders/Sprites/Backgrounds/City/Ghotic-City.yy",
+    "path": "folders/Sprites/Maps/Backgrounds/City/Ghotic-City.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -31,7 +31,7 @@
   "origin": 7,
   "parent": {
     "name": "Attack",
-    "path": "folders/Sprites/Characters/Monsters/Boss/Death/Attack.yy",
+    "path": "folders/Sprites/Entities/Enimies/Boss/Death/Attack.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

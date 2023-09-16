@@ -29,7 +29,7 @@
   "origin": 0,
   "parent": {
     "name": "Idle",
-    "path": "folders/Sprites/Characters/Monsters/MiniBoss/Nightmare/Move/Idle.yy",
+    "path": "folders/Sprites/Entities/Enimies/MiniBoss/Nightmare/Move/Idle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

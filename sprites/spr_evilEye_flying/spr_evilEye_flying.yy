@@ -33,7 +33,7 @@
   "origin": 7,
   "parent": {
     "name": "Flying",
-    "path": "folders/Sprites/Characters/Monsters/Minion/EvilEye/Move/Flying.yy",
+    "path": "folders/Sprites/Entities/Enimies/Minion/EvilEye/Move/Flying.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

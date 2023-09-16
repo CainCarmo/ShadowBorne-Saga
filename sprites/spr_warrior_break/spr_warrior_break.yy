@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Break",
-    "path": "folders/Sprites/Characters/Player/Warrior/Move/Break.yy",
+    "path": "folders/Sprites/Entities/Characters/Warrior/Move/Break.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

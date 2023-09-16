@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Sheathe",
-    "path": "folders/Sprites/Characters/Player/Warrior/Move/Sheathe.yy",
+    "path": "folders/Sprites/Entities/Characters/Warrior/Move/Sheathe.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Characters",
-    "path": "folders/Objetos/Characters.yy",
+    "name": "Entities",
+    "path": "folders/Objetos/Entities.yy",
   },
   "parentObjectId": null,
   "persistent": false,

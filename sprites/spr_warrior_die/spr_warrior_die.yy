@@ -32,7 +32,7 @@
   "origin": 7,
   "parent": {
     "name": "Die",
-    "path": "folders/Sprites/Characters/Player/Warrior/Move/Die.yy",
+    "path": "folders/Sprites/Entities/Characters/Warrior/Move/Die.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

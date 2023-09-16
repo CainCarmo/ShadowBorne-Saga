@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Oak",
-    "path": "folders/Sprites/Backgrounds/Florest/Oak.yy",
+    "path": "folders/Sprites/Maps/Backgrounds/Florest/Oak.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

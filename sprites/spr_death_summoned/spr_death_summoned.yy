@@ -35,7 +35,7 @@
   "origin": 7,
   "parent": {
     "name": "Summoned",
-    "path": "folders/Sprites/Characters/Monsters/Boss/Death/Move/Summon/Summoned.yy",
+    "path": "folders/Sprites/Entities/Enimies/Boss/Death/Move/Summon/Summoned.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

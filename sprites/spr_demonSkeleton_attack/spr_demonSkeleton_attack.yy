@@ -43,7 +43,7 @@
   "origin": 7,
   "parent": {
     "name": "Attack",
-    "path": "folders/Sprites/Characters/Monsters/Boss/Demon-Skeleton/Attack.yy",
+    "path": "folders/Sprites/Entities/Enimies/Boss/Demon-Skeleton/Attack.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

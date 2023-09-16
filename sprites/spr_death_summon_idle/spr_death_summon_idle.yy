@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Idle",
-    "path": "folders/Sprites/Characters/Monsters/Boss/Death/Move/Summon/Idle.yy",
+    "path": "folders/Sprites/Entities/Enimies/Boss/Death/Move/Summon/Idle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

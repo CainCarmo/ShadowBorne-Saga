@@ -30,7 +30,7 @@
   "origin": 7,
   "parent": {
     "name": "Slide",
-    "path": "folders/Sprites/Characters/Player/Warrior/Move/Slide.yy",
+    "path": "folders/Sprites/Entities/Characters/Warrior/Move/Slide.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

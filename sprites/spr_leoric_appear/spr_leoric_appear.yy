@@ -32,7 +32,7 @@
   "origin": 7,
   "parent": {
     "name": "Appear",
-    "path": "folders/Sprites/Characters/NPC/Leoric Emberforge/Move/Appear.yy",
+    "path": "folders/Sprites/Entities/Npc/Leoric Emberforge/Move/Appear.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

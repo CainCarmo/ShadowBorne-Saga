@@ -27,7 +27,7 @@
   "origin": 0,
   "parent": {
     "name": "Fall",
-    "path": "folders/Sprites/Characters/Monsters/MiniBoss/Evil-Wizard/Move/Fall.yy",
+    "path": "folders/Sprites/Entities/Enimies/MiniBoss/Evil-Wizard/Move/Fall.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Oak-Dark",
-    "path": "folders/Sprites/Backgrounds/Florest/Oak-Dark.yy",
+    "path": "folders/Sprites/Maps/Backgrounds/Florest/Oak-Dark.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

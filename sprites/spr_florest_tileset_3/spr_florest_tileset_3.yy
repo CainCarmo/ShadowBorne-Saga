@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Florest",
-    "path": "folders/Sprites/Miscellaneous/Tilesets/Florest.yy",
+    "path": "folders/Sprites/Maps/Tilesets/Florest.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

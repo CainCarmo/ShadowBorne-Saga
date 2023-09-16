@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Menu",
-    "path": "folders/Scripts/Utils/Menu.yy",
+    "path": "folders/Scripts/Interfaces/Menu.yy",
   },
 }
