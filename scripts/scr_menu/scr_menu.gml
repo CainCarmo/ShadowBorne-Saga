@@ -8,7 +8,7 @@ function CreateMenu () constructor {
 	/// @description Cria o menu principal
 	static Initial = function () {
 		var menuOptions = {
-			Continuar: ["Continuar", function () { room_goto(rm_test_mechanics); }],
+			Continuar: ["Continuar", function () { room_goto(rm_loading); }],
 			NovoJogo : ["Novo Jogo", function () {}],
 			Opcoes	 : ["Opções",    function () {}],
 			Creditos : ["Créditos",  function () {}],
@@ -24,7 +24,7 @@ function CreateMenu () constructor {
 		];
 		
 		var optionSelection = undefined;
-		optionSelection[array_length(arrOptions) - 1] = 0;
+			optionSelection[array_length(arrOptions) - 1] = 0;
 		
 		var _mouseX = device_mouse_x_to_gui(0);
 		var _mouseY = device_mouse_y_to_gui(0);

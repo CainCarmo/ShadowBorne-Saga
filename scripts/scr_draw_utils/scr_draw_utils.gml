@@ -16,10 +16,10 @@ function DrawGUI () constructor {
 	/// @param {Real}			 xscale Escala no eixo X
 	/// @param {Real}			 yscale Escala no eixo Y
 	/// @param {Bool}			 border Desenha uma borda "sombra" no texto
-	static Text = function (font, hal, val, text, color, _x, _y, _sx, _sy, border = false) {
+	static Text = function (font, hal = undefined, val = undefined, text, color, _x, _y, _sx, _sy, border = false) {
 		draw_set_font(font);
-		draw_set_halign(hal);
-		draw_set_valign(val);
+		if (hal != undefined) draw_set_halign(hal);
+		if (val != undefined) draw_set_valign(val);
 		
 		if (border) {
 			draw_set_color(c_black);
@@ -34,6 +34,11 @@ function DrawGUI () constructor {
 		
 		draw_set_halign(-1);
 		draw_set_valign(-1);
+	}
+	
+	static Bar = function () {
+		
+		//draw_rectangle_color();
 	}
 }
 

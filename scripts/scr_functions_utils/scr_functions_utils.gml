@@ -26,4 +26,12 @@ function Utils (_obj_entity) constructor {
 	static AssignSpriteToObject = function () {
 		_obj.sprite_index = SpriteMachine(_obj);
 	}
+	
+	static SetTimer = function (time) {
+		_obj.timer = room_speed * time;
+	}
+	
+	static CountTimer = function () {
+		return _obj.timer > 0 ? _obj.timer -- : _obj.timer;
+	}
 }
