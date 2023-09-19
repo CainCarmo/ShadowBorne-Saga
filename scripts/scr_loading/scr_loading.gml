@@ -1,59 +1,85 @@
-#region [Loading Room]
+#region Enums [RegionRoom]
 
-function CreateLoading (_obj_entity) constructor {
-	_obj = _obj_entity;
-	
-	static Cave = function () {}
-	
-	static City = function () {
+enum RegionRoom {
+	Cave,
+	City,
+	Florest
+}
+
+#endregion
+
+#region Functions [Create Loading Elements] & [Set Background Loading Room]
+
+/// @function							 CreateLoading(_obj_loading)
+/// @description						 Cria os elementos da tela de loading
+/// @param {Asset.GMObject} _obj_loading Objeto loading
+function CreateLoading (_obj_loading) {
+	loadingSettings = {
+		TimerSecs: 7,
+		MarginBar: 3,
+		HeightBar: 30,
+		ColorProgressBar: c_lime
+	}
+
+	var loadingMessages = [
+		"Loading",
+		"Loading.",
+		"Loading..",
+		"Loading..."
+	]
 		
-		if (_obj.timer == -1) new Utils(_obj).SetTimer(5);
+	var _widthGUI  = display_get_gui_width();
+	var _heightGUI = display_get_gui_height();
 		
-		var cityBackgrounds = [
-			spr_loading_city_background_1,
-		];
+	/// @Timer
+	if (_obj_loading.timer == -1) new Utils(_obj_loading).SetTimer(loadingSettings.TimerSecs)
 		
-		var layerID = layer_get_id("Background");
-		var backsID = layer_background_get_id(layerID);
+	new Utils(_obj_loading).ListenerTimer()
 		
-		var guid = random(array_length(cityBackgrounds) - 1);
+	/// @Logic Timer
+	if (_obj_loading.timer == 0) {
 		
-		var _mouseX = device_mouse_x_to_gui(0);
-		var _mouseY = device_mouse_y_to_gui(0);
-		
-		var _widthGUI  = display_get_gui_width();
-		var _heightGUI = display_get_gui_height();
-		
-		if (new Utils(_obj).CountTimer() == 0) {
+		_obj_loading.timer = -1;
+		room_goto(_obj_loading.roomDestiny);
+	} 
+	else {
+		/// @Draw
+		if (_obj_loading.timer % (loadingSettings.TimerSecs + 3) == 0)
+			_obj_loading.messageIndex = _obj_loading.messageIndex >= array_length(loadingMessages) - 1 ? 0 : _obj_loading.messageIndex + 1;
 			
-			// do something
-		}
-		else {
-			
-		}
-		
-		layer_background_sprite(backsID, cityBackgrounds[guid]);
+		new DrawGUI().Text(loadingMessages[_obj_loading.messageIndex], 10, (_heightGUI - loadingSettings.HeightBar) - 40, 1, 1, ft_loading);
+		new DrawGUI().LoadingBar(loadingSettings.MarginBar, _heightGUI, _widthGUI - loadingSettings.MarginBar, _heightGUI - loadingSettings.HeightBar, true, loadingSettings.ColorProgressBar, _obj_loading.timer, loadingSettings.TimerSecs);
+	}
+}
 
-		// Loading Text
-		var loadingMessages = [
-			"Loading",
-			"Loading.",
-			"Loading..",
-			"Loading..."
-		]
-		
-		new DrawGUI().Text(ft_menu_initial_options,,, loadingMessages[3], c_white, _heightGUI - 30 - 10, 5, 1, 1);
-
-		// Perfect loadingbar wrap
-		draw_rectangle(3, _heightGUI, _widthGUI - 3, _heightGUI - 30, true);
-		
-		// Perfect loadingbar [full]
-		draw_rectangle_color(3 + 1, _heightGUI - 1, _widthGUI - 3 - 1, _heightGUI - 30, c_lime, c_lime, c_lime, c_lime, false);
+/// @function							 SetLoadingBackground(_obj_loading)
+/// @description						 Alterna os backgrounds da tela de loading de acordo com o save da room
+/// @param {Asset.GMObject} _obj_loading Objeto loading
+function SetLoadingBackground (_obj_loading) {
+	regionRoom = {
+		Cave: [],
+		City: [
+			spr_loading_city_background_1
+		],
+		Florest: []
 	}
 	
-	static Forest = function () {}
+	var UUID = undefined;
 	
-	static Montain = function () {}
+	switch (_obj_loading.loadingRegionBackground) {
+		case RegionRoom.Cave:
+			UUID = random(array_length(regionRoom.Cave) - 1);
+			layer_background_sprite(layer_background_get_id(layer_get_id("Background")), regionRoom.Cave[UUID]);
+			break;
+		case RegionRoom.City:
+			UUID = random(array_length(regionRoom.City) - 1);
+			layer_background_sprite(layer_background_get_id(layer_get_id("Background")), regionRoom.City[UUID]);
+			break;
+		case RegionRoom.Florest:
+			UUID = random(array_length(regionRoom.Florest) - 1);
+			layer_background_sprite(layer_background_get_id(layer_get_id("Background")), regionRoom.Florest[UUID]);
+			break;
+	}
 }
 
 #endregion

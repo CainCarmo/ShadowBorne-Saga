@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Draw",
-    "path": "folders/Scripts/Utils/Draw.yy",
+    "path": "folders/Scripts/Settings/Utils/Draw.yy",
   },
 }

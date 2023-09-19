@@ -4,7 +4,7 @@
 /// @description Funções para criações de menu
 function CreateMenu () constructor {
 	
-	/// @function	 Initial(_obj_entity)
+	/// @function	 Initial()
 	/// @description Cria o menu principal
 	static Initial = function () {
 		var menuOptions = {
@@ -32,21 +32,12 @@ function CreateMenu () constructor {
 		var _widthGUI  = display_get_gui_width();
 		var _heightGUI = display_get_gui_height();
 		
+		var _colorText = undefined;
+		
 		#region Draw [Title]
 		
 		new DrawGUI()
-			.Text(
-				ft_menu_initial_title,
-				fa_center,
-				fa_middle,
-				GAMETITLE,
-				c_white,
-				_widthGUI  / 2,
-				_heightGUI / 4 - 50,
-				1,
-				1,
-				true
-			);
+			.Text(GAMETITLE, _widthGUI  / 2, _heightGUI / 4 - 50, 1, 1, ft_menu_initial_title, c_white, fa_center, fa_middle, true);
 			
 		#endregion
 		
@@ -68,32 +59,19 @@ function CreateMenu () constructor {
 			var _x2 = _widthGUI  / 2 + _widthString;
 			var _y2 = _heightGUI / 2 + _heightString / 2 + _heightString * i;
 			
-			var _fontColor = undefined;
-			
 			if (point_in_rectangle(_mouseX, _mouseY, _x1 - 30, _y1, _x2 + 30, _y2)) {
-				_fontColor = c_red;
+				_colorText = c_red;
 				optionSelection[i] = lerp(optionSelection[i], 1.4, .05);
 				
 				if (mouse_check_button(mb_left)) arrOptions[i][1]();
 			}
 			else {
-				_fontColor = c_white;
+				_colorText = c_white;
 				optionSelection[i] = lerp(optionSelection[i], 1, .05);
 			}
 			
 			new DrawGUI()
-				.Text(
-					ft_menu_initial_options,
-					fa_center,
-					fa_middle,
-					arrOptions[i][0],
-					_fontColor,
-					_widthGUI  / 2,
-					_heightGUI / 2 + _heightString * i,
-					optionSelection[i],
-					optionSelection[i],
-					true
-				);
+				.Text(arrOptions[i][0], _widthGUI  / 2, _heightGUI / 2 + _heightString * i, optionSelection[i], optionSelection[i], ft_menu_initial_options, _colorText, fa_center, fa_middle, true);
 		}
 		
 		#endregion

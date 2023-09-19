@@ -1,1 +1,5 @@
-new CreateLoading(obj_loading).City();
+#region Draw [Loading Elements]
+
+CreateLoading(obj_loading);
+
+#endregion

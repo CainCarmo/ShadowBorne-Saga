@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Common",
-    "path": "folders/Scripts/Utils/Common.yy",
+    "path": "folders/Scripts/Settings/Utils/Common.yy",
   },
 }

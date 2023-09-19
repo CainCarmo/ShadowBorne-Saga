@@ -27,11 +27,16 @@ function Utils (_obj_entity) constructor {
 		_obj.sprite_index = SpriteMachine(_obj);
 	}
 	
+	/// @function		   SetTimer(time)
+	/// @description	   Aplica o valor (segs) ao timer
+	/// @param {Real} time Tempo em segundos
 	static SetTimer = function (time) {
 		_obj.timer = room_speed * time;
 	}
 	
-	static CountTimer = function () {
+	/// @function	 ListenerTimer()
+	/// @description Verifica e itera o timer do objeto passado
+	static ListenerTimer = function () {
 		return _obj.timer > 0 ? _obj.timer -- : _obj.timer;
 	}
 }
