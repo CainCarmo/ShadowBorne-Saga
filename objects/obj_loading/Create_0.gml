@@ -13,7 +13,7 @@ loadingRegionBackground = RegionRoom.City;
 
 #region 
 
-roomDestiny = rm_astravens_city;
+roomDestiny = rm_astravens_city_;
 
 #endregion
 

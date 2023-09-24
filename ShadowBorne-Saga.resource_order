@@ -270,6 +270,7 @@
     {"name":"spr_mushroom_attack","order":2,"path":"sprites/spr_mushroom_attack/spr_mushroom_attack.yy",},
     {"name":"spr_florest_tileset_3","order":2,"path":"sprites/spr_florest_tileset_3/spr_florest_tileset_3.yy",},
     {"name":"spr_montain_rocky_2","order":1,"path":"sprites/spr_montain_rocky_2/spr_montain_rocky_2.yy",},
+    {"name":"rm_astravens_city","order":1,"path":"rooms/rm_astravens_city/rm_astravens_city.yy",},
     {"name":"spr_city_ruin_sky","order":5,"path":"sprites/spr_city_ruin_sky/spr_city_ruin_sky.yy",},
     {"name":"spr_mushroom_attack_combo_first","order":3,"path":"sprites/spr_mushroom_attack_combo_first/spr_mushroom_attack_combo_first.yy",},
     {"name":"spr_goblin_attack_combo_second","order":4,"path":"sprites/spr_goblin_attack_combo_second/spr_goblin_attack_combo_second.yy",},

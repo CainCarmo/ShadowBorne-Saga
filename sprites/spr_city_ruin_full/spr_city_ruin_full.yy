@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_city_ruin_full",
-  "bbox_bottom": 1079,
+  "bbox_bottom": 719,
   "bbox_left": 0,
-  "bbox_right": 2468,
+  "bbox_right": 1645,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 1080,
+  "height": 720,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6ae2df1f-fe5e-4de9-b9b4-dc2581a4a269","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 2469,
+  "width": 1646,
 }

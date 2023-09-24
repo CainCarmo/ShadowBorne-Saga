@@ -3,13 +3,13 @@
 screenWidth  = display_get_width();
 screenHeight = display_get_height();
 
-gameWidth  = 1920;
-gameHeight = 1080;
+gameWidth  = 1280;
+gameHeight = 720;
 
 scaleX = screenWidth / gameWidth;
 scaleY = screenHeight / gameHeight;
 
-scaleMin = min(scaleX, scaleY);
+scaleMin = 2;
 
 #endregion
 
