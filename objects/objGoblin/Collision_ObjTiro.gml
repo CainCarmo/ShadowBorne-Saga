@@ -1,0 +1,1 @@
+objGoblin.vida	-= ObjTiro.dano;

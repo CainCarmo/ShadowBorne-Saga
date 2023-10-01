@@ -1,0 +1,1 @@
+other.vida -= ObjPlayer.dano
