@@ -13,21 +13,21 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"67564c04-de5f-453b-b436-b8d70d5f6127",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84caf960-c984-4d06-afe6-055efee85b9e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3d66a503-bda0-4b69-b118-b38087ff0c42",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cf3b3240-0f21-47d8-a9a1-a36f58f1661d",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 250,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"56a78db5-5e49-4026-93fb-c55e0fb9e9e4","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9c7245fe-82a1-4675-9078-23ff18885275","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
     "name": "Fall",
-    "path": "folders/Sprites/Entities/Enimies/MiniBoss/Evil-Wizard/Move/Fall.yy",
+    "path": "folders/Sprites/Entities/Enemies/Class/SubBoss/EvilWizard/Move/Fall.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"67564c04-de5f-453b-b436-b8d70d5f6127","path":"sprites/spr_evilWizard_fall/spr_evilWizard_fall.yy",},},},"Disabled":false,"id":"8cb0016d-82c0-4e63-9dbb-e54550765b63","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"84caf960-c984-4d06-afe6-055efee85b9e","path":"sprites/spr_evilWizard_fall/spr_evilWizard_fall.yy",},},},"Disabled":false,"id":"7cedcdb7-d37d-4fac-bce5-07801e253c41","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3d66a503-bda0-4b69-b118-b38087ff0c42","path":"sprites/spr_evilWizard_fall/spr_evilWizard_fall.yy",},},},"Disabled":false,"id":"4079fe4c-3132-4c44-9c23-3944e7d2a063","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cf3b3240-0f21-47d8-a9a1-a36f58f1661d","path":"sprites/spr_evilWizard_fall/spr_evilWizard_fall.yy",},},},"Disabled":false,"id":"cfdb98ea-bee8-4f1b-82ec-0b0debccdc01","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

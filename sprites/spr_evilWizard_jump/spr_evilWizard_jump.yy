@@ -13,21 +13,21 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c100dcf7-1127-423c-b1b0-06aa1259cded",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e75b96e8-47d3-4af1-bac5-331366e5f2d0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ad3e1049-99a1-413c-8336-835b527d5896",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"812a1f97-079e-4bf8-b9fc-7ae8e8ea32a4",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 250,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a695ff0e-fd64-4440-9117-f71196fcb185","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ac80f6d9-a581-4916-bdec-2ea4c4182957","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
     "name": "Jump",
-    "path": "folders/Sprites/Entities/Enimies/MiniBoss/Evil-Wizard/Move/Jump.yy",
+    "path": "folders/Sprites/Entities/Enemies/Class/SubBoss/EvilWizard/Move/Jump.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c100dcf7-1127-423c-b1b0-06aa1259cded","path":"sprites/spr_evilWizard_jump/spr_evilWizard_jump.yy",},},},"Disabled":false,"id":"0775ed35-2c9f-4e9c-90d5-7b5fa16db0ca","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e75b96e8-47d3-4af1-bac5-331366e5f2d0","path":"sprites/spr_evilWizard_jump/spr_evilWizard_jump.yy",},},},"Disabled":false,"id":"2e1fd8ce-18e9-4752-b006-43af8bf66286","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ad3e1049-99a1-413c-8336-835b527d5896","path":"sprites/spr_evilWizard_jump/spr_evilWizard_jump.yy",},},},"Disabled":false,"id":"9b3f80c5-0186-420d-8908-f276484bca8d","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"812a1f97-079e-4bf8-b9fc-7ae8e8ea32a4","path":"sprites/spr_evilWizard_jump/spr_evilWizard_jump.yy",},},},"Disabled":false,"id":"ec34ac1a-9cba-480d-8860-f871fb29ce99","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

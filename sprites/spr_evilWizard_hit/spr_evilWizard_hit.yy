@@ -13,22 +13,22 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4abc57e7-ef27-4c0c-a54d-2c463d814046",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"94ca3cae-7511-4b07-88b2-14d06ee95953",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d0be9f97-bd1d-4fdf-8ad1-5fac9c71598d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a76cced9-1e59-4840-9846-be1401f4f066",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c7d6212e-e31b-45b1-a872-291d95ff8185",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3a0217ba-0af0-4bc2-a63f-613452a451fe",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 250,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6756aa1b-f0c6-44e9-adb5-a9bb586160d7","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5312ed99-f1c4-4ea4-b4f0-763d5289bc68","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
     "name": "Hit",
-    "path": "folders/Sprites/Entities/Enimies/MiniBoss/Evil-Wizard/Move/Hit.yy",
+    "path": "folders/Sprites/Entities/Enemies/Class/SubBoss/EvilWizard/Move/Hit.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -56,9 +56,9 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4abc57e7-ef27-4c0c-a54d-2c463d814046","path":"sprites/spr_evilWizard_hit/spr_evilWizard_hit.yy",},},},"Disabled":false,"id":"32b130e5-1e21-44d4-91b4-b32feeade0a0","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"94ca3cae-7511-4b07-88b2-14d06ee95953","path":"sprites/spr_evilWizard_hit/spr_evilWizard_hit.yy",},},},"Disabled":false,"id":"f898d5a5-f863-4dc2-9b33-dc328b6b32b1","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d0be9f97-bd1d-4fdf-8ad1-5fac9c71598d","path":"sprites/spr_evilWizard_hit/spr_evilWizard_hit.yy",},},},"Disabled":false,"id":"fef75748-184e-43bc-950d-96ac7cae3064","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a76cced9-1e59-4840-9846-be1401f4f066","path":"sprites/spr_evilWizard_hit/spr_evilWizard_hit.yy",},},},"Disabled":false,"id":"875175c5-ba17-46ff-abb7-9bd3006190a5","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c7d6212e-e31b-45b1-a872-291d95ff8185","path":"sprites/spr_evilWizard_hit/spr_evilWizard_hit.yy",},},},"Disabled":false,"id":"c7158953-8844-4b1c-90ce-56203e8c4601","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3a0217ba-0af0-4bc2-a63f-613452a451fe","path":"sprites/spr_evilWizard_hit/spr_evilWizard_hit.yy",},},},"Disabled":false,"id":"4bfe18d9-b249-441c-84b8-2e9b3f8c0d73","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

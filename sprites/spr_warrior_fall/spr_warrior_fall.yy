@@ -13,21 +13,21 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f0684393-3cd9-4dc9-a4a1-570caa0a38a3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c8b52107-52f7-476e-98b1-81780df99af9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d9abd89a-feb4-4043-891f-552b0fedd2f2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0606b773-abd8-4831-8926-31b5b0d45b5b",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 89,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7934e00f-be7c-4313-b421-f40e16486587","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7385a03c-e325-405a-b055-19a4859135a0","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 7,
   "parent": {
     "name": "Fall",
-    "path": "folders/Sprites/Entities/Characters/Warrior/Move/Fall.yy",
+    "path": "folders/Sprites/Entities/Player/Class/Warrior/Move/Fall.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f0684393-3cd9-4dc9-a4a1-570caa0a38a3","path":"sprites/spr_warrior_fall/spr_warrior_fall.yy",},},},"Disabled":false,"id":"a6c90d0c-bb43-43e8-998c-71dcfa1d6c98","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c8b52107-52f7-476e-98b1-81780df99af9","path":"sprites/spr_warrior_fall/spr_warrior_fall.yy",},},},"Disabled":false,"id":"c226e205-6c9a-4c6f-9a86-5bfcb73fa0aa","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d9abd89a-feb4-4043-891f-552b0fedd2f2","path":"sprites/spr_warrior_fall/spr_warrior_fall.yy",},},},"Disabled":false,"id":"4aef7208-ebc7-420d-8ec8-432ca82dc75a","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0606b773-abd8-4831-8926-31b5b0d45b5b","path":"sprites/spr_warrior_fall/spr_warrior_fall.yy",},},},"Disabled":false,"id":"ebdd130e-fba4-449c-b2e4-51b062a8a0af","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
