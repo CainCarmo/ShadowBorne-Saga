@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Die",
-    "path": "folders/Sprites/Entities/Player/Class/Wizard/Move/Die.yy",
+    "name": "Walk",
+    "path": "folders/Sprites/Entities/Player/Class/Wizard/Move/Walk.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
