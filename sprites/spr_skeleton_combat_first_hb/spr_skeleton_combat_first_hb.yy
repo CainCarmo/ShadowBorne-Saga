@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_skeleton_combat_first_hb",
-  "bbox_bottom": 100,
+  "bbox_bottom": 147,
   "bbox_left": 53,
   "bbox_right": 147,
   "bbox_top": 44,

@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Combat",
-    "path": "folders/Scripts/Mechanics/Entities/Enemies/Class/Boss/Death/Combat.yy",
+    "name": "Death",
+    "path": "folders/Scripts/Mechanics/Entities/Enemies/Class/Boss/Death.yy",
   },
 }

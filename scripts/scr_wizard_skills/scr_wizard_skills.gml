@@ -1,0 +1,3 @@
+function WizardSkills () constructor {
+
+}

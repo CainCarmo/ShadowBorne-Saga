@@ -1,0 +1,3 @@
+function CreateLoading () {}
+
+function SetLoadingBackground () {}
