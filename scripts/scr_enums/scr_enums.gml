@@ -69,7 +69,7 @@ enum PlayerMainWeapon {
 		Hand,
 		Sword
 	}
-	enum WarriorTypeCombat {
+	enum WarriorTypeAttack {
 		Normal,
 		Break,
 		JumpSpecial
@@ -82,6 +82,18 @@ enum PlayerMainWeapon {
 #endregion
 
 #region [Non-Player Character (NPC)]
+
+enum NPC {
+	Leoric,
+	Starfeon
+}
+
+enum NPCState {
+	Idle,
+	Appear,
+	Disappear
+}
+
 #endregion
 
 #region [Enimies]

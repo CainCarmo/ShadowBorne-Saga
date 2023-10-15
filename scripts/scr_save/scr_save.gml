@@ -1,4 +1,5 @@
 global.SaveData = {
+	LastSavePlayed: undefined,
 	Saves: [
 		{
 			IsEmpty: true,
@@ -39,6 +40,7 @@ global.SaveData = {
 		},
 		{
 			IsEmpty: true,
+			LastSavePlayed: false,
 			Character: {
 				Class: undefined,
 				Status: {
@@ -76,43 +78,7 @@ global.SaveData = {
 		},
 		{
 			IsEmpty: true,
-			Character: {
-				Class: undefined,
-				Status: {
-					Life: undefined,
-					Mana: undefined,
-					Armor: undefined,
-					Strength: undefined
-				},
-				Items: {
-					Coins: undefined,
-					Potions: {
-						Life: {
-							Count: 0
-						},
-						Mana: {
-							Count: 0
-						}
-					},
-					Equipaments: {
-					
-					}
-				},
-				Progression: {
-					Level: {
-						Count: 0,
-						Experience: 0
-					},
-				}
-			},
-			Room: {
-				Local: undefined,
-				_x: undefined,
-				_y: undefined
-			}
-		},
-		{
-			IsEmpty: true,
+			LastSavePlayed: false,
 			Character: {
 				Class: undefined,
 				Status: {
@@ -154,16 +120,17 @@ global.SaveData = {
 			Type: DeviceController.Keyboard,
 			Commands: {
 				Keyboard: {
-					Dash:   vk_space,
+					Dash:   "S",
 					Left:   "A",
 					Right:  "D",
-					Jump:   "S",
+					Jump:   vk_space,
 					Attack: mb_left,
 					
 					// @Warrior
 					Wield:  "E",
 					
 					// @Wizard
+					Teleport: "E"
 				}
 			}
 		}
@@ -172,7 +139,7 @@ global.SaveData = {
 
 function CreateSave () constructor {
 	static Save = function () {
-		var json   = json_stringify(global.SaveState);
+		var json   = json_stringify(global.SaveData);
 		var buffer = buffer_create(string_byte_length(json) + 1, buffer_fixed, 1);
 		
 		buffer_write(buffer, buffer_string, json);
@@ -188,50 +155,51 @@ function CreateSave () constructor {
 		 
 		buffer_delete(buffer);
 		 
-		var saveState = json_parse(json);
-		 
-		global.SaveState.Saves[saveIndex] = array_get(saveState.Saves, saveIndex);
-		global.SaveState.Settings = struct_get(saveState, "Settings");
+		var saveData = json_parse(json);
+		
+		global.SaveData.LastSavePlayed = struct_get(saveData, "LastSavePlayed");
+		global.SaveData.Saves[saveIndex] = array_get(saveData.Saves, saveIndex);
+		global.SaveData.Settings = struct_get(saveData, "Settings");
 	}
 	static Delete = function (saveIndex) {
 		if (!new Utils().VerifySaveFileExists()) exit;
 		
 		var modelStructUserDataEmpty = {
-			IsEmpty: true,
-			Character: {
-				Class: undefined,
-				Status: {
-					Life: undefined,
-					Mana: undefined,
-					Armor: undefined,
-					Strength: undefined
-				},
-				Items: {
-					Coins: undefined,
-					Potions: {
-						Life: {
-							Count: 0
+				IsEmpty: true,
+				Character: {
+					Class: undefined,
+					Status: {
+						Life: undefined,
+						Mana: undefined,
+						Armor: undefined,
+						Strength: undefined
+					},
+					Items: {
+						Coins: undefined,
+						Potions: {
+							Life: {
+								Count: 0
+							},
+							Mana: {
+								Count: 0
+							}
 						},
-						Mana: {
-							Count: 0
+						Equipaments: {
+					
 						}
 					},
-					Equipaments: {
-					
+					Progression: {
+						Level: {
+							Count: 0,
+							Experience: 0
+						},
 					}
 				},
-				Progression: {
-					Level: {
-						Count: 0,
-						Experience: 0
-					},
+				Room: {
+					Local: undefined,
+					_x: undefined,
+					_y: undefined
 				}
-			},
-			Room: {
-				Local: undefined,
-				_x: undefined,
-				_y: undefined
-			}
 		};
 		
 		global.SaveData.Saves[saveIndex] = modelStructUserDataEmpty;
@@ -239,7 +207,7 @@ function CreateSave () constructor {
 		new CreateSave().Save();
 	}
 	static CountAllSaves = function () {
-		if (!new Utils().VerifySaveFileExists()) exit;
+		if (!new Utils().VerifySaveFileExists()) return 0;
 		
 		var countSaves = 0;
 		
@@ -248,10 +216,10 @@ function CreateSave () constructor {
 		 
 		buffer_delete(buffer);
 		 
-		var saveState = json_parse(json);
+		var saveData = json_parse(json);
 		
-		for (var i = 0; i < array_length(saveState.Saves); i++) {
-			if (!saveState.Saves[i].IsEmpty) countSaves++
+		for (var i = 0; i < array_length(saveData.Saves); i++) {
+			if (!saveData.Saves[i].IsEmpty) countSaves++
 		}
 		
 		return countSaves;

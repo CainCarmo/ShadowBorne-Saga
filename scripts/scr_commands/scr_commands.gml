@@ -1,15 +1,16 @@
 function ControllerMappingCommands () constructor {
 	KeyboardCommands = {
-		Dash:   keyboard_check_released(global.SaveData.Settings.Controllers.Commands.Keyboard.Dash),
+		Dash:   keyboard_check_released(ord(global.SaveData.Settings.Controllers.Commands.Keyboard.Dash)),
 		Left:   keyboard_check(ord(global.SaveData.Settings.Controllers.Commands.Keyboard.Left)),
 		Right:  keyboard_check(ord(global.SaveData.Settings.Controllers.Commands.Keyboard.Right)),
-		Jump:   keyboard_check_pressed(ord(global.SaveData.Settings.Controllers.Commands.Keyboard.Jump)), 
+		Jump:   keyboard_check_pressed(global.SaveData.Settings.Controllers.Commands.Keyboard.Jump), 
 		Attack: mouse_check_button(global.SaveData.Settings.Controllers.Commands.Keyboard.Attack),
 		
 		// @Warrior
 		Wield: keyboard_check_released(ord(global.SaveData.Settings.Controllers.Commands.Keyboard.Wield)),
 		
 		// @Wizard
+		Teleport: keyboard_check_released(ord(global.SaveData.Settings.Controllers.Commands.Keyboard.Teleport))
 	}
 	
 	static Moves = function (_action) {
@@ -28,12 +29,14 @@ function ControllerMappingCommands () constructor {
 						return KeyboardCommands.Jump;
 					case PlayerActions.Wield:
 						return KeyboardCommands.Wield;
+					case PlayerActions.Teleport:
+						return KeyboardCommands.Teleport;
 				}
 				break;
 		}
 	}
 	static Combat = function () {
-		var attackCommands = false;
+		var attackCommand = false;
 		
 		switch (global.SaveData.Settings.Controllers.Type) {
 			case DeviceController.Joystick:
@@ -41,14 +44,18 @@ function ControllerMappingCommands () constructor {
 			case DeviceController.Keyboard:
 				switch (obj_player.class) {
 					case PlayerClass.Wizard:
+						attackCommand = KeyboardCommands.Attack;
 						break;
 					case PlayerClass.Warrior:
 						if (KeyboardCommands.Attack) {
-							
+							attackCommand = KeyboardCommands.Attack;
+							obj_player.wAttackType = WarriorTypeAttack.Normal;
 						}
 						break;
 				}
 				break;
 		}
+		
+		return attackCommand;
 	}
 }
