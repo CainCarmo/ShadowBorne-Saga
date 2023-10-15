@@ -7,29 +7,29 @@ function ControllerSprite (_obj_entity) constructor {
 	}
 	
 	static AssignSpriteToObject = function () {
-		switch (_obj.type) {
-			case EntityType.Player:
+		switch (_obj.identity) {
+			case Identity.Player:
 				_obj.sprite_index = new MachineSprite().Player();
 				break;
-			case EntityType.NPC:
+			case Identity.NPC:
 				_obj.sprite_index = new MachineSprite().NPC();
 				break;
-			case EntityType.Boss:
+			case Identity.Boss:
 				_obj.sprite_index = new MachineSprite().Boss();
 				break;
-			case EntityType.SubBoss:
+			case Identity.SubBoss:
 				_obj.sprite_index = new MachineSprite().SubBoss();
 				break;
-			case EntityType.Minion:
+			case Identity.Minion:
 				_obj.sprite_index = new MachineSprite().Minion();
 				break;
-			case EntityType.Obelisk:
+			case Identity.Obelisk:
 				_obj.sprite_index = new MachineSprite().Obelisk();
 				break;
-			case EntityType.Totem:
+			case Identity.Totem:
 				_obj.sprite_index = new MachineSprite().Totem();
 				break;
-			case EntityType.Chest:
+			case Identity.Chest:
 				_obj.sprite_index = new MachineSprite().Chest();
 				break;
 		}	

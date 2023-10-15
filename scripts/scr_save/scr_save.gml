@@ -206,6 +206,22 @@ function CreateSave () constructor {
 		
 		new CreateSave().Save();
 	}
+	static LoadAllStruct = function () {
+		if (!new Utils().VerifySaveFileExists()) exit;
+		 
+		var buffer = buffer_load(FILESAVENAME);
+		var json   = buffer_read(buffer, buffer_string);
+		 
+		buffer_delete(buffer);
+		 
+		var saveData = json_parse(json);
+		
+		global.SaveData.LastSavePlayed = struct_get(saveData, "LastSavePlayed");
+		global.SaveData.Settings = struct_get(saveData, "Settings");
+		
+		for (var i = 0; i < new CreateSave().CountAllSaves(); i++)
+			global.SaveData.Saves[i] = array_get(saveData.Saves, i);
+	}
 	static CountAllSaves = function () {
 		if (!new Utils().VerifySaveFileExists()) return 0;
 		

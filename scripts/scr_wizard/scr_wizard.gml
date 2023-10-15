@@ -1,8 +1,6 @@
 function WizardStates () constructor {
 	static Die = function () {
 	}
-	static Fly = function () {
-	}
 	static Hit = function () {
 	}
 	static Run = function () {
@@ -15,8 +13,6 @@ function WizardStates () constructor {
 	}
 	static Walk	= function () {
 	}
-	static Climb = function () {
-	}
 	static Wield = function () {
 	}
 	static Attack = function () {
@@ -24,8 +20,6 @@ function WizardStates () constructor {
 	static Dialog = function () {
 	}
 	static Cutscene	= function () {
-	}
-	static Consuming = function () {
 	}
 }
 

@@ -52,47 +52,40 @@ function MachineSprite () constructor {
 				if (obj_player.class == PlayerClass.Warrior) {
 					var attackSprite = undefined;
 					
-					switch (obj_player.wAttackType) {
-						case WarriorTypeAttack.Break:
-							attackSprite = spr_warrior_break;
-							break;
-						case WarriorTypeAttack.Normal:
-							if (obj_player.hadGroundCollised) {
-								if (obj_player.comboState) {
-									switch (obj_player.comboIndex) {
-										case WarriorComboIndex.First:
-											attackSprite = obj_player.weapon == WarriorWeaponCombat.Hand
-												? spr_warrior_combat_sg_second
-												: spr_warrior_combat_wg_second;
-											break;
-										case WarriorComboIndex.Second:
-											attackSprite = obj_player.weapon == WarriorWeaponCombat.Hand
-												? spr_warrior_combat_sg_third
-												: spr_warrior_combat_wg_third;
-											break;
-									}
-								}
-								else {
+					if (obj_player.hadGroundCollised) {
+						if (obj_player.comboState) {
+							switch (obj_player.comboIndex) {
+								case WarriorComboIndex.First:
 									attackSprite = obj_player.weapon == WarriorWeaponCombat.Hand
-										? spr_warrior_combat_sg_first
-										: spr_warrior_combat_wg_first;
-								}
+										? spr_warrior_combat_sg_second
+										: spr_warrior_combat_wg_second;
+									break;
+								case WarriorComboIndex.Second:
+									attackSprite = obj_player.weapon == WarriorWeaponCombat.Hand
+										? spr_warrior_combat_sg_third
+										: spr_warrior_combat_wg_third;
+									break;
 							}
-							else {
-								var playerOriginCenter = obj_player.y - obj_player.sprite_height * .5;
+						}
+						else {
+							attackSprite = obj_player.weapon == WarriorWeaponCombat.Hand
+								? spr_warrior_combat_sg_first
+								: spr_warrior_combat_wg_first;
+						}
+					}
+					else {
+						var playerOriginCenter = obj_player.y - obj_player.sprite_height * .5;
 							
-								switch (obj_player.weapon) {
-									case WarriorWeaponCombat.Hand:
-										attackSprite = spr_warrior_combat_sa;
-										break;
-									case WarriorWeaponCombat.Sword:
-										attackSprite = playerOriginCenter >= mouse_y
-											? spr_warrior_combat_wa_above
-											: spr_warrior_combat_wa_front;
-										break;
-								}
-							}
-							break;
+						switch (obj_player.weapon) {
+							case WarriorWeaponCombat.Hand:
+								attackSprite = spr_warrior_combat_sa;
+								break;
+							case WarriorWeaponCombat.Sword:
+								attackSprite = playerOriginCenter >= mouse_y
+									? spr_warrior_combat_wa_above
+									: spr_warrior_combat_wa_front;
+								break;
+						}
 					}
 					
 					return attackSprite;
@@ -114,8 +107,6 @@ function MachineSprite () constructor {
 				else 
 					return spr_wizard_idle;
 					
-				break;
-			case EntityStates.Consuming:
 				break;
 		}
 	}
@@ -210,16 +201,6 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Climb:
-				switch (_obj.name) {
-					case Boss.Death:
-						break;
-					case Boss.DemonSkeleton:
-						break;
-					case Boss.KingSlime:
-						break;
-				}
-				break;
 			case EntityStates.Wield:
 				switch (_obj.name) {
 					case Boss.Death:
@@ -252,16 +233,6 @@ function MachineSprite () constructor {
 				}
 				break;
 			case EntityStates.Cutscene:
-				switch (_obj.name) {
-					case Boss.Death:
-						break;
-					case Boss.DemonSkeleton:
-						break;
-					case Boss.KingSlime:
-						break;
-				}
-				break;
-			case EntityStates.Consuming:
 				switch (_obj.name) {
 					case Boss.Death:
 						break;
@@ -369,16 +340,6 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Climb:
-				switch (_obj.name) {
-					case SubBoss.EvilWizard:
-						break;
-					case SubBoss.Nightmare:
-						break;
-					case SubBoss.Primordial:
-						break;
-				}
-				break;
 			case EntityStates.Wield:
 				switch (_obj.name) {
 					case SubBoss.EvilWizard:
@@ -410,16 +371,6 @@ function MachineSprite () constructor {
 				}
 				break;
 			case EntityStates.Cutscene:
-				switch (_obj.name) {
-					case SubBoss.EvilWizard:
-						break;
-					case SubBoss.Nightmare:
-						break;
-					case SubBoss.Primordial:
-						break;
-				}
-				break;
-			case EntityStates.Consuming:
 				switch (_obj.name) {
 					case SubBoss.EvilWizard:
 						break;
@@ -591,24 +542,6 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Climb:
-				switch (_obj.name) {
-					case Minion.Hound:
-						break;
-					case Minion.Goblin:
-						break;
-					case Minion.Slime:
-						break;
-					case Minion.EvilEye:
-						break;
-					case Minion.Skeleton:
-						break;
-					case Minion.Mushroom:
-						break;
-					case Minion.FireWorm:
-						break;
-				}
-				break;
 			case EntityStates.Wield:
 				switch (_obj.name) {
 					case Minion.Hound:
@@ -665,24 +598,6 @@ function MachineSprite () constructor {
 				}
 				break;
 			case EntityStates.Cutscene:
-				switch (_obj.name) {
-					case Minion.Hound:
-						break;
-					case Minion.Goblin:
-						break;
-					case Minion.Slime:
-						break;
-					case Minion.EvilEye:
-						break;
-					case Minion.Skeleton:
-						break;
-					case Minion.Mushroom:
-						break;
-					case Minion.FireWorm:
-						break;
-				}
-				break;
-			case EntityStates.Consuming:
 				switch (_obj.name) {
 					case Minion.Hound:
 						break;

@@ -1,6 +1,8 @@
 function OptionsInitial () constructor {
 	static Continue = function () {
+		new CreateSave().LoadAllStruct();
 		
+		room_goto(rm_test);
 	}
 	static NewGame = function () {
 		new DrawOptionsElements().BackToHome();

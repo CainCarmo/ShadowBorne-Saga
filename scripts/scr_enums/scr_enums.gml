@@ -9,12 +9,10 @@ enum EntityStates {
 	Idle,
 	Jump,
 	Walk,
-	Climb,
 	Wield,
 	Attack,
 	Dialog,
-	Cutscene,
-	Consuming
+	Cutscene
 }
 
 enum StructsState {
@@ -26,6 +24,17 @@ enum StructsState {
 enum StockState {
 	Open,
 	Closed
+}
+
+enum Identity {
+	Player,
+	NPC,
+	Boss,
+	SubBoss,
+	Minion,
+	Obelisk,
+	Totem,
+	Chest
 }
 
 #endregion
@@ -69,11 +78,6 @@ enum PlayerMainWeapon {
 		Hand,
 		Sword
 	}
-	enum WarriorTypeAttack {
-		Normal,
-		Break,
-		JumpSpecial
-	}
 
 	// @Wizard
 	
@@ -83,7 +87,7 @@ enum PlayerMainWeapon {
 
 #region [Non-Player Character (NPC)]
 
-enum NPC {
+enum nameNPC {
 	Leoric,
 	Starfeon
 }

@@ -2,32 +2,34 @@ function MachineState () constructor {
 	static Player = function () {
 		switch (obj_player.state) {
 			case EntityStates.Die:
-				break;
-			case EntityStates.Fly:
+				new PlayerStates().Die();
 				break;
 			case EntityStates.Hit:
-				break;
-			case EntityStates.Run:
+				new PlayerStates().Hit();
 				break;
 			case EntityStates.Dash:
+				new PlayerStates().Dash();
 				break;
 			case EntityStates.Idle:
+				new PlayerStates().Idle();
 				break;
 			case EntityStates.Jump:
+				new PlayerStates().Jump();
 				break;
 			case EntityStates.Walk:
-				break;
-			case EntityStates.Climb:
+				new PlayerStates().Walk();
 				break;
 			case EntityStates.Wield:
+				new PlayerStates().Wield();
 				break;
 			case EntityStates.Attack:
+				new PlayerStates().Attack();
 				break;
 			case EntityStates.Dialog:
+				new PlayerStates().Dialog();
 				break;
 			case EntityStates.Cutscene:
-				break;
-			case EntityStates.Consuming:
+				new PlayerStates().Cutscene();
 				break;
 		}
 	}
@@ -50,8 +52,6 @@ function MachineState () constructor {
 				break;
 			case EntityStates.Walk:
 				break;
-			case EntityStates.Climb:
-				break;
 			case EntityStates.Wield:
 				break;
 			case EntityStates.Attack:
@@ -59,8 +59,6 @@ function MachineState () constructor {
 			case EntityStates.Dialog:
 				break;
 			case EntityStates.Cutscene:
-				break;
-			case EntityStates.Consuming:
 				break;
 		}
 	}
@@ -83,8 +81,6 @@ function MachineState () constructor {
 				break;
 			case EntityStates.Walk:
 				break;
-			case EntityStates.Climb:
-				break;
 			case EntityStates.Wield:
 				break;
 			case EntityStates.Attack:
@@ -92,8 +88,6 @@ function MachineState () constructor {
 			case EntityStates.Dialog:
 				break;
 			case EntityStates.Cutscene:
-				break;
-			case EntityStates.Consuming:
 				break;
 		}
 	}

@@ -42,17 +42,7 @@ function ControllerMappingCommands () constructor {
 			case DeviceController.Joystick:
 				break;
 			case DeviceController.Keyboard:
-				switch (obj_player.class) {
-					case PlayerClass.Wizard:
-						attackCommand = KeyboardCommands.Attack;
-						break;
-					case PlayerClass.Warrior:
-						if (KeyboardCommands.Attack) {
-							attackCommand = KeyboardCommands.Attack;
-							obj_player.wAttackType = WarriorTypeAttack.Normal;
-						}
-						break;
-				}
+				attackCommand = KeyboardCommands.Attack;
 				break;
 		}
 		
