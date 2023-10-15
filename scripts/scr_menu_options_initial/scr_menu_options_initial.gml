@@ -2,7 +2,7 @@ function OptionsInitial () constructor {
 	static Continue = function () {
 		new CreateSave().LoadAllStruct();
 		
-		room_goto(rm_test);
+		room_goto(rm_astravens_initial);
 	}
 	static NewGame = function () {
 		new DrawOptionsElements().BackToHome();
@@ -302,7 +302,7 @@ function DrawOptionsElements () constructor {
 					
 					new CreateSave().Save();
 					
-					room_goto(rm_test)
+					room_goto(rm_astravens_initial);
 				}	
 			}
 			

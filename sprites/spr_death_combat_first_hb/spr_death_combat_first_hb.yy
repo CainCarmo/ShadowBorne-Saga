@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_death_combat_first_hb",
-  "bbox_bottom": 247,
+  "bbox_bottom": 225,
   "bbox_left": 74,
   "bbox_right": 238,
   "bbox_top": 70,
@@ -25,7 +25,8 @@
   "height": 250,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f8f27547-2999-4ada-8184-639b9638da71","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2f820034-8091-4ee6-8dbc-55e2100896ba","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f8f27547-2999-4ada-8184-639b9638da71","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":false,},
   ],
   "nineSlice": {
     "resourceType": "GMNineSliceData",
