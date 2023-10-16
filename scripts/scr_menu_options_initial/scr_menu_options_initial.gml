@@ -16,9 +16,13 @@ function OptionsInitial () constructor {
 	}
 	static Disclaimer = function () {
 		new DrawOptionsElements().BackToHome();
+		
+		draw_sprite(spr_disclaimer, 0, 450, 150);
 	}
 	static Credits = function () {
 		new DrawOptionsElements().BackToHome();
+		
+		draw_sprite(spr_banner, 0, 450, 10)
 	}
 	static Close = function () {
 		game_end();
@@ -255,7 +259,7 @@ function DrawOptionsElements () constructor {
 		for (var i = 0; i < array_length(arrCharacters); i++) {
 			var colorRectangle = undefined;
 			
-			if (obj_menu.classSelected != undefined) {
+			if (obj_menu.classSelected == PlayerClass.Warrior) {
 				draw_rectangle_color(
 					(wGUI / 2) + 155,
 					hGUI - 45,

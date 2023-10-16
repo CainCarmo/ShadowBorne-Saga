@@ -59,7 +59,7 @@ function PlayerStates () constructor {
 		if (obj_player.hadGroundCollised)
 			AlterPlayerDefault(0, 0,, EntityStates.Idle);
 		else if (obj_player.attack)
-			AlterPlayerDefault(,,, EntityStates.Attack, true);
+			AlterPlayerDefault(0, 0,, EntityStates.Attack, true);
 	}
 	static Walk	= function () {
 		switch (obj_player.class) {

@@ -13,3 +13,7 @@ wield  = new ControllerMappingCommands().Moves(PlayerActions.Wield);
 // @Wizard
 teleport = new ControllerMappingCommands().Moves(PlayerActions.Teleport);
 #endregion
+
+if vida<3{
+	room_restart();
+}

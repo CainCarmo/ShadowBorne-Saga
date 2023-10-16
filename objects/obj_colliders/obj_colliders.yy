@@ -30,5 +30,5 @@
     "path": "sprites/spr_colliders_block/spr_colliders_block.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

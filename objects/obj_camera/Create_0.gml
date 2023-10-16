@@ -3,8 +3,8 @@
 screenWidth  = display_get_width();
 screenHeight = display_get_height();
 
-gameWidth  = 1280;
-gameHeight = 720;
+gameWidth  = 1366;
+gameHeight = 768;
 
 scaleX = screenWidth / gameWidth;
 scaleY = screenHeight / gameHeight;

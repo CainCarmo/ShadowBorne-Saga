@@ -53,3 +53,5 @@ quests = [];
 
 // @Debug
 view_debugger = true;
+
+vida = 3;

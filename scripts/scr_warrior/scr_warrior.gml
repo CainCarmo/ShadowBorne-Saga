@@ -1,6 +1,9 @@
 function WarriorStates () constructor {
 	static Die = function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
+		
+		if (new ControllerSprite(obj_player).ListenerSpriteIndex(1))
+			room_restart();
 	}
 	static Hit = function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
@@ -11,7 +14,7 @@ function WarriorStates () constructor {
 		AlterPlayerDefault(obj_player.speed_horizontal + (obj_player.dashDistance * obj_player.scale_x));
 		
 		if (new ControllerSprite(obj_player).ListenerSpriteIndex(1))
-			AlterPlayerDefault(0, 0, EntityStates.Idle, true);
+			AlterPlayerDefault(0, 0,, EntityStates.Idle, true);
 	}
 	static Idle	= function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
@@ -96,6 +99,14 @@ function WarriorCombat () constructor {
 					break;
 			}
 		}
+	}
+	static CollidionAttack = function () {
+		//if (place_meeting(obj_player.x, obj_player.y, )) {
+					
+		//}
+		//if (place_meeting(obj_player.x, obj_player.y, )) {
+			
+		//}
 	}
 }
 
