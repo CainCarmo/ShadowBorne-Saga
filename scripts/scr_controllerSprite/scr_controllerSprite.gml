@@ -12,16 +12,16 @@ function ControllerSprite (_obj_entity) constructor {
 				_obj.sprite_index = new MachineSprite().Player();
 				break;
 			case Identity.NPC:
-				_obj.sprite_index = new MachineSprite().NPC();
+				_obj.sprite_index = new MachineSprite().NPC(_obj);
 				break;
 			case Identity.Boss:
-				_obj.sprite_index = new MachineSprite().Boss();
+				_obj.sprite_index = new MachineSprite().Boss(_obj);
 				break;
 			case Identity.SubBoss:
-				_obj.sprite_index = new MachineSprite().SubBoss();
+				_obj.sprite_index = new MachineSprite().SubBoss(_obj);
 				break;
 			case Identity.Minion:
-				_obj.sprite_index = new MachineSprite().Minion();
+				_obj.sprite_index = new MachineSprite().Minion(_obj);
 				break;
 			case Identity.Obelisk:
 				_obj.sprite_index = new MachineSprite().Obelisk();

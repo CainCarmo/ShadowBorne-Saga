@@ -205,6 +205,7 @@ function CreateSave () constructor {
 		global.SaveData.Saves[saveIndex] = modelStructUserDataEmpty;
 		
 		new CreateSave().Save();
+		new CreateSave().LoadAllStruct();
 	}
 	static LoadAllStruct = function () {
 		if (!new Utils().VerifySaveFileExists()) exit;

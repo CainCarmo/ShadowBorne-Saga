@@ -103,10 +103,11 @@ function DrawOptionsElements () constructor {
 				},
 				Start:  function (indexSave) {
 					global.SaveData.LastSavePlayed = indexSave;
-					new CreateSave().Save();
-					new CreateSave().Load(indexSave);
 					
-					room_goto(rm_test);
+					new CreateSave().Load(indexSave);
+					new CreateSave().Save();
+					
+					room_goto(rm_astravens_initial);
 				},
 				Delete: function (indexSave) {
 					new CreateSave().Delete(indexSave);
@@ -282,8 +283,10 @@ function DrawOptionsElements () constructor {
 						wGUI - (wGUI / 2) - 150,
 						hGUI - 100,
 						(wGUI / 2) + 150,
-						hGUI - 50,
+						hGUI - 50
 				) && mouse_check_button(mb_left)) {
+					new CreateSave().LoadAllStruct();
+					
 					global.SaveData.LastSavePlayed = obj_menu.saveIndex;
 					
 					global.SaveData.Saves[obj_menu.saveIndex].IsEmpty = false;
@@ -296,7 +299,7 @@ function DrawOptionsElements () constructor {
 					
 					global.SaveData.Saves[obj_menu.saveIndex].Character.Items.Coins = 0;
 					
-					global.SaveData.Saves[obj_menu.saveIndex].Room.Local = rm_astravens_ruins;
+					global.SaveData.Saves[obj_menu.saveIndex].Room.Local = rm_astravens_initial;
 					global.SaveData.Saves[obj_menu.saveIndex].Room._x = 150;
 					global.SaveData.Saves[obj_menu.saveIndex].Room._y = 150;
 					
@@ -342,7 +345,7 @@ function DrawOptionsElements () constructor {
 					wGUI / 2 * .65 + (250 * i),
 					hGUI / 2 * .65,
 					wGUI / 2 * .65 + 200 + (250 * i),
-					hGUI / 2 * .65 + 200,
+					hGUI / 2 * .65 + 200
 			) && mouse_check_button(mb_left) && obj_menu.timer == 0)
 				obj_menu.classSelected = arrCharacters[i].Class;
 		}

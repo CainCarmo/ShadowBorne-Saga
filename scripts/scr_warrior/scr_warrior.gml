@@ -41,7 +41,7 @@ function WarriorStates () constructor {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
 		
 		if (new ControllerSprite(obj_player).ListenerSpriteIndex(1))
-			AlterPlayerDefault(0, 0,, EntityStates.Idle, true)
+			AlterPlayerDefault(0, 0,, EntityStates.Idle, true);
 	}
 	static Attack = function () {
 		if (!obj_player.hadGroundCollised)
@@ -75,18 +75,24 @@ function WarriorCombat () constructor {
 		var isComboIndexValid = obj_player.comboIndex <= WarriorComboIndex.Second;
 		var isFrameComboValid = new ControllerSprite(obj_player).ListenerSpriteIndex(2);
 		
-		if (obj_player.attack && isFrameComboValid)
-			new AlterWarrior(AlterPlayerDefault(0,0)).Attack(true, WarriorComboIndex.First);
-		else if (new ControllerSprite(obj_player).ListenerSpriteIndex(1))
-			new AlterWarrior(AlterPlayerDefault(,,, EntityStates.Idle, true)).Attack(false, WarriorComboIndex.None);
+		if (obj_player.attack && isFrameComboValid) {
+			AlterPlayerDefault(0,0)
+			new AlterWarrior().Attack(true, WarriorComboIndex.First);
+		}
+		else if (new ControllerSprite(obj_player).ListenerSpriteIndex(1)) {
+			AlterPlayerDefault(,,, EntityStates.Idle, true)
+			new AlterWarrior().Attack(false, WarriorComboIndex.None);
+		}
 		
 		if (isComboIndexValid && new ControllerSprite(obj_player).ListenerSpriteIndex(1)) {
 			switch (obj_player.comboIndex) {
 				case WarriorComboIndex.First:
-					new AlterWarrior(AlterPlayerDefault(,,,, true)).Attack(, WarriorComboIndex.Second);
+					AlterPlayerDefault(,,,, true);
+					new AlterWarrior().Attack(, WarriorComboIndex.Second);
 					break;
 				case WarriorComboIndex.Second:
-					new AlterWarrior(AlterPlayerDefault(,,,, true)).Attack(false, WarriorComboIndex.None);
+					AlterPlayerDefault(,,,, true);
+					new AlterWarrior().Attack(false, WarriorComboIndex.None);
 					break;
 			}
 		}
