@@ -1,28 +1,39 @@
-function WizardStates () constructor {
+function WizardState () constructor {
 	static Die = function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
 	}
 	static Hit = function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
+		
+		if (new ControllerSprite(obj_player).ListenerSpriteIndex(1))
+			AlterPlayerDefault(,,, EntityState.Idle, true);
 	}
-	static Run = function () {
+	static Dash = function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
+		
+		if (new ControllerSprite(obj_player).ListenerSpriteIndex(1))
+			AlterPlayerDefault(,,, EntityState.Idle, true);
 	}
 	static Idle	= function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
+		
+		if (obj_player.dash)
+			new WarriorCommands().Dash();
 	}
 	static Jump	= function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
 	}
 	static Walk	= function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
+		
+		if (obj_player.dash)
+			new WarriorCommands().Dash();
 	}
 	static Attack = function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
 		
-		if (new ControllerSprite(obj_player).ListenerSpriteIndex(1)) {
-			AlterPlayerDefault(,,, EntityStates.Idle, true)
-		}
+		if (new ControllerSprite(obj_player).ListenerSpriteIndex(1))
+			AlterPlayerDefault(,,, EntityState.Idle, true);
 	}
 	static Dialog = function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
@@ -30,9 +41,4 @@ function WizardStates () constructor {
 	static Cutscene	= function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
 	}
-}
-
-function AlterWizard () constructor {
-	static Move = function () {}
-	static Combat = function () {}
 }

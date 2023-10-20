@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Wizard",
-    "path": "folders/Scripts/Mechanics/Entities/Player/Class/Wizard.yy",
+    "path": "folders/Scripts/Mechanics/Entities/Player/Wizard.yy",
   },
 }

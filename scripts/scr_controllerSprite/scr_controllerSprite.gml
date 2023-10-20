@@ -9,19 +9,38 @@ function ControllerSprite (_obj_entity) constructor {
 	static AssignSpriteToObject = function () {
 		switch (_obj.identity) {
 			case Identity.Player:
-				_obj.sprite_index = new MachineSprite().Player();
+				var spritesPlayer = new MachineSprite().Player();
+				
+				if (_obj.state == EntityState.Attack) {
+					_obj.sprite_index = spritesPlayer[0];
+					//_obj.mask_index   = spritesPlayer[1];
+				}
+				else {
+					_obj.sprite_index = spritesPlayer;
+					//_obj.mask_index   = spritesPlayer;
+				}
+				
 				break;
 			case Identity.NPC:
 				_obj.sprite_index = new MachineSprite().NPC(_obj);
 				break;
 			case Identity.Boss:
-				_obj.sprite_index = new MachineSprite().Boss(_obj);
+				var spritesBoss = new MachineSprite().Boss(_obj);
+				
+				_obj.sprite_index = spritesBoss[0];
+				_obj.mask_index   = spritesBoss[1];
 				break;
 			case Identity.SubBoss:
-				_obj.sprite_index = new MachineSprite().SubBoss(_obj);
+				var spritesSubBoss = new MachineSprite().SubBoss(_obj);
+				
+				_obj.sprite_index = spritesSubBoss[0];
+				_obj.mask_index   = spritesSubBoss[1];
 				break;
 			case Identity.Minion:
-				_obj.sprite_index = new MachineSprite().Minion(_obj);
+				var spritesMinion = new MachineSprite().Minion(_obj);
+				
+				_obj.sprite_index = spritesMinion[0];
+				_obj.mask_index   = spritesMinion[1];
 				break;
 			case Identity.Obelisk:
 				_obj.sprite_index = new MachineSprite().Obelisk();
@@ -32,7 +51,7 @@ function ControllerSprite (_obj_entity) constructor {
 			case Identity.Chest:
 				_obj.sprite_index = new MachineSprite().Chest();
 				break;
-		}	
+		}
 	}
 	
 	static ListenerSpriteIndex = function (index) {

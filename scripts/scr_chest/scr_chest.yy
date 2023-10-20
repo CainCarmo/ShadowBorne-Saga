@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Chest",
-    "path": "folders/Scripts/Interactions/Other/Chest.yy",
+    "path": "folders/Scripts/Interactions/Chest.yy",
   },
 }

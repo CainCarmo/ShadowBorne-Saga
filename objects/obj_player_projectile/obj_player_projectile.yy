@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Player",
-    "path": "folders/Objetos/Entities/Player.yy",
+    "path": "folders/Objetos/Enitities/Player.yy",
   },
   "parentObjectId": null,
   "persistent": false,

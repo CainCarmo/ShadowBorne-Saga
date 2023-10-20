@@ -1,1 +1,0 @@
-obj_player.vida -= 1;

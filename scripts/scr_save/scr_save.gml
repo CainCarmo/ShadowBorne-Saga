@@ -1,143 +1,242 @@
 global.SaveData = {
-	LastSavePlayed: undefined,
 	Saves: [
 		{
 			IsEmpty: true,
 			Character: {
 				Class: undefined,
 				Status: {
-					Life: undefined,
-					Mana: undefined,
-					Armor: undefined,
-					Strength: undefined
-				},
-				Items: {
-					Coins: undefined,
-					Potions: {
-						Life: {
-							Count: 0
-						},
-						Mana: {
-							Count: 0
-						}
+					Life: {
+						Max: 0,
+						Atual: 0,
+						Regen: 0
 					},
-					Equipaments: {
-					
+					Stamina: {
+						Max: 0,
+						Atual: 0,
+						Regen: 0
+					},
+					Mana: {
+						Max: 0,
+						Atual: 0,
+						Regen: 0
+					},
+					Armor: {
+						Atual: 0,
+						Buffed: 0	
+					},
+					Strenght: {
+						Atual: 0,
+						Buffed: 0
+					},	
+					Level: {
+						XP: 0,
+						LimitXP: 0,
+						Count: 0
+					},
+					Bulk: 0
+				},
+				Movimentation: {
+					Speed: {
+						Vertical: 0,
+						Horizontal: 0
 					}
 				},
-				Progression: {
-					Level: {
-						Count: 0,
-						Experience: 0
-					},
+				Combat: {
+					Wield: false,
+					Dash: {
+						Distance: 0
+					}
+				},
+				Local: {
+					Room: undefined,
+					_x: undefined,
+					_y: undefined
 				}
 			},
-			Room: {
-				Local: undefined,
-				_x: undefined,
-				_y: undefined
-			}
 		},
 		{
 			IsEmpty: true,
-			LastSavePlayed: false,
 			Character: {
 				Class: undefined,
 				Status: {
-					Life: undefined,
-					Mana: undefined,
-					Armor: undefined,
-					Strength: undefined
-				},
-				Items: {
-					Coins: undefined,
-					Potions: {
-						Life: {
-							Count: 0
-						},
-						Mana: {
-							Count: 0
-						}
+					Life: {
+						Max: 0,
+						Atual: 0,
+						Regen: 0
 					},
-					Equipaments: {
-					
+					Stamina: {
+						Max: 0,
+						Atual: 0,
+						Regen: 0
+					},
+					Mana: {
+						Max: 0,
+						Atual: 0,
+						Regen: 0
+					},
+					Armor: {
+						Atual: 0,
+						Buffed: 0	
+					},
+					Strenght: {
+						Atual: 0,
+						Buffed: 0
+					},	
+					Level: {
+						XP: 0,
+						LimitXP: 0,
+						Count: 0
+					},
+					Bulk: 0
+				},
+				Movimentation: {
+					Speed: {
+						Vertical: 0,
+						Horizontal: 0
 					}
 				},
-				Progression: {
-					Level: {
-						Count: 0,
-						Experience: 0
-					},
+				Combat: {
+					Wield: false,
+					Dash: {
+						Distance: 0
+					}
+				},
+				Local: {
+					Room: undefined,
+					_x: undefined,
+					_y: undefined
 				}
 			},
-			Room: {
-				Local: undefined,
-				_x: undefined,
-				_y: undefined
-			}
 		},
 		{
 			IsEmpty: true,
-			LastSavePlayed: false,
 			Character: {
 				Class: undefined,
 				Status: {
-					Life: undefined,
-					Mana: undefined,
-					Armor: undefined,
-					Strength: undefined
-				},
-				Items: {
-					Coins: undefined,
-					Potions: {
-						Life: {
-							Count: 0
-						},
-						Mana: {
-							Count: 0
-						}
+					Life: {
+						Max: 0,
+						Atual: 0,
+						Regen: 0
 					},
-					Equipaments: {
-					
+					Stamina: {
+						Max: 0,
+						Atual: 0,
+						Regen: 0
+					},
+					Mana: {
+						Max: 0,
+						Atual: 0,
+						Regen: 0
+					},
+					Armor: {
+						Atual: 0,
+						Buffed: 0	
+					},
+					Strenght: {
+						Atual: 0,
+						Buffed: 0
+					},	
+					Level: {
+						XP: 0,
+						LimitXP: 0,
+						Count: 0
+					},
+					Bulk: 0
+				},
+				Movimentation: {
+					Speed: {
+						Vertical: 0,
+						Horizontal: 0
 					}
 				},
-				Progression: {
-					Level: {
-						Count: 0,
-						Experience: 0
-					},
+				Combat: {
+					Wield: false,
+					Dash: {
+						Distance: 0
+					}
+				},
+				Local: {
+					Room: undefined,
+					_x: undefined,
+					_y: undefined
 				}
 			},
-			Room: {
-				Local: undefined,
-				_x: undefined,
-				_y: undefined
-			}
 		}
 	],
 	Settings: {
-		Controllers: {
-			Type: DeviceController.Keyboard,
-			Commands: {
-				Keyboard: {
-					Dash:   "S",
-					Left:   "A",
-					Right:  "D",
-					Jump:   vk_space,
-					Attack: mb_left,
-					
-					// @Warrior
-					Wield:  "E",
-					
-					// @Wizard
-					Teleport: "E"
+		Commands: {
+			Keyboard: {
+				Left:   "A",
+				Right:  "D",
+				Jump:   vk_space,
+				Attack: mb_left,
+				Dash:   "S",
+				// @Warrior
+				Wield:  "E",
+				// @Wizard
+				Teleport: "E"
+			}
+		}
+	},
+	LastSavePlayed: undefined
+};
+
+function CreateSave () constructor {
+	SaveStructEmpty = {
+		IsEmpty: true,
+		Character: {
+			Class: undefined,
+			Status: {
+				Life: {
+					Max: 0,
+					Atual: 0,
+					Regen: 0
+				},
+				Stamina: {
+					Max: 0,
+					Atual: 0,
+					Regen: 0
+				},
+				Mana: {
+					Max: 0,
+					Atual: 0,
+					Regen: 0
+				},
+				Armor: {
+					Atual: 0,
+					Buffed: 0	
+				},
+				Strenght: {
+					Atual: 0,
+					Buffed: 0
+				},	
+				Level: {
+					XP: 0,
+					LimitXP: 0,
+					Count: 0
+				},
+				Bulk: 0
+			},
+			Movimentation: {
+				Speed: {
+					Vertical: 0,
+					Horizontal: 0
 				}
+			},
+			Combat: {
+				Wield: false,
+				Dash: {
+					Distance: 0
+				}
+			},
+			Local: {
+				Room: undefined,
+				_x: undefined,
+				_y: undefined
 			}
 		}
 	}
-}
-
-function CreateSave () constructor {
+	
 	static Save = function () {
 		var json   = json_stringify(global.SaveData);
 		var buffer = buffer_create(string_byte_length(json) + 1, buffer_fixed, 1);
@@ -148,7 +247,7 @@ function CreateSave () constructor {
 		buffer_delete(buffer);
 	}
 	static Load = function (saveIndex) {
-		if (!new Utils().VerifySaveFileExists()) exit;
+		if (!new Utils(undefined).VerifySaveFileExists()) exit;
 		 
 		var buffer = buffer_load(FILESAVENAME);
 		var json   = buffer_read(buffer, buffer_string);
@@ -157,58 +256,20 @@ function CreateSave () constructor {
 		 
 		var saveData = json_parse(json);
 		
-		global.SaveData.LastSavePlayed = struct_get(saveData, "LastSavePlayed");
 		global.SaveData.Saves[saveIndex] = array_get(saveData.Saves, saveIndex);
 		global.SaveData.Settings = struct_get(saveData, "Settings");
+		global.SaveData.LastSavePlayed = struct_get(saveData, "LastSavePlayed");
 	}
 	static Delete = function (saveIndex) {
-		if (!new Utils().VerifySaveFileExists()) exit;
+		global.SaveData.Saves[saveIndex] = SaveStructEmpty
 		
-		var modelStructUserDataEmpty = {
-				IsEmpty: true,
-				Character: {
-					Class: undefined,
-					Status: {
-						Life: undefined,
-						Mana: undefined,
-						Armor: undefined,
-						Strength: undefined
-					},
-					Items: {
-						Coins: undefined,
-						Potions: {
-							Life: {
-								Count: 0
-							},
-							Mana: {
-								Count: 0
-							}
-						},
-						Equipaments: {
-					
-						}
-					},
-					Progression: {
-						Level: {
-							Count: 0,
-							Experience: 0
-						},
-					}
-				},
-				Room: {
-					Local: undefined,
-					_x: undefined,
-					_y: undefined
-				}
-		};
-		
-		global.SaveData.Saves[saveIndex] = modelStructUserDataEmpty;
+		array_sort(global.SaveData.Saves, function (save1, save2) { return save1.IsEmpty - save2.IsEmpty })
 		
 		new CreateSave().Save();
 		new CreateSave().LoadAllStruct();
 	}
 	static LoadAllStruct = function () {
-		if (!new Utils().VerifySaveFileExists()) exit;
+		if (!new Utils(undefined).VerifySaveFileExists()) exit;
 		 
 		var buffer = buffer_load(FILESAVENAME);
 		var json   = buffer_read(buffer, buffer_string);
@@ -217,14 +278,14 @@ function CreateSave () constructor {
 		 
 		var saveData = json_parse(json);
 		
-		global.SaveData.LastSavePlayed = struct_get(saveData, "LastSavePlayed");
-		global.SaveData.Settings = struct_get(saveData, "Settings");
-		
 		for (var i = 0; i < new CreateSave().CountAllSaves(); i++)
 			global.SaveData.Saves[i] = array_get(saveData.Saves, i);
+			
+		global.SaveData.Settings = struct_get(saveData, "Settings");
+		global.SaveData.LastSavePlayed = struct_get(saveData, "LastSavePlayed");
 	}
 	static CountAllSaves = function () {
-		if (!new Utils().VerifySaveFileExists()) return 0;
+		if (!new Utils(undefined).VerifySaveFileExists()) return 0;
 		
 		var countSaves = 0;
 		

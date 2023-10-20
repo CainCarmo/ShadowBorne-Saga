@@ -2,12 +2,14 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_chest",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
     "name": "Chest",
-    "path": "folders/Objetos/Interactions/Other/Chest.yy",
+    "path": "folders/Objetos/Interactions/Chest.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -1,4 +1,4 @@
-function DrawGUI () constructor {
+	function DrawGUI () constructor {
 	static Text = function (text, _x, _y, _sx, _sy, font = undefined, colorDefault = undefined, border = false, colorBorder = undefined, hal = undefined, val = undefined) {
 		if (font != undefined) draw_set_font(font);
 		if (hal  != undefined) draw_set_halign(hal);
@@ -18,10 +18,10 @@ function DrawGUI () constructor {
 		draw_set_color (-1);
 		draw_set_halign(-1);
 		draw_set_valign(-1);
+			
 	}
-	
 	static SaveBoard = function () {
-		var wGUI  = display_get_gui_width();
+		var wGUI = display_get_gui_width();
 		var hGUI = display_get_gui_height();
 		
 		draw_rectangle_color(
@@ -67,6 +67,13 @@ function DrawGUI () constructor {
 			.Text(VERSION, wGUI - (wGUI / 2) * .65, hGUI / 4, 1, 1, ft_logo_version,, true, c_black, fa_center, fa_middle);
 		
 		new DrawGUI()
-			.Text("Saves", (wGUI  / 2), (hGUI / 2) * .75 - 10, 1, 1, ft_menu_initial,, true, c_black, fa_center, fa_middle);
+			.Text("Saves", (wGUI  / 2), (hGUI / 2) * .75 - 10, 1, 1, ft_menu,, true, c_black, fa_center, fa_middle);
+	}
+	static LoadingBar = function (x1, y1, x2, y2, outline = false, color = undefined, timer, timeSecs) {
+		var progressBar = (x2 / timeSecs) * (timer / 60);
+		
+		draw_rectangle(x1, y1, x2, y2, outline);
+		draw_rectangle_color(x1 + 1, y1 - 1, x2 - 1, y2, c_gray, c_gray, c_gray, c_gray, false);
+		draw_rectangle_color(x1 + 1, y1 - 1, x2 - progressBar, y2, color, color, color, color, false);
 	}
 }

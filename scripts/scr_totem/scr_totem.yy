@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Totem",
-    "path": "folders/Scripts/Interactions/Other/Totem.yy",
+    "path": "folders/Scripts/Interactions/Totem.yy",
   },
 }

@@ -12,3 +12,6 @@ selectedOption = undefined;
 	// @Options - [Create Save]
 	selectorCharacter = false;
 	classSelected = undefined;
+	
+// @Discart Operator
+_ = undefined;

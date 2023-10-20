@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Option",
-    "path": "folders/Scripts/Interfaces/Menu/Option.yy",
+    "name": "Options",
+    "path": "folders/Scripts/Interfaces/Menus/Options.yy",
   },
 }

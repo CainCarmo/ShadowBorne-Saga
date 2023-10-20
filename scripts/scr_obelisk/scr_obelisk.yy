@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Obelisk",
-    "path": "folders/Scripts/Interactions/Other/Obelisk.yy",
+    "path": "folders/Scripts/Interactions/Obelisk.yy",
   },
 }

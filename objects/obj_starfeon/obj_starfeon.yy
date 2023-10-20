@@ -7,9 +7,12 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Starfeon",
-    "path": "folders/Objetos/Entities/Non-Player/Starfeon.yy",
+    "path": "folders/Objetos/Enitities/Non-Player/Starfeon.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_entity",
+    "path": "objects/obj_entity/obj_entity.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

@@ -1,112 +1,155 @@
 function MachineSprite () constructor {
 	static Player = function () {
 		switch (obj_player.state) {
-			case EntityStates.Die:
-				if (obj_player.class == PlayerClass.Warrior) 
-					return spr_warrior_die;
-				else 
-					return spr_wizard_die;
-				
+			case EntityState.Die:
+				return obj_player.class == PlayerClass.Warrior
+					? spr_warrior_die
+					: spr_wizard_die;
 				break;
-			case EntityStates.Hit:
-				if (obj_player.class == PlayerClass.Warrior)
-					return obj_player.weapon == WarriorWeaponCombat.Hand ? spr_warrior_hit_s : spr_warrior_hit_w;
-				else 
-					return spr_wizard_hit;
-				
-				break;
-			case EntityStates.Dash:
-				if (obj_player.class == PlayerClass.Warrior) 
-					return spr_warrior_dash;
-				else
-					return spr_wizard_dash;
-				
-				break;
-			case EntityStates.Idle:
-				if (obj_player.class == PlayerClass.Warrior)
-					return obj_player.weapon == WarriorWeaponCombat.Hand ? spr_warrior_idle_s : spr_warrior_idle_w;
-				else 
-					return spr_wizard_idle;
-				
-				break;
-			case EntityStates.Jump:
-				if (obj_player.class == PlayerClass.Warrior)
-					return obj_player.speed_vertical > 0 ? spr_warrior_fall : spr_warrior_jump;
-				else
-					return obj_player.speed_vertical > 0 ? spr_wizard_fall : spr_wizard_jump;
-					
-				break;
-			case EntityStates.Walk:
-				if (obj_player.class == PlayerClass.Warrior)
-					return obj_player.weapon == WarriorWeaponCombat.Hand ? spr_warrior_walk_s : spr_warrior_walk_w;
-				else
-					return spr_wizard_walk;
-					
-				break;
-			case EntityStates.Wield:
-				if (obj_player.class == PlayerClass.Warrior)
-					return obj_player.weapon == WarriorWeaponCombat.Hand ? spr_warrior_sheathe : spr_warrior_wield;
-				
-				break;
-			case EntityStates.Attack:
+			case EntityState.Hit:
 				if (obj_player.class == PlayerClass.Warrior) {
-					var attackSprite = undefined;
-					
-					if (obj_player.hadGroundCollised) {
-						if (obj_player.comboState) {
-							switch (obj_player.comboIndex) {
-								case WarriorComboIndex.First:
-									attackSprite = obj_player.weapon == WarriorWeaponCombat.Hand
-										? spr_warrior_combat_sg_second
-										: spr_warrior_combat_wg_second;
-									break;
-								case WarriorComboIndex.Second:
-									attackSprite = obj_player.weapon == WarriorWeaponCombat.Hand
-										? spr_warrior_combat_sg_third
-										: spr_warrior_combat_wg_third;
-									break;
-							}
-						}
-						else {
-							attackSprite = obj_player.weapon == WarriorWeaponCombat.Hand
-								? spr_warrior_combat_sg_first
-								: spr_warrior_combat_wg_first;
-						}
-					}
-					else {
-						var playerOriginCenter = obj_player.y - obj_player.sprite_height * .5;
-							
-						switch (obj_player.weapon) {
-							case WarriorWeaponCombat.Hand:
-								attackSprite = spr_warrior_combat_sa;
-								break;
-							case WarriorWeaponCombat.Sword:
-								attackSprite = playerOriginCenter >= mouse_y
-									? spr_warrior_combat_wa_above
-									: spr_warrior_combat_wa_front;
-								break;
-						}
-					}
-					
-					return attackSprite;
+					return obj_player.mechanics.Warrior.Wield 
+						? spr_warrior_hit_w 
+						: spr_warrior_hit_s;
 				}
 				else
-					return spr_wizard_combat_first;
+					return spr_wizard_hit;
+				break;
+			case EntityState.Dash:
+				return obj_player.class == PlayerClass.Warrior
+					? spr_warrior_dash
+					: _;
+				break;
+			case EntityState.Idle:
+				if (obj_player.class == PlayerClass.Warrior) {
+					return obj_player.mechanics.Warrior.Wield 
+						? spr_warrior_idle_w 
+						: spr_warrior_idle_s;
+				}
+				else
+					return spr_wizard_idle;
+				break;
+			case EntityState.Jump:
+				if (obj_player.class == PlayerClass.Warrior) {
+					return obj_player.speed_vertical > 0 
+						? spr_warrior_fall 
+						: spr_warrior_jump;
+				}
+				else {
+					return obj_player.speed_vertical > 0 
+						? spr_wizard_fall 
+						: spr_wizard_jump;
+				}
+				break;
+			case EntityState.Walk:
+				if (obj_player.class == PlayerClass.Warrior) {
+					return obj_player.mechanics.Warrior.Wield 
+						? spr_warrior_walk_w 
+						: spr_warrior_walk_s;
+				}
+				else
+					return spr_wizard_walk;
+				break;
+			case EntityState.Wield:
+				if (obj_player.class == PlayerClass.Warrior) {
+					return obj_player.mechanics.Warrior.Wield 
+						? spr_warrior_wield 
+						: spr_warrior_sheathe;
+				}
+				else
+					return _;
+				break;
+			case EntityState.Attack:
+				var attackSprite = undefined;
+				var attackSpriteHitBox = undefined;
+				
+				var WarriorSprites = function () {
+					if (obj_player.hadGroundCollised) {
+				        if (obj_player.mechanics.Warrior.ComboState) {
+				            switch (obj_player.mechanics.Warrior.ComboIndex) {
+				                case WarriorComboIndex.First:
+				                    attackSprite = (obj_player.mechanics.Warrior.Wield == WarriorWeaponCombat.Hand)
+				                        ? spr_warrior_combat_sg_second
+				                        : spr_warrior_combat_wg_second;
+										
+				                    attackSpriteHitBox = (obj_player.mechanics.Warrior.Wield == WarriorWeaponCombat.Hand)
+				                        ? spr_warrior_combat_sg_second_hb
+				                        : spr_warrior_combat_wg_second_hb;
+				                    break;
+				                case WarriorComboIndex.Second:
+				                    attackSprite = (obj_player.mechanics.Warrior.Wield == WarriorWeaponCombat.Hand)
+				                        ? spr_warrior_combat_sg_third
+				                        : spr_warrior_combat_wg_third;
+										
+				                    attackSpriteHitBox = (obj_player.mechanics.Warrior.Wield == WarriorWeaponCombat.Hand)
+				                        ? spr_warrior_combat_sg_third_hb
+				                        : spr_warrior_combat_wg_third_hb;
+				                    break;
+				            }
+				        }
+				        else {
+				            attackSprite = (obj_player.mechanics.Warrior.Wield == WarriorWeaponCombat.Hand)
+				                ? spr_warrior_combat_sg_first
+				                : spr_warrior_combat_wg_first;
+								
+				            attackSpriteHitBox = (obj_player.mechanics.Warrior.Wield == WarriorWeaponCombat.Hand)
+				                ? spr_warrior_combat_sg_first_hb
+				                : spr_warrior_combat_wg_first_hb;
+				        }
+				    }
+				    else {
+				        var playerOriginCenter = obj_player.y - obj_player.sprite_height * 0.5;
+        
+				        switch (obj_player.mechanics.Warrior.Wield) {
+				            case WarriorWeaponCombat.Hand:
+				                attackSprite = spr_warrior_combat_sa;
+				                attackSpriteHitBox = spr_warrior_combat_sa_hb;
+				                break;
+				            case WarriorWeaponCombat.Sword:
+				                attackSprite = (playerOriginCenter >= mouse_y)
+				                    ? spr_warrior_combat_wa_above
+				                    : spr_warrior_combat_wa_front;
+									
+				                attackSpriteHitBox = (playerOriginCenter >= mouse_y)
+				                    ? spr_warrior_combat_wa_above_hb
+				                    : spr_warrior_combat_wa_front_hb;
+				                break;
+				        }
+				    }
+    
+				    return [attackSprite, attackSpriteHitBox];
+				}
+				var WizardSprites = function () {
+					return [spr_wizard_combat_first, spr_wizard_combat_first];
+				}
+				
+				return obj_player.class == PlayerClass.Warrior
+					? WarriorSprites()
+					: WizardSprites();
 				
 				break;
-			case EntityStates.Dialog:
-				if (obj_player.class == PlayerClass.Warrior)
-					return obj_player.weapon == WarriorWeaponCombat.Hand ? spr_warrior_idle_s : spr_warrior_idle_w;
-				else 
+			case EntityState.Dialog:
+				if (obj_player.class == PlayerClass.Warrior) {
+					return obj_player.mechanics.Warrior.Wield 
+						? spr_warrior_idle_w 
+						: spr_warrior_idle_s;
+				}
+				else
 					return spr_wizard_idle;
-					
 				break;
-			case EntityStates.Cutscene:
-				if (obj_player.class == PlayerClass.Warrior)
-					return obj_player.weapon == WarriorWeaponCombat.Hand ? spr_warrior_idle_s : spr_warrior_idle_w;
-				else 
+			case EntityState.Teleport:
+				return obj_player.class == PlayerClass.Warrior
+					? _
+					: _;
+				break;
+			case EntityState.Cutscene:
+				if (obj_player.class == PlayerClass.Warrior) {
+					return obj_player.mechanics.Warrior.Wield 
+						? spr_warrior_idle_w 
+						: spr_warrior_idle_s;
+				}
+				else
 					return spr_wizard_idle;
-					
 				break;
 		}
 	}
@@ -115,7 +158,7 @@ function MachineSprite () constructor {
 		var stateSpr = undefined;
 		
 		switch (_obj.state) {
-			case EntityStates.Die:
+			case EntityState.Die:
 				switch (_obj.name) {
 					case Boss.Death:
 						stateSpr = spr_death_die;
@@ -128,7 +171,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Fly:
+			case EntityState.Fly:
 				switch (_obj.name) {
 					case Boss.Death:
 						break;
@@ -139,7 +182,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Hit:
+			case EntityState.Hit:
 				switch (_obj.name) {
 					case Boss.Death:
 						break;
@@ -149,7 +192,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Run:
+			case EntityState.Dash:
 				switch (_obj.name) {
 					case Boss.Death:
 						break;
@@ -159,17 +202,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Dash:
-				switch (_obj.name) {
-					case Boss.Death:
-						break;
-					case Boss.DemonSkeleton:
-						break;
-					case Boss.KingSlime:
-						break;
-				}
-				break;
-			case EntityStates.Idle:
+			case EntityState.Idle:
 				switch (_obj.name) {
 					case Boss.Death:
 						stateSpr = spr_death_idle;
@@ -181,7 +214,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Jump:
+			case EntityState.Jump:
 				switch (_obj.name) {
 					case Boss.Death:
 						break;
@@ -191,7 +224,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Walk:
+			case EntityState.Walk:
 				switch (_obj.name) {
 					case Boss.Death:
 						break;
@@ -201,7 +234,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Wield:
+			case EntityState.Wield:
 				switch (_obj.name) {
 					case Boss.Death:
 						break;
@@ -211,7 +244,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Attack:
+			case EntityState.Attack:
 				switch (_obj.name) {
 					case Boss.Death:
 						break;
@@ -222,7 +255,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Dialog:
+			case EntityState.Dialog:
 				switch (_obj.name) {
 					case Boss.Death:
 						break;
@@ -232,7 +265,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Cutscene:
+			case EntityState.Cutscene:
 				switch (_obj.name) {
 					case Boss.Death:
 						break;
@@ -249,7 +282,7 @@ function MachineSprite () constructor {
 		var stateSpr = undefined;
 		
 		switch (_obj.state) {
-			case EntityStates.Die:
+			case EntityState.Die:
 				switch (_obj.name) {
 					case SubBoss.EvilWizard:
 						stateSpr = spr_evilWizard_die;
@@ -262,7 +295,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Fly:
+			case EntityState.Fly:
 				switch (_obj.name) {
 					case SubBoss.EvilWizard:
 						break;
@@ -272,7 +305,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Hit:
+			case EntityState.Hit:
 				switch (_obj.name) {
 					case SubBoss.EvilWizard:
 						stateSpr = spr_evilWizard_hit;
@@ -285,18 +318,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Run:
-				switch (_obj.name) {
-					case SubBoss.EvilWizard:
-						stateSpr = spr_evilWizard_run;
-						break;
-					case SubBoss.Nightmare:
-						break;
-					case SubBoss.Primordial:
-						break;
-				}
-				break;
-			case EntityStates.Dash:
+			case EntityState.Dash:
 				switch (_obj.name) {
 					case SubBoss.EvilWizard:
 						break;
@@ -306,7 +328,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Idle:
+			case EntityState.Idle:
 				switch (_obj.name) {
 					case SubBoss.EvilWizard:
 						stateSpr = spr_evilWizard_idle;
@@ -318,7 +340,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Jump:
+			case EntityState.Jump:
 				switch (_obj.name) {
 					case SubBoss.EvilWizard:
 						stateSpr = _obj.speed_vertical > 0 ? spr_evilWizard_fall : spr_evilWizard_jump;
@@ -329,7 +351,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Walk:
+			case EntityState.Walk:
 				switch (_obj.name) {
 					case SubBoss.EvilWizard:
 						break;
@@ -340,7 +362,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Wield:
+			case EntityState.Wield:
 				switch (_obj.name) {
 					case SubBoss.EvilWizard:
 						break;
@@ -350,7 +372,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Attack:
+			case EntityState.Attack:
 				switch (_obj.name) {
 					case SubBoss.EvilWizard:
 						break;
@@ -360,7 +382,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Dialog:
+			case EntityState.Dialog:
 				switch (_obj.name) {
 					case SubBoss.EvilWizard:
 						break;
@@ -370,7 +392,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Cutscene:
+			case EntityState.Cutscene:
 				switch (_obj.name) {
 					case SubBoss.EvilWizard:
 						break;
@@ -389,7 +411,7 @@ function MachineSprite () constructor {
 		var stateSpr = undefined;
 		
 		switch (_obj.state) {
-			case EntityStates.Die:
+			case EntityState.Die:
 				switch (_obj.name) {
 					case Minion.Hound:
 						stateSpr = spr_hound_idle;
@@ -398,7 +420,7 @@ function MachineSprite () constructor {
 						stateSpr = spr_goblin_die;
 						break;
 					case Minion.Slime:
-						stateSpr = spr_slime_idle;
+						stateSpr = spr_slime_death_idle;
 						break;
 					case Minion.EvilEye:
 						stateSpr = spr_evilEye_die;
@@ -414,7 +436,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Fly:
+			case EntityState.Fly:
 				switch (_obj.name) {
 					case Minion.Hound:
 						break;
@@ -433,7 +455,101 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Hit:
+			case EntityState.Hit:
+				switch (_obj.name) {
+					case Minion.Hound:
+						
+						break;
+					case Minion.Goblin:
+						break;
+					case Minion.Slime:
+						stateSpr = spr_slime_hit_idle;
+						break;
+					case Minion.EvilEye:
+						break;
+					case Minion.Skeleton:
+						break;
+					case Minion.Mushroom:
+						break;
+					case Minion.FireWorm:
+						break;
+				}
+				break;
+			case EntityState.Dash:
+				switch (_obj.name) {
+					case Minion.Hound:
+						break;
+					case Minion.Goblin:
+						break;
+					case Minion.Slime:
+						break;
+					case Minion.EvilEye:
+						break;
+					case Minion.Skeleton:
+						break;
+					case Minion.Mushroom:
+						break;
+					case Minion.FireWorm:
+						break;
+				}
+				break;
+			case EntityState.Idle:
+				switch (_obj.name) {
+					case Minion.Hound:
+						break;
+					case Minion.Goblin:
+						break;
+					case Minion.Slime:
+						stateSpr = spr_slime_idle;
+						break;
+					case Minion.EvilEye:
+						break;
+					case Minion.Skeleton:
+						break;
+					case Minion.Mushroom:
+						break;
+					case Minion.FireWorm:
+						break;
+				}
+				break;
+			case EntityState.Jump:
+				switch (_obj.name) {
+					case Minion.Hound:
+						break;
+					case Minion.Goblin:
+						break;
+					case Minion.Slime:
+						break;
+					case Minion.EvilEye:
+						break;
+					case Minion.Skeleton:
+						break;
+					case Minion.Mushroom:
+						break;
+					case Minion.FireWorm:
+						break;
+				}
+				break;
+			case EntityState.Walk:
+				switch (_obj.name) {
+					case Minion.Hound:
+						break;
+					case Minion.Goblin:
+						break;
+					case Minion.Slime:
+						stateSpr = spr_slime_walk;
+						break;
+					case Minion.EvilEye:
+						break;
+					case Minion.Skeleton:
+						break;
+					case Minion.Mushroom:
+						break;
+					case Minion.FireWorm:
+						break;
+				}
+				break;
+			case EntityState.Attack:
 				switch (_obj.name) {
 					case Minion.Hound:
 						
@@ -452,152 +568,7 @@ function MachineSprite () constructor {
 						break;
 				}
 				break;
-			case EntityStates.Run:
-				switch (_obj.name) {
-					case Minion.Hound:
-						break;
-					case Minion.Goblin:
-						break;
-					case Minion.Slime:
-						break;
-					case Minion.EvilEye:
-						break;
-					case Minion.Skeleton:
-						break;
-					case Minion.Mushroom:
-						break;
-					case Minion.FireWorm:
-						break;
-				}
-				break;
-			case EntityStates.Dash:
-				switch (_obj.name) {
-					case Minion.Hound:
-						break;
-					case Minion.Goblin:
-						break;
-					case Minion.Slime:
-						break;
-					case Minion.EvilEye:
-						break;
-					case Minion.Skeleton:
-						break;
-					case Minion.Mushroom:
-						break;
-					case Minion.FireWorm:
-						break;
-				}
-				break;
-			case EntityStates.Idle:
-				switch (_obj.name) {
-					case Minion.Hound:
-						break;
-					case Minion.Goblin:
-						break;
-					case Minion.Slime:
-						break;
-					case Minion.EvilEye:
-						break;
-					case Minion.Skeleton:
-						break;
-					case Minion.Mushroom:
-						break;
-					case Minion.FireWorm:
-						break;
-				}
-				break;
-			case EntityStates.Jump:
-				switch (_obj.name) {
-					case Minion.Hound:
-						break;
-					case Minion.Goblin:
-						break;
-					case Minion.Slime:
-						break;
-					case Minion.EvilEye:
-						break;
-					case Minion.Skeleton:
-						break;
-					case Minion.Mushroom:
-						break;
-					case Minion.FireWorm:
-						break;
-				}
-				break;
-			case EntityStates.Walk:
-				switch (_obj.name) {
-					case Minion.Hound:
-						break;
-					case Minion.Goblin:
-						break;
-					case Minion.Slime:
-						break;
-					case Minion.EvilEye:
-						break;
-					case Minion.Skeleton:
-						break;
-					case Minion.Mushroom:
-						break;
-					case Minion.FireWorm:
-						break;
-				}
-				break;
-			case EntityStates.Wield:
-				switch (_obj.name) {
-					case Minion.Hound:
-						break;
-					case Minion.Goblin:
-						break;
-					case Minion.Slime:
-						break;
-					case Minion.EvilEye:
-						break;
-					case Minion.Skeleton:
-						break;
-					case Minion.Mushroom:
-						break;
-					case Minion.FireWorm:
-						break;
-				}
-				break;
-			case EntityStates.Attack:
-				switch (_obj.name) {
-					case Minion.Hound:
-						
-						break;
-					case Minion.Goblin:
-						break;
-					case Minion.Slime:
-						break;
-					case Minion.EvilEye:
-						break;
-					case Minion.Skeleton:
-						break;
-					case Minion.Mushroom:
-						break;
-					case Minion.FireWorm:
-						break;
-				}
-				break;
-			case EntityStates.Dialog:
-				switch (_obj.name) {
-					case Minion.Hound:
-						break;
-					case Minion.Goblin:
-						break;
-					case Minion.Slime:
-						break;
-					case Minion.EvilEye:
-						break;
-					case Minion.Skeleton:
-						break;
-					case Minion.Mushroom:
-						break;
-					case Minion.FireWorm:
-						break;
-				}
-				break;
-			case EntityStates.Cutscene:
+			case EntityState.Cutscene:
 				switch (_obj.name) {
 					case Minion.Hound:
 						break;
@@ -619,75 +590,52 @@ function MachineSprite () constructor {
 	}
 	
 	static NPC = function (_obj) {
-		var stateSpr = undefined;
-		
 		switch (_obj.state) {
-			case EntityStates.Idle:
-				if (_obj.name == NPC.Leoric) {
-					switch (_obj.stateNPC) {
-						case NPCState.Idle:
-							stateSpr = spr_leoric_idle;
-							break;
-						case NPCState.Appear:
-							stateSpr = spr_leoric_appear;
-							break;
-						case NPCState.Disappear:
-							stateSpr = spr_leoric_disappear;
-							break;
-					}
-				}
-				else if (_obj.name == NPC.Starfeon) {
-					switch (_obj.stateNPC) {
-						case NPCState.Idle:
-							stateSpr = spr_starfeon_idle;
-							break;
-					}
-				}
-			case EntityStates.Dialog:
-				if (_obj.name == NPC.Starfeon) 
-					stateSpr = spr_starfeon_dialog;
+			case EntityState.Idle:
+				
+				break;
+			case EntityState.Dialog:
+				
 				break;
 		}
-		
-		return stateSpr;
 	}
 	
 	static Obelisk = function () {
-		var stateSpr = undefined;
-		
 		switch (obj_obelisk.state) {
-			case StructsState.Disabled:
-				stateSpr = spr_obelisk_disabled;
-			case StructsState.Activating:
-				stateSpr = spr_obelisk_activating;
-			case StructsState.Active:
-				stateSpr = spr_obelisk_active;
+			case StructState.Disabled:
+				return ;
+				break;
+			case StructState.Activating:
+				return ;
+				break;
+			case StructState.Active:
+				return ;
+				break;
 		}
-		
-		return stateSpr;
 	}
 	
 	static Totem = function () {
-		var stateSpr = undefined;
-		
 		switch (obj_totem.state) {
-			case StructsState.Active:
-				stateSpr = spr_totem;
+			case StructState.Disabled:
+				return ;
+				break;
+			case StructState.Activating:
+				return ;
+				break;
+			case StructState.Active:
+				return ;
+				break;
 		}
-		
-		return stateSpr;
 	}
 	
 	static Chest = function () {
-		var stateSpr = undefined;
-		
 		switch (obj_chest.state) {
 			case StockState.Closed:
-				stateSpr = spr_chest_closed;
+				return ;
+				break;
 			case StockState.Open:
-				stateSpr = spr_chest_open;
+				return ;
+				break
 		}
-		
-		return stateSpr;
 	}
 }

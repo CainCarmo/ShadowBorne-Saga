@@ -1,10 +1,8 @@
-#region [Common]
-
-enum EntityStates {
+// @Default
+enum EntityState {
 	Die,
 	Fly,
 	Hit,
-	Run,
 	Dash,
 	Idle,
 	Jump,
@@ -12,10 +10,11 @@ enum EntityStates {
 	Wield,
 	Attack,
 	Dialog,
+	Teleport,
 	Cutscene
 }
 
-enum StructsState {
+enum StructState {
 	Active,
 	Activating,
 	Disabled
@@ -27,67 +26,55 @@ enum StockState {
 }
 
 enum Identity {
-	Player,
+	// @Non-Player
 	NPC,
+	// @Player
+	Player,
+	// @Enimies
 	Boss,
 	SubBoss,
 	Minion,
+	// @Structs
 	Obelisk,
 	Totem,
+	// @Storage
 	Chest
 }
 
-#endregion
-
-#region [Player]
-
+// @Player
 enum PlayerClass {
-	Wizard,
-	Warrior
+	Warrior,
+	Wizard
 }
+
 enum PlayerActions {
-	Dash,
 	Left,
 	Right,
 	Jump,
 	Attack,
-	
+	Dash,
 	// @Warrior
 	Wield,
-	
 	// @Wizard
 	Teleport
 }
-enum PlayerTypeAttack {
-	Melee,
-	Ranged
-}
-enum PlayerMainWeapon {
-	Staff,
-	Sword
-}
 
-	// @Warrior
-
+	// @Warrior	
 	enum WarriorComboIndex {
 		None   = -1,
 		First  =  0,
 		Second =  1
 	}
+	
 	enum WarriorWeaponCombat {
 		Hand,
-		Sword
+		Sword,
 	}
-
+	
 	// @Wizard
 	
-	
-
-#endregion
-
-#region [Non-Player Character (NPC)]
-
-enum nameNPC {
+// @NPC (Non-Player)
+enum IdentiyNPC {
 	Leoric,
 	Starfeon
 }
@@ -98,20 +85,19 @@ enum NPCState {
 	Disappear
 }
 
-#endregion
-
-#region [Enimies]
-
+// @Enimies
 enum Boss {
 	Death,
 	KingSlime,
 	DemonSkeleton
 }
+
 enum SubBoss {
 	Nightmare,
 	EvilWizard,
 	Primordial
 }
+
 enum Minion {
 	Hound,
 	Slime,
@@ -122,41 +108,23 @@ enum Minion {
 	FireWorm
 }
 
-#endregion
-
-#region [Interactions]
-#endregion
-
-#region [Interfaces]
-
-	// @Menu - Initial
-	enum MenuInitialOptions {
-		Continue,
-		NewGame,
-		Disclaimer,
-		Credits,
-		Close
-	}
-
-#endregion
-
-#region [Room]
-
-enum RoomState {
+// @Room
+enum EnvironmentState {
 	Normal,
 	Paused,
 	Loading,
 	Cutscene
 }
 
-#endregion
+// @Interfaces
+enum MenuInitialOptions {
+	Continue,
+	NewGame,
+	Credits,
+	Close
+}
 
-#region [Settings]
-	
-	// @Controller
-	enum DeviceController {
-		Joystick,
-		Keyboard
-	}
-
-#endregion
+enum MenuInGameOptions {
+	Continue,
+	BackToHome
+}

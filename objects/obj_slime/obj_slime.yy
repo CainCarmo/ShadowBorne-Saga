@@ -2,14 +2,19 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_slime",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
     "name": "Slime",
-    "path": "folders/Objetos/Entities/Enimies/Minion/Slime.yy",
+    "path": "folders/Objetos/Enitities/Enimies/Minion/Slime.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_entity",
+    "path": "objects/obj_entity/obj_entity.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -25,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_slime_idle",
+    "path": "sprites/spr_slime_idle/spr_slime_idle.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

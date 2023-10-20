@@ -1,137 +1,149 @@
 function MachineState () constructor {
 	static Player = function () {
+		if (obj_room.state != EnvironmentState.Normal) exit;
+		
 		switch (obj_player.state) {
-			case EntityStates.Die:
-				new PlayerStates().Die();
+			case EntityState.Die:
+				new PlayerState().Die();
 				break;
-			case EntityStates.Hit:
-				new PlayerStates().Hit();
+			case EntityState.Hit:
+				new PlayerState().Hit();
 				break;
-			case EntityStates.Dash:
-				new PlayerStates().Dash();
+			case EntityState.Dash:
+				new PlayerState().Dash();
 				break;
-			case EntityStates.Idle:
-				new PlayerStates().Idle();
+			case EntityState.Idle:
+				new PlayerState().Idle();
 				break;
-			case EntityStates.Jump:
-				new PlayerStates().Jump();
+			case EntityState.Jump:
+				new PlayerState().Jump();
 				break;
-			case EntityStates.Walk:
-				new PlayerStates().Walk();
+			case EntityState.Walk:
+				new PlayerState().Walk();
 				break;
-			case EntityStates.Wield:
-				new PlayerStates().Wield();
+			case EntityState.Wield:
+				new PlayerState().Wield();
 				break;
-			case EntityStates.Attack:
-				new PlayerStates().Attack();
+			case EntityState.Attack:
+				new PlayerState().Attack();
 				break;
-			case EntityStates.Dialog:
-				new PlayerStates().Dialog();
+			case EntityState.Dialog:
+				new PlayerState().Dialog();
 				break;
-			case EntityStates.Cutscene:
-				new PlayerStates().Cutscene();
+			case EntityState.Teleport:
+				new PlayerState().Teleport();
+				break;
+			case EntityState.Cutscene:
+				new PlayerState().Cutscene();
 				break;
 		}
 	}
 	
 	static Enimies = function (_obj) {
+		if (obj_room.state != EnvironmentState.Normal) exit;
+		
 		switch (_obj.state) {
-			case EntityStates.Die:
+			case EntityState.Die:
+				new EnemyState().Die(_obj);
 				break;
-			case EntityStates.Fly:
+			case EntityState.Fly:
+				new EnemyState().Fly(_obj);
 				break;
-			case EntityStates.Hit:
+			case EntityState.Hit:
+				new EnemyState().Hit(_obj);
 				break;
-			case EntityStates.Run:
+			case EntityState.Dash:
+				new EnemyState().Dash(_obj);
 				break;
-			case EntityStates.Dash:
+			case EntityState.Idle:
+				new EnemyState().Idle(_obj);
 				break;
-			case EntityStates.Idle:
+			case EntityState.Jump:
+				new EnemyState().Jump(_obj);
 				break;
-			case EntityStates.Jump:
+			case EntityState.Walk:
+				new EnemyState().Walk(_obj);
 				break;
-			case EntityStates.Walk:
+			case EntityState.Attack:
+				new EnemyState().Attack(_obj);
 				break;
-			case EntityStates.Wield:
-				break;
-			case EntityStates.Attack:
-				break;
-			case EntityStates.Dialog:
-				break;
-			case EntityStates.Cutscene:
+			case EntityState.Cutscene:
+				new EnemyState().Cutscene(_obj);
 				break;
 		}
 	}
 	
 	static NPC = function (_obj) {
+		if (obj_room.state != EnvironmentState.Normal) exit;
+		
 		switch (_obj.state) {
-			case EntityStates.Die:
+			case EntityState.Idle:
+				new NonPlayerState().Idle(_obj);
 				break;
-			case EntityStates.Fly:
-				break;
-			case EntityStates.Hit:
-				break;
-			case EntityStates.Run:
-				break;
-			case EntityStates.Dash:
-				break;
-			case EntityStates.Idle:
-				break;
-			case EntityStates.Jump:
-				break;
-			case EntityStates.Walk:
-				break;
-			case EntityStates.Wield:
-				break;
-			case EntityStates.Attack:
-				break;
-			case EntityStates.Dialog:
-				break;
-			case EntityStates.Cutscene:
+			case EntityState.Dialog:
+				new NonPlayerState().Dialog(_obj);
 				break;
 		}
 	}
 	
 	static Obelisk = function () {
+		if (obj_room.state != EnvironmentState.Normal) exit;
+		
 		switch (obj_obelisk.state) {
-			case StructsState.Disabled:
+			case StructState.Disabled:
+				new ObeliskState().Disabled();
 				break;
-			case StructsState.Activating:
+			case StructState.Activating:
+				new ObeliskState().Activating();
 				break;
-			case StructsState.Active:
+			case StructState.Active:
+				new ObeliskState().Active();
 				break;
 		}
 	}
 	
 	static Totem = function () {
+		if (obj_room.state != EnvironmentState.Normal) exit;
+		
 		switch (obj_totem.state) {
-			case StructsState.Disabled:
+			case StructState.Disabled:
+				new TotemState().Disabled();
 				break;
-			case StructsState.Activating:
+			case StructState.Activating:
+				new TotemState().Activating();
 				break;
-			case StructsState.Active:
+			case StructState.Active:
+				new TotemState().Active();
 				break;
 		}
 	}
 	
 	static Chest = function () {
+		if (obj_room.state != EnvironmentState.Normal) exit;
+		
 		switch (obj_chest.state) {
 			case StockState.Closed:
+				new ChestState().Closed();
 				break;
 			case StockState.Open:
+				new ChestState().Open();
 				break
 		}
 	}
 	
 	static Room = function () {
 		switch (obj_room.state) {
-			case RoomState.Normal:
+			case EnvironmentState.Normal:
+				new RoomState().Normal();
 				break;
-			case RoomState.Loading:
+			case EnvironmentState.Paused:
+				new RoomState().Paused();
 				break;
-			case RoomState.Paused:
+			case EnvironmentState.Loading:
+				new RoomState().Loading();
 				break;
-			case RoomState.Cutscene:
+			case EnvironmentState.Cutscene:
+				new RoomState().Cutscene();
 				break;
 		}
 	}

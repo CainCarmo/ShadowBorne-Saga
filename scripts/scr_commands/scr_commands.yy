@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Commands",
-    "path": "folders/Scripts/Settings/Preference/Commands.yy",
+    "path": "folders/Scripts/Settings/Commands.yy",
   },
 }
