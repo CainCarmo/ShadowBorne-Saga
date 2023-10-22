@@ -1,5 +1,7 @@
 function EnemyState () constructor {
 	static Die = function (_obj) {
+		new ControllerSprite(_obj).AssignSpriteToObject();
+		
 		if (_obj.identity == Identity.Boss) {
 			switch (_obj.name) {
 				case Boss.Death:
@@ -34,6 +36,8 @@ function EnemyState () constructor {
 		}
 	}
 	static Hit = function (_obj) {
+		new ControllerSprite(_obj).AssignSpriteToObject();
+		
 		if (_obj.identity == Identity.Boss) {
 			switch (_obj.name) {
 				case Boss.Death:
@@ -68,6 +72,8 @@ function EnemyState () constructor {
 		}
 	}
 	static Idle	= function (_obj) {
+		new ControllerSprite(_obj).AssignSpriteToObject();
+		
 		if (_obj.identity == Identity.Boss) {
 			switch (_obj.name) {
 				case Boss.Death:
@@ -100,8 +106,12 @@ function EnemyState () constructor {
 					break;
 			}
 		}
+		
+		AlterEnemyDefault(_obj, 0);
 	}
 	static Walk	= function (_obj) {
+		new ControllerSprite(_obj).AssignSpriteToObject();
+		
 		if (_obj.identity == Identity.Boss) {
 			switch (_obj.name) {
 				case Boss.Death:
@@ -134,8 +144,12 @@ function EnemyState () constructor {
 					break;
 			}
 		}
+		
+		AlterEnemyDefault(_obj, 1);
 	}
 	static Attack = function (_obj) {
+		new ControllerSprite(_obj).AssignSpriteToObject();
+		
 		if (_obj.identity == Identity.Boss) {
 			switch (_obj.name) {
 				case Boss.Death:
@@ -170,6 +184,8 @@ function EnemyState () constructor {
 		}
 	}
 	static Cutscene	= function (_obj) {
+		new ControllerSprite(_obj).AssignSpriteToObject();
+		
 		if (_obj.identity == Identity.Boss) {
 			switch (_obj.name) {
 				case Boss.Death:

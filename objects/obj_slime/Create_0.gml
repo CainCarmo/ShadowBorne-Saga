@@ -10,7 +10,7 @@ speed_horizontal = 0;
 speed_vertical   = 0;
 
 speed_horizontal_max = 1;
-speed_vertical_max   = 3;
+speed_vertical_max   = 1;
 
 hadGroundCollised = false;
 
@@ -35,6 +35,9 @@ view_debugger = true;
 
 // @Discart
 _ = undefined;
+
+// @Controller
+dist_aggro = 0;
 
 // @Draw Bars
 enemiesBar = new DrawElementEnemy(objectAtual);

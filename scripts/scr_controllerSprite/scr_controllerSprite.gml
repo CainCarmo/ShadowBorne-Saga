@@ -13,12 +13,11 @@ function ControllerSprite (_obj_entity) constructor {
 				
 				if (_obj.state == EntityState.Attack) {
 					_obj.sprite_index = spritesPlayer[0];
+					
 					if (instance_exists(obj_player_hitbox)) obj_player_hitbox.sprite_index = spritesPlayer[1];
 				}
-				else {
+				else
 					_obj.sprite_index = spritesPlayer;
-					//_obj.mask_index   = spritesPlayer;
-				}
 				
 				break;
 			case Identity.NPC:
@@ -27,14 +26,12 @@ function ControllerSprite (_obj_entity) constructor {
 			case Identity.Boss:
 				var spritesBoss = new MachineSprite().Boss(_obj);
 				
-				_obj.sprite_index = spritesBoss[0];
-				_obj.mask_index   = spritesBoss[1];
+				_obj.sprite_index = spritesBoss;
 				break;
 			case Identity.Minion:
 				var spritesMinion = new MachineSprite().Minion(_obj);
 				
-				_obj.sprite_index = spritesMinion[0];
-				_obj.mask_index   = spritesMinion[1];
+				_obj.sprite_index = spritesMinion;
 				break;
 			case Identity.Obelisk:
 				_obj.sprite_index = new MachineSprite().Obelisk();

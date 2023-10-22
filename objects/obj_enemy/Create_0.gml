@@ -8,3 +8,5 @@ alarm[0] = 1;
 
 // @Controller
 attacking = false;
+
+dist_aggro = 0;
