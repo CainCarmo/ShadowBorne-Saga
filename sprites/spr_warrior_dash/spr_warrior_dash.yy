@@ -26,10 +26,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1201a765-372d-48f2-aef7-37dc82a1cb10","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 7,
+  "origin": 9,
   "parent": {
     "name": "Dash",
-    "path": "folders/Sprites/Entities/Player/Class/Warrior/Move/Dash.yy",
+    "path": "folders/Sprites/Entities/Player/Warrior/Move/Dash.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -66,7 +66,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 71,
-    "yorigin": 105,
+    "yorigin": 106,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

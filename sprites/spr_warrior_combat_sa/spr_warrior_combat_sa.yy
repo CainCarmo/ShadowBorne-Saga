@@ -26,10 +26,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"52fbdeeb-5c52-4210-9cfa-619433997cef","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 7,
+  "origin": 9,
   "parent": {
     "name": "Air",
-    "path": "folders/Sprites/Entities/Player/Class/Warrior/Combat/Sheathed/Air.yy",
+    "path": "folders/Sprites/Entities/Player/Warrior/Combat/Sheathed/Air.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -66,7 +66,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 71,
-    "yorigin": 105,
+    "yorigin": 106,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

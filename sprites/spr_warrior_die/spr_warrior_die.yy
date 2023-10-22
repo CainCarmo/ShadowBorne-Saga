@@ -29,10 +29,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b6b0e4c8-0ecd-41e0-a5c8-8f33852cc3e7","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 7,
+  "origin": 9,
   "parent": {
     "name": "Die",
-    "path": "folders/Sprites/Entities/Player/Class/Warrior/Move/Die.yy",
+    "path": "folders/Sprites/Entities/Player/Warrior/Move/Die.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -72,7 +72,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 71,
-    "yorigin": 105,
+    "yorigin": 106,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

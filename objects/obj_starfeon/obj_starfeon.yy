@@ -28,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_starfeon_idle",
+    "path": "sprites/spr_starfeon_idle/spr_starfeon_idle.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

@@ -34,7 +34,7 @@
   "origin": 7,
   "parent": {
     "name": "Ground",
-    "path": "folders/Sprites/Entities/Player/Class/Wizard/Combat/Ground.yy",
+    "path": "folders/Sprites/Entities/Player/Wizard/Combat/Ground.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

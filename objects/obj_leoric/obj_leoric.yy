@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_collider",
-    "path": "sprites/spr_collider/spr_collider.yy",
+    "name": "spr_leoric_idle",
+    "path": "sprites/spr_leoric_idle/spr_leoric_idle.yy",
   },
   "spriteMaskId": null,
   "visible": true,

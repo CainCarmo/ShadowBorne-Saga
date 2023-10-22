@@ -27,10 +27,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f434b07c-17fd-4496-ab07-044cea1ae0e4","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 7,
+  "origin": 9,
   "parent": {
     "name": "Ground",
-    "path": "folders/Sprites/Entities/Player/Class/Warrior/Combat/Sheathed/Ground.yy",
+    "path": "folders/Sprites/Entities/Player/Warrior/Combat/Sheathed/Ground.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -68,7 +68,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 71,
-    "yorigin": 105,
+    "yorigin": 106,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

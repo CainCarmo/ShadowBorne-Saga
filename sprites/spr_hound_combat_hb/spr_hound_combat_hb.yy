@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_hound_combat_hb",
-  "bbox_bottom": 45,
+  "bbox_bottom": 32,
   "bbox_left": 0,
-  "bbox_right": 25,
+  "bbox_right": 17,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -22,7 +22,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 48,
+  "height": 34,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"991d31ab-4140-40fb-8930-dfe5d4432ad3","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
@@ -81,5 +81,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 65,
+  "width": 46,
 }

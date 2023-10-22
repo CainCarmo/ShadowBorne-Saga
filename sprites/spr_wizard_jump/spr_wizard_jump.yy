@@ -30,7 +30,7 @@
   "origin": 7,
   "parent": {
     "name": "Jump",
-    "path": "folders/Sprites/Entities/Player/Class/Wizard/Move/Jump.yy",
+    "path": "folders/Sprites/Entities/Player/Wizard/Move/Jump.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

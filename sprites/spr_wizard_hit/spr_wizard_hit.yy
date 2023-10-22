@@ -30,7 +30,7 @@
   "origin": 7,
   "parent": {
     "name": "Hit",
-    "path": "folders/Sprites/Entities/Player/Class/Wizard/Move/Hit.yy",
+    "path": "folders/Sprites/Entities/Player/Wizard/Move/Hit.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

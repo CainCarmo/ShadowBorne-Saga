@@ -8,6 +8,12 @@ function PlayerState () constructor {
 				new WarriorState().Die();
 				break;
 		}
+		
+		if (new ControllerSprite(obj_player).ListenerSpriteIndex(obj_player.image_number - 1))
+			new ControllerSprite(obj_player).AssignSpriteToObject();
+		
+		if (new ControllerSprite(obj_player).ListenerSpriteIndex(1))
+			new ControllerSprite(obj_player).StopIn(1);
 	}
 	static Hit = function () {
 		switch (obj_player.class) {
@@ -178,7 +184,7 @@ function DrawElementPlayer () constructor {
 		);
 		
 		new DrawGUI()
-			.Text(string(obj_player.status.Life.Atual) + "/" + string(obj_player.status.Life.Max), 270 - 40, 8 + 10, 1, 1, ft_status,, true, c_black, fa_center, fa_middle);
+			.Text(string(obj_player.status.Life.Atual) + "/" + string(ceil(obj_player.status.Life.Max)), 270 - 40, 8 + 10, 1, 1, ft_status,, true, c_black, fa_center, fa_middle);
 	}
 	static StaminaBar = function () {
 		var wStamina = (stamina_temp / obj_player.status.Stamina.Max) * 270;
@@ -217,7 +223,7 @@ function DrawElementPlayer () constructor {
 		);
 		
 		new DrawGUI()
-			.Text(string(obj_player.status.Stamina.Atual) + "/" + string(obj_player.status.Stamina.Max), 270 - 40, 100 + 20, 1, 1, ft_status,, true, c_black, fa_center, fa_middle);
+			.Text(string(obj_player.status.Stamina.Atual) + "/" + string(ceil(obj_player.status.Stamina.Max)), 270 - 40, 100 + 20, 1, 1, ft_status,, true, c_black, fa_center, fa_middle);
 	}
 	static ManaBar = function () {
 		var wMana = (mana_temp / obj_player.status.Mana.Max) * 270;
@@ -256,7 +262,7 @@ function DrawElementPlayer () constructor {
 		);
 		
 		new DrawGUI()
-			.Text(string(obj_player.status.Mana.Atual) + "/" + string(obj_player.status.Mana.Max), 270 - 40, 100 + 20, 1, 1, ft_status,, true, c_black, fa_center, fa_middle);
+			.Text(string(obj_player.status.Mana.Atual) + "/" + string(ceil(obj_player.status.Mana.Max)), 270 - 40, 100 + 20, 1, 1, ft_status,, true, c_black, fa_center, fa_middle);
 	}
 	static LevelBar = function () {
 		var wGUI = display_get_gui_width();
@@ -296,5 +302,131 @@ function DrawElementPlayer () constructor {
 			wGUI - (wGUI / 2) * .38, 
 			hGUI - 55, "XP: " + string(obj_player.status.Level.XP) + "/" + string(obj_player.status.Level.LimitXP)
 		);
+	}
+	
+	static DeadView = function () {
+		var wGUI = display_get_gui_width();
+		var hGUI = display_get_gui_height();
+		
+		if (new ControllerSprite(obj_player).ListenerSpriteIndex(1)) {
+			draw_rectangle_color (
+				0,
+				hGUI,
+				wGUI,
+				0,
+				c_black, c_black, c_black, c_black, 
+				false
+			);
+			
+			new Utils(obj_room).SetTimer(5);
+		
+			new DrawGUI()
+				.Text("You Died", wGUI / 2, hGUI / 4 - 50, 1, 1, ft_logo,, true, c_red, fa_center, fa_middle);
+			new DrawGUI()
+				.Text("Voltando no ùltimo ponto em: " + string(round(obj_room.timer / room_speed)), wGUI - 420, hGUI - 30, 1, 1, ft_status,, true, c_black, fa_left, fa_top);
+				
+			if (obj_room.timer == 0) {
+				obj_player.x = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Local._x;
+				obj_player.y = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Local._y;
+				
+				obj_player.status.Life.Max = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Life.Max;
+				obj_player.status.Life.Atual = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Life.Atual;
+				obj_player.status.Life.Regen = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Life.Regen;
+				
+				obj_player.status.Stamina.Max = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Stamina.Max;
+				obj_player.status.Stamina.Atual = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Stamina.Atual;
+				obj_player.status.Stamina.Regen = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Stamina.Regen;
+				
+				obj_player.status.Mana.Max = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Mana.Max;
+				obj_player.status.Mana.Atual = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Mana.Atual;
+				obj_player.status.Mana.Regen = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Mana.Regen;
+				
+				obj_player.state = EntityState.Idle;
+				
+				obj_room.timer = -1;
+			}
+		}
+	}
+}
+
+function DealDamage () {
+	if (place_meeting(x, y, obj_player.enemies) && obj_player.timer == -1 && obj_player.state != EntityState.Dash && obj_player.state != EntityState.Attack) {
+		var damage = 50;
+		
+		if ((obj_player.status.Life.Atual - damage) < 0) {
+			obj_player.status.Life.Atual -= (obj_player.status.Life.Atual - damage) + damage;
+			
+			obj_player.state = EntityState.Die;
+		}
+		else {
+			obj_player.image_alpha = .4;
+			obj_player.status.Life.Atual -= damage; 
+			
+			new Utils(obj_player).SetTimer(2);
+		}
+	}
+	
+	if (obj_player.timer == 0) {
+		obj_player.timer = -1;
+		obj_player.image_alpha = 1;
+	}
+	else if (obj_player.timer > 0) {
+		if (obj_player.status.Life.Atual == 0) {
+			obj_player.timer = -1;
+			obj_player.image_alpha = 1;
+			
+			obj_player.state = EntityState.Die;
+		}
+		else
+			new Utils(obj_player).SetTimer(2);
+	}
+}
+
+function RegenStatus () {
+	if (obj_player.status.Life.Atual < 100 && obj_player.status.Life.Atual - obj_player.status.Life.Regen > 100)
+		obj_player.status.Life.Atual += (obj_player.status.Life.Atual - obj_player.status.Life.Regen) + obj_player.status.Life.Regen;
+	else if (obj_player.status.Life.Atual < 100)
+		obj_player.status.Life.Atual += obj_player.status.Life.Regen;
+	
+	if (obj_player.status.Mana.Atual < 100 && obj_player.status.Mana.Atual - obj_player.status.Mana.Regen > 100)
+		obj_player.status.Mana.Atual += (obj_player.status.Mana.Atual - obj_player.status.Mana.Regen) + obj_player.status.Mana.Regen;
+	else if (obj_player.status.Mana.Atual < 100)
+		obj_player.status.Mana.Atual += obj_player.status.Mana.Regen;
+	
+	
+	if (obj_player.status.Stamina.Atual < 100 && obj_player.status.Stamina.Atual - obj_player.status.Stamina.Regen > 100)
+		obj_player.status.Stamina.Atual += (obj_player.status.Stamina.Atual - obj_player.status.Stamina.Regen) + obj_player.status.Stamina.Regen;
+	else if (obj_player.status.Stamina.Atual < 100)
+		obj_player.status.Stamina.Atual += obj_player.status.Stamina.Regen;
+}
+
+function ListenerLevel () {
+	if (obj_player.status.Level.XP >= obj_player.status.Level.LimitXP) {
+		obj_player.status.Level.Count++;
+	
+		if (obj_player.status.Level.Count >= 1 && obj_player.status.Level.Count <= 9) {
+			obj_player.status.Level.LimitXP = 150;
+			obj_player.status.Level.XP = 0;
+		}
+		if (obj_player.status.Level.Count >= 10 && obj_player.status.Level.Count <= 19) {
+			obj_player.status.Level.LimitXP = 300;
+			obj_player.status.Level.XP = 0;
+		}
+		if (obj_player.status.Level.Count >= 20 && obj_player.status.Level.Count <= 29) {
+			obj_player.status.Level.LimitXP = 500;
+			obj_player.status.Level.XP = 0;
+		}
+		if (obj_player.status.Level.Count >= 30 && obj_player.status.Level.Count <= 39) {
+			obj_player.status.Level.LimitXP = 1000;
+			obj_player.status.Level.XP = 0;
+		}
+		if (obj_player.status.Level.Count >= 40 && obj_player.status.Level.Count <= 49) {
+			obj_player.status.Level.LimitXP = 1500;
+			obj_player.status.Level.XP = 0;
+		}
+		if (obj_player.status.Level.Count >= 50 && obj_player.status.Level.Count <= 59) {
+			obj_player.status.Level.LimitXP = 2500;
+			obj_player.status.Level.XP = 0;
+		}
 	}
 }

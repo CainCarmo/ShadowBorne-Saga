@@ -3,10 +3,10 @@
   "resourceVersion": "1.0",
   "name": "spr_wizard_idle",
   "bbox_bottom": 157,
-  "bbox_left": 37,
-  "bbox_right": 100,
-  "bbox_top": 74,
-  "bboxMode": 0,
+  "bbox_left": 59,
+  "bbox_right": 92,
+  "bbox_top": 96,
+  "bboxMode": 2,
   "collisionKind": 1,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
@@ -33,7 +33,7 @@
   "origin": 7,
   "parent": {
     "name": "Idle",
-    "path": "folders/Sprites/Entities/Player/Class/Wizard/Move/Idle.yy",
+    "path": "folders/Sprites/Entities/Player/Wizard/Move/Idle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

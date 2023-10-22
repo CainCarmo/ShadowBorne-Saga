@@ -27,7 +27,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_obelisk_disabled",
+    "path": "sprites/spr_obelisk_disabled/spr_obelisk_disabled.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

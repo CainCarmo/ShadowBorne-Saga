@@ -30,9 +30,6 @@ function MachineState () constructor {
 			case EntityState.Dialog:
 				new PlayerState().Dialog();
 				break;
-			case EntityState.Teleport:
-				new PlayerState().Teleport();
-				break;
 			case EntityState.Cutscene:
 				new PlayerState().Cutscene();
 				break;
@@ -45,9 +42,6 @@ function MachineState () constructor {
 		switch (_obj.state) {
 			case EntityState.Die:
 				new EnemyState().Die(_obj);
-				break;
-			case EntityState.Fly:
-				new EnemyState().Fly(_obj);
 				break;
 			case EntityState.Hit:
 				new EnemyState().Hit(_obj);
@@ -115,19 +109,6 @@ function MachineState () constructor {
 			case StructState.Active:
 				new TotemState().Active();
 				break;
-		}
-	}
-	
-	static Chest = function () {
-		if (obj_room.state != EnvironmentState.Normal) exit;
-		
-		switch (obj_chest.state) {
-			case StockState.Closed:
-				new ChestState().Closed();
-				break;
-			case StockState.Open:
-				new ChestState().Open();
-				break
 		}
 	}
 	

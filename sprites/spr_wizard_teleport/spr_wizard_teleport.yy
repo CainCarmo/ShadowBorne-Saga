@@ -41,7 +41,7 @@
   "origin": 7,
   "parent": {
     "name": "Teleport",
-    "path": "folders/Sprites/Entities/Player/Class/Wizard/Move/Teleport.yy",
+    "path": "folders/Sprites/Entities/Player/Wizard/Move/Teleport.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

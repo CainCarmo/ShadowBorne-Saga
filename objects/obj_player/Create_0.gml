@@ -3,11 +3,19 @@ event_inherited();
 // @Struct Save
 saveStruct = global.SaveData.Saves[global.SaveData.LastSavePlayed];
 
+// @Alarm
+alarm[0] = 1;
+
 // @Information
 name  = "Kirin"; 
 class = saveStruct.Character.Class;
 state = hadGroundCollised ? EntityState.Idle : EntityState.Jump;
 identity = Identity.Player;
+
+// @Collision
+self.mask_index = self.class == PlayerClass.Warrior
+	? spr_warrior_idle_s
+	: spr_wizard_idle;
 
 // @Movimentation
 left  = undefined;
@@ -75,7 +83,15 @@ mechanics = {
 
 // @Draw Bars
 playerBars = new DrawElementPlayer();
-enemiesBar = new DrawElementEnemy(self);
+
+// @Get All Enemies In Room
+enemies = []
+
+for (var i = 0; i < instance_number(obj_entity); ++i;)
+{
+    if (instance_find(obj_entity, i).identity != Identity.Player && instance_find(obj_entity, i).identity != Identity.NPC)
+		enemies[i] = instance_find(obj_entity, i);
+}
 
 // @Direction Sprite
 scale_x = 1;
@@ -88,3 +104,6 @@ objectAtual = self;
 
 // @Discart
 _ = undefined;
+
+// @Projectile
+timerProjectile = 0;

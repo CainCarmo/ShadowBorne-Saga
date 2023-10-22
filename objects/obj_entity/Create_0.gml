@@ -54,11 +54,14 @@ status = {
 	Bulk: 1
 }
 
+// @Settings
+objectAtual = self;
+
 // @Direction Sprite
 scale_x = 1;
 
 // @Debug
 view_debugger = true;
 
-// @Settings
-objectAtual = obj_entity;
+// @Draw Bars
+enemiesBar = new DrawElementEnemy(objectAtual);

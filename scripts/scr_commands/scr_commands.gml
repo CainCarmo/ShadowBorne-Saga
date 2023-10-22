@@ -3,12 +3,10 @@ function ControllerMappingCommands () constructor {
 		Left:   keyboard_check(ord(global.SaveData.Settings.Commands.Keyboard.Left)),
 		Right:  keyboard_check(ord(global.SaveData.Settings.Commands.Keyboard.Right)),
 		Jump:   keyboard_check_pressed(global.SaveData.Settings.Commands.Keyboard.Jump),
-		Attack: mouse_check_button(global.SaveData.Settings.Commands.Keyboard.Attack),
+		Attack: mouse_check_button_released(global.SaveData.Settings.Commands.Keyboard.Attack),
 		Dash:   keyboard_check_released(ord(global.SaveData.Settings.Commands.Keyboard.Dash)),
 		// @Warrior
-		Wield: keyboard_check_released(ord(global.SaveData.Settings.Commands.Keyboard.Wield)),
-		// @Wizard
-		Teleport: keyboard_check_released(ord(global.SaveData.Settings.Commands.Keyboard.Teleport))
+		Wield: keyboard_check_released(ord(global.SaveData.Settings.Commands.Keyboard.Wield))
 	}
 	
 	static Moves = function (_action) {
@@ -23,8 +21,6 @@ function ControllerMappingCommands () constructor {
 				return KeyboardCommands.Dash;
 			case PlayerActions.Wield:
 				return KeyboardCommands.Wield;
-			case PlayerActions.Teleport:
-				return KeyboardCommands.Teleport;
 		}
 	}
 	static Combat = function () {

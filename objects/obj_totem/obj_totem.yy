@@ -27,7 +27,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_totem",
+    "path": "sprites/spr_totem/spr_totem.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

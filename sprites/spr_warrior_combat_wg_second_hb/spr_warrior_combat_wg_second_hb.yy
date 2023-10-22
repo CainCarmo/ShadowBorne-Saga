@@ -28,10 +28,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0f2db27c-5c98-4738-a9fa-ca85031582f2","blendMode":0,"displayName":"Hitbox","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 7,
+  "origin": 9,
   "parent": {
     "name": "Ground",
-    "path": "folders/Sprites/Entities/Player/Class/Warrior/Combat/Wielded/Ground.yy",
+    "path": "folders/Sprites/Entities/Player/Warrior/Combat/Wielded/Ground.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -70,7 +70,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 71,
-    "yorigin": 105,
+    "yorigin": 106,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

@@ -25,10 +25,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"cd7300db-e353-4a68-afb2-39bfc36a8d78","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 7,
+  "origin": 9,
   "parent": {
     "name": "Wielded",
-    "path": "folders/Sprites/Entities/Player/Class/Warrior/Move/Hit/Wielded.yy",
+    "path": "folders/Sprites/Entities/Player/Warrior/Move/Hit/Wielded.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -64,7 +64,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 71,
-    "yorigin": 105,
+    "yorigin": 106,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

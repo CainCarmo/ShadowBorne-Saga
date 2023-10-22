@@ -1,16 +1,15 @@
 // @Default
 enum EntityState {
 	Die,
-	Fly,
 	Hit,
 	Dash,
 	Idle,
 	Jump,
 	Walk,
+	Chase,
 	Wield,
 	Attack,
 	Dialog,
-	Teleport,
 	Cutscene
 }
 
@@ -20,11 +19,6 @@ enum StructState {
 	Disabled
 }
 
-enum StockState {
-	Open,
-	Closed
-}
-
 enum Identity {
 	// @Non-Player
 	NPC,
@@ -32,13 +26,10 @@ enum Identity {
 	Player,
 	// @Enimies
 	Boss,
-	SubBoss,
 	Minion,
 	// @Structs
 	Obelisk,
-	Totem,
-	// @Storage
-	Chest
+	Totem
 }
 
 // @Player
@@ -55,8 +46,6 @@ enum PlayerActions {
 	Dash,
 	// @Warrior
 	Wield,
-	// @Wizard
-	Teleport
 }
 
 	// @Warrior	
@@ -92,20 +81,12 @@ enum Boss {
 	DemonSkeleton
 }
 
-enum SubBoss {
-	Nightmare,
-	EvilWizard,
-	Primordial
-}
-
 enum Minion {
 	Hound,
 	Slime,
 	Goblin,
-	EvilEye,
 	Mushroom,
 	Skeleton,
-	FireWorm
 }
 
 // @Room

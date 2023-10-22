@@ -6,7 +6,8 @@ dash   = new ControllerMappingCommands().Moves(PlayerActions.Dash);
 attack = new ControllerMappingCommands().Combat();
 
 // @Controller Check [Warrior]
-wieldToggle = new ControllerMappingCommands().Moves(PlayerActions.Wield);
+if (class == PlayerClass.Warrior)
+	wieldToggle = new ControllerMappingCommands().Moves(PlayerActions.Wield);
 
 // @Controller Check [Wizard]
-mechanics.Wizard.Teleport = new ControllerMappingCommands().Moves(PlayerActions.Teleport);
+//mechanics.Wizard.Teleport = new ControllerMappingCommands().Moves(PlayerActions.Teleport);

@@ -16,6 +16,15 @@ function Utils (_obj_entity) constructor {
 	static ListenerTimer = function () {
 		return _obj.timer > 0 ? _obj.timer-- : _obj.timer;
 	}
+	static SetTimerProjectile = function (time) {
+		if (_obj.timerProjectile == -1)
+			_obj.timerProjectile = room_speed * time;
+		
+		new Utils(_obj).ListenerTimerProjectile();
+	}
+	static ListenerTimerProjectile = function () {
+		return _obj.timerProjectile > 0 ? _obj.timerProjectile-- : _obj.timerProjectile;
+	}
 	static VerifySaveFileExists = function () {
 		return file_exists(FILESAVENAME);
 	}

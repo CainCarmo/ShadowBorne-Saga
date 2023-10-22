@@ -28,7 +28,7 @@
   "origin": 7,
   "parent": {
     "name": "Fall",
-    "path": "folders/Sprites/Entities/Player/Class/Wizard/Move/Fall.yy",
+    "path": "folders/Sprites/Entities/Player/Wizard/Move/Fall.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

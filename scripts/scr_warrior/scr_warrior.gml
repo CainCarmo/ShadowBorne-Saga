@@ -57,7 +57,11 @@ function WarriorState () constructor {
 
 function WarriorCommands () constructor {
 	static Dash = function () {
-		AlterPlayerDefault(,,, EntityState.Dash, true);
+		if (obj_player.status.Stamina.Atual > 5) {
+			AlterPlayerDefault(,,, EntityState.Dash, true);
+		
+			obj_player.status.Stamina.Atual -= 5;
+		}
 	}
 	static Wield = function () {
 		AlterPlayerDefault(,,, EntityState.Wield, true);
@@ -70,6 +74,7 @@ function WarriorCommands () constructor {
 				AlterPlayerDefault(0, 0);
 				
 				new ControllerSprite(obj_player).AssignSpriteToObject();
+				WarriorHitBox();
 				
 				var isComboIndexValid = obj_player.mechanics.Warrior.ComboIndex <= WarriorComboIndex.Second;
 				var isFrameComboValid = new ControllerSprite(obj_player).ListenerSpriteIndex(2);
@@ -103,6 +108,7 @@ function WarriorCommands () constructor {
 			Air: function () {
 				if (!obj_player.mechanics.Warrior.JumpAttack) {
 					new ControllerSprite(obj_player).AssignSpriteToObject();
+					
 					new AlterWarrior().Attack(,, true);
 				}
 		
@@ -121,12 +127,23 @@ function WarriorCommands () constructor {
 function AlterWarrior () constructor {
 	static Move = function () {
 		obj_player.mechanics.Warrior.Wield = obj_player.mechanics.Warrior.Wield ? false : true;
-		show_debug_message(obj_player.mechanics.Warrior.Wield ? "Com" : "Sem");
 	}
 	
 	static Attack = function (cs = undefined, ci = undefined, ja = undefined) {
 		obj_player.mechanics.Warrior.ComboState = cs == undefined ? obj_player.mechanics.Warrior.ComboState : cs;
 		obj_player.mechanics.Warrior.ComboIndex = ci == undefined ? obj_player.mechanics.Warrior.ComboIndex : ci;
 		obj_player.mechanics.Warrior.JumpAttack = ja == undefined ? obj_player.mechanics.Warrior.JumpAttack : ja;
+	}
+}
+
+function WarriorHitBox () {
+	if (!instance_exists(obj_player_hitbox)) {
+		var hitbox = instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_player_hitbox);
+		
+		hitbox.image_xscale = obj_player.scale_x;
+	}
+	
+	if (new ControllerSprite(obj_player).ListenerSpriteIndex(1)) {
+		if (instance_exists(obj_player_hitbox)) instance_destroy(obj_player_hitbox);
 	}
 }

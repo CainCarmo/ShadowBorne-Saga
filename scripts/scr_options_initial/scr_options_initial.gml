@@ -109,6 +109,7 @@ function DrawOptionsInitial () constructor {
 				Start:  function (saveIndex) {
 					global.SaveData.LastSavePlayed = saveIndex;
 					
+					new CreateSave().Save();
 					new CreateSave().Load(saveIndex);
 					new CreateSave().Save();
 					
@@ -274,20 +275,20 @@ function DrawOptionsInitial () constructor {
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Class = obj_menu.classSelected;
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Life.Max   = 100;
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Life.Atual = 100;
-				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Life.Regen = .5;
+				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Life.Regen = 2;
 				
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Stamina.Max   = 100;
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Stamina.Atual = 100;
-				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Stamina.Regen = .5;
+				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Stamina.Regen = 1;
 				
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Mana.Max   = 100;
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Mana.Atual = 100;
-				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Mana.Regen = .5;
+				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Mana.Regen = 1;
 				
-				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Armor.Atual  = 1;
+				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Armor.Atual  = obj_menu.classSelected == PlayerClass.Warrior ? 5 : 7;
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Armor.Buffed = 0;
 				
-				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Strenght.Atual  = 1;
+				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Strenght.Atual  = obj_menu.classSelected == PlayerClass.Warrior ? 6 : 8;
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Strenght.Buffed = 0;
 				
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Level.XP      = 0;
@@ -310,7 +311,7 @@ function DrawOptionsInitial () constructor {
 				
 				new CreateSave().Save();
 				
-				room_goto(rm_teste);
+				room_goto(global.SaveData.Saves[obj_menu.saveIndex].Character.Local.Room);
 			}
 			
 			colorRectangle = obj_menu.classSelected == arrCharacters[i].Class 

@@ -30,6 +30,9 @@ function WizardState () constructor {
 			new WarriorCommands().Dash();
 	}
 	static Attack = function () {
+		if (obj_player.status.Mana.Atual > 3) 
+			new MachineProjectile().Player();
+			
 		new ControllerSprite(obj_player).AssignSpriteToObject();
 		
 		if (new ControllerSprite(obj_player).ListenerSpriteIndex(1))

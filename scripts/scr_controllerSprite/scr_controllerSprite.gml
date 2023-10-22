@@ -3,7 +3,7 @@ function ControllerSprite (_obj_entity) constructor {
 	
 	static StopIn = function (index) {
 		if (_obj.image_index >= _obj.image_number - index)
-			_obj.image_index = index;
+			_obj.image_index =  _obj.image_number - index; 
 	}
 	
 	static AssignSpriteToObject = function () {
@@ -13,7 +13,7 @@ function ControllerSprite (_obj_entity) constructor {
 				
 				if (_obj.state == EntityState.Attack) {
 					_obj.sprite_index = spritesPlayer[0];
-					//_obj.mask_index   = spritesPlayer[1];
+					if (instance_exists(obj_player_hitbox)) obj_player_hitbox.sprite_index = spritesPlayer[1];
 				}
 				else {
 					_obj.sprite_index = spritesPlayer;
@@ -30,12 +30,6 @@ function ControllerSprite (_obj_entity) constructor {
 				_obj.sprite_index = spritesBoss[0];
 				_obj.mask_index   = spritesBoss[1];
 				break;
-			case Identity.SubBoss:
-				var spritesSubBoss = new MachineSprite().SubBoss(_obj);
-				
-				_obj.sprite_index = spritesSubBoss[0];
-				_obj.mask_index   = spritesSubBoss[1];
-				break;
 			case Identity.Minion:
 				var spritesMinion = new MachineSprite().Minion(_obj);
 				
@@ -47,9 +41,6 @@ function ControllerSprite (_obj_entity) constructor {
 				break;
 			case Identity.Totem:
 				_obj.sprite_index = new MachineSprite().Totem();
-				break;
-			case Identity.Chest:
-				_obj.sprite_index = new MachineSprite().Chest();
 				break;
 		}
 	}

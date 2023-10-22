@@ -9,3 +9,7 @@ draw_sprite (spr_playerbar, 0, 3, 3);
 
 // @Level
 new DrawElementPlayer().LevelBar();
+
+// @Draw Death View
+if (state == EntityState.Die)
+	new DrawElementPlayer().DeadView();

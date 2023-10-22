@@ -25,10 +25,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a357f6cc-ffc5-46b4-b755-82ac81d961dc","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 7,
+  "origin": 9,
   "parent": {
     "name": "Sheathe",
-    "path": "folders/Sprites/Entities/Player/Class/Warrior/Move/Sheathe.yy",
+    "path": "folders/Sprites/Entities/Player/Warrior/Move/Sheathe.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -64,7 +64,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 71,
-    "yorigin": 105,
+    "yorigin": 106,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

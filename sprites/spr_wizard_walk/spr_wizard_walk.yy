@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_wizard_walk",
-  "bbox_bottom": 156,
+  "bbox_bottom": 157,
   "bbox_left": 47,
   "bbox_right": 111,
-  "bbox_top": 75,
+  "bbox_top": 76,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -32,7 +32,7 @@
   "origin": 7,
   "parent": {
     "name": "Walk",
-    "path": "folders/Sprites/Entities/Player/Class/Wizard/Move/Walk.yy",
+    "path": "folders/Sprites/Entities/Player/Wizard/Move/Walk.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
