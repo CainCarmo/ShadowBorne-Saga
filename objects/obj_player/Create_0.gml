@@ -7,7 +7,7 @@ saveStruct = global.SaveData.Saves[global.SaveData.LastSavePlayed];
 alarm[0] = 1;
 
 // @Information
-name  = "Kirin"; 
+name  = ""; 
 class = saveStruct.Character.Class;
 state = hadGroundCollised ? EntityState.Idle : EntityState.Jump;
 identity = Identity.Player;

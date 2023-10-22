@@ -2,4 +2,5 @@
 timer = -1;
 
 // @Information
-state = undefined;
+state = StructState.Disabled;
+identity = Identity.Obelisk;

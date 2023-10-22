@@ -173,8 +173,6 @@ global.SaveData = {
 				Dash:   "S",
 				// @Warrior
 				Wield:  "E",
-				// @Wizard
-				Teleport: "E"
 			}
 		}
 	},
