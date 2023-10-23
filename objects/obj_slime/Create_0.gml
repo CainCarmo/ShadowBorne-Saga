@@ -10,7 +10,7 @@ speed_horizontal = 0;
 speed_vertical   = 0;
 
 speed_horizontal_max = 1;
-speed_vertical_max   = 5;
+speed_vertical_max   = 6;
 
 hadGroundCollised = false;
 

@@ -1,13 +1,14 @@
 event_inherited();
+if (self.state == EntityState.Die) return;
 
 if (hadGroundCollised) speed_vertical = 0;
 
 if (distance_to_object(obj_player) <= dist_aggro) {	
 	
-	if (distance_to_object(obj_player) <= 20 && name != Minion.Slime) {
-		speed_horizontal = 0;
+	if (distance_to_object(obj_player) <= 35 && name != Minion.Slime) {
+		speed_horizontal = 0; 
 		
-		new Utils(self).SetTimer(1);
+		new Utils(self).SetTimer(.4);
 		
 		if (timer == 0) {
 			state = EntityState.Attack;

@@ -3,7 +3,7 @@ timer = -1;
 
 // @Steps
 steps	 = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Rounds.Step;
-stepsAll = 2;
+stepsAll = 4;
 
 // @Settings
 started	  = false;
@@ -16,4 +16,4 @@ spawned		 = false;
 porcentageAtual = 0;
 
 // @Enemies Numbers
-limit = [2, 2];
+limit = [1, 1, 1, 1];

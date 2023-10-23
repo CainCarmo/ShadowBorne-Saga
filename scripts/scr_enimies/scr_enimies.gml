@@ -4,6 +4,7 @@ function EnemyState () constructor {
 			switch (_obj.name) {
 				case Boss.Death:
 					_obj.sprite_index = spr_death_die;
+					AlterEnemyDefault(_obj, 0, 0);
 					new DeathState().Die();
 					break;
 				case Boss.DemonSkeleton:
@@ -38,6 +39,10 @@ function EnemyState () constructor {
 		
 		if (new ControllerSprite(_obj).ListenerSpriteIndex(1)) {
 			obj_player.status.Level.XP += irandom_range(15, 35);
+			
+			if (_obj.name == Boss.Death) {
+				obj_room.deathIsDead = true;
+			}
 			
 			instance_destroy(_obj);
 		}
@@ -247,31 +252,89 @@ function DrawElementEnemy (_obj_entity) constructor {
 		life_temp = lerp(life_temp, clamp(_obj.status.Life.Atual, 0, _obj.status.Life.Max), 0.1);
 		life_bg   = lerp(life_bg, life_temp, 0.05);
 		
-		draw_rectangle_color(
-			_obj.x - 25,
-			_obj.y - (_obj.sprite_height - 20) - 20,
-			_obj.x + 25,
-			_obj.y - (_obj.sprite_height - 20) - 30,
-			c_gray, c_gray, c_gray, c_gray,
-			false
-		);
+		if (_obj.name == Minion.Slime) {
+			draw_rectangle_color(
+				_obj.x - 25,
+				_obj.y - (_obj.sprite_height - 20) - 20,
+				_obj.x + 25,
+				_obj.y - (_obj.sprite_height - 20) - 30,
+				c_gray, c_gray, c_gray, c_gray,
+				false
+			);
 		
-		draw_rectangle_color(
-			_obj.x - 25,
-			_obj.y - (_obj.sprite_height - 20) - 20,
-			_obj.x - 25 + wLifeBackground,
-			_obj.y - (_obj.sprite_height - 20) - 30,
-			c_red, c_red, c_red, c_red,		
-			false
-		);
+			draw_rectangle_color(
+				_obj.x - 25,
+				_obj.y - (_obj.sprite_height - 20) - 20,
+				_obj.x - 25 + wLifeBackground,
+				_obj.y - (_obj.sprite_height - 20) - 30,
+				c_red, c_red, c_red, c_red,		
+				false
+			);
 		
-		draw_rectangle_color(
-			_obj.x - 25,
-			_obj.y - (_obj.sprite_height - 20) - 20,
-			_obj.x - 25 + wLife,
-			_obj.y - (_obj.sprite_height - 20) - 30,
-			colorBar, colorBar, colorBar, colorBar,
-			false
-		);
+			draw_rectangle_color(
+				_obj.x - 25,
+				_obj.y - (_obj.sprite_height - 20) - 20,
+				_obj.x - 25 + wLife,
+				_obj.y - (_obj.sprite_height - 20) - 30,
+				colorBar, colorBar, colorBar, colorBar,
+				false
+			);
+		}
+		else if (_obj.name == Boss.Death) {
+			draw_rectangle_color(
+				_obj.x - 25,
+				_obj.y - ((_obj.sprite_height) - 80) - 20,
+				_obj.x + 25,
+				_obj.y - ((_obj.sprite_height) - 80) - 30,
+				c_gray, c_gray, c_gray, c_gray,
+				false
+			);
+		
+			draw_rectangle_color(
+				_obj.x - 25,
+				_obj.y - ((_obj.sprite_height) - 80) - 20,
+				_obj.x - 25 + wLifeBackground,
+				_obj.y - ((_obj.sprite_height) - 80) - 30,
+				c_red, c_red, c_red, c_red,		
+				false
+			);
+		
+			draw_rectangle_color(
+				_obj.x - 25,
+				_obj.y - ((_obj.sprite_height) - 80) - 20,
+				_obj.x - 25 + wLife,
+				_obj.y - ((_obj.sprite_height) - 80) - 30,
+				colorBar, colorBar, colorBar, colorBar,
+				false
+			);
+		}
+		else {
+			draw_rectangle_color(
+				_obj.x - 25,
+				_obj.y - ((_obj.sprite_height / 2) - 40) - 20,
+				_obj.x + 25,
+				_obj.y - ((_obj.sprite_height / 2) - 40) - 30,
+				c_gray, c_gray, c_gray, c_gray,
+				false
+			);
+		
+			draw_rectangle_color(
+				_obj.x - 25,
+				_obj.y - ((_obj.sprite_height / 2) - 40) - 20,
+				_obj.x - 25 + wLifeBackground,
+				_obj.y - ((_obj.sprite_height / 2) - 40) - 30,
+				c_red, c_red, c_red, c_red,		
+				false
+			);
+		
+			draw_rectangle_color(
+				_obj.x - 25,
+				_obj.y - ((_obj.sprite_height / 2) - 40) - 20,
+				_obj.x - 25 + wLife,
+				_obj.y - ((_obj.sprite_height / 2) - 40) - 30,
+				colorBar, colorBar, colorBar, colorBar,
+				false
+			);
+		}
 	}
 }

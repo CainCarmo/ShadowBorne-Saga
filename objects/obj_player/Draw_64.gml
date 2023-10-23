@@ -1,3 +1,5 @@
+if (obj_room.state != EnvironmentState.Normal) return;
+
 // @Life And (Mana || Stamina)
 playerBars.LifeBar();
 

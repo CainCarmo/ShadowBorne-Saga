@@ -1,7 +1,5 @@
 function MachineState () constructor {
 	static Player = function () {
-		if (obj_room.state != EnvironmentState.Normal) exit;
-		
 		switch (obj_player.state) {
 			case EntityState.Die:
 				new PlayerState().Die();
@@ -37,8 +35,6 @@ function MachineState () constructor {
 	}
 	
 	static Enimies = function (_obj) {
-		if (obj_room.state != EnvironmentState.Normal) exit;
-		
 		switch (_obj.state) {
 			case EntityState.Die:
 				new EnemyState().Die(_obj);
@@ -68,8 +64,6 @@ function MachineState () constructor {
 	}
 	
 	static NPC = function (_obj) {
-		if (obj_room.state != EnvironmentState.Normal) exit;
-		
 		switch (_obj.state) {
 			case EntityState.Idle:
 				new NonPlayerState().Idle(_obj);
@@ -81,8 +75,6 @@ function MachineState () constructor {
 	}
 	
 	static Obelisk = function () {
-		if (obj_room.state != EnvironmentState.Normal) exit;
-		
 		switch (obj_obelisk.state) {
 			case StructState.Disabled:
 				new ObeliskState().Disabled();
@@ -97,8 +89,6 @@ function MachineState () constructor {
 	}
 	
 	static Totem = function () {
-		if (obj_room.state != EnvironmentState.Normal) exit;
-		
 		switch (obj_totem.state) {
 			case StructState.Disabled:
 				new TotemState().Disabled();

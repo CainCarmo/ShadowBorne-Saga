@@ -28,7 +28,7 @@ else {
 		new DrawGUI()
 			.Text("Parabéns por passar pelas Hordas!", wGUI / 2, hGUI / 4, 1, 1, ft_menu,, true, c_black, fa_center, fa_middle);
 		new DrawGUI()
-			.Text("Movendo para a sala do Boss", wGUI / 2, hGUI / 4 + 20, 1, 1, ft_menu,, true, c_black, fa_center, fa_middle);
+			.Text("Movendo para a sala do Boss", wGUI / 2, hGUI / 4 + 30, 1, 1, ft_menu,, true, c_black, fa_center, fa_middle);
 		new DrawGUI()
 			.Text("Começando em: " + string(round(timer / room_speed)), wGUI - 200, 40, 1, 1, ft_status,, true, c_black, fa_left, fa_top);
 	}

@@ -15,7 +15,7 @@ speed_vertical_max   = 5;
 hadGroundCollised = false;
 
 // @Damage
-damage = 9;
+damage = 17;
 
 // @Status
 status = {
@@ -40,7 +40,7 @@ view_debugger = true;
 _ = undefined;
 
 // @Controller
-dist_aggro = 300;
+dist_aggro = 500;
 
 // @Draw Bars
 enemiesBar = new DrawElementEnemy(objectAtual);
