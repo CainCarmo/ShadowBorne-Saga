@@ -13,7 +13,7 @@ if (oCollised > 0 && !executed) {
 			with (enemy) {
 				status.Life.Atual -= obj_player.status.Strenght.Atual + obj_player.status.Strenght.Buffed;
 				
-				//state = EntityState.Hit;
+				state = EntityState.Hit;
 			}
 		}
 	}

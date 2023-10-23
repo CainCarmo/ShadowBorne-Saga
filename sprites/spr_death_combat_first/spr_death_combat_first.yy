@@ -54,7 +54,7 @@
   "origin": 7,
   "parent": {
     "name": "Ground",
-    "path": "folders/Sprites/Entities/Enemies/Class/Boss/Death/Combat/Ground.yy",
+    "path": "folders/Sprites/Entities/Enemies/Boss/Death/Combat/Ground.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

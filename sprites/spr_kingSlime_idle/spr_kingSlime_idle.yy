@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Idle",
-    "path": "folders/Sprites/Entities/Enemies/Class/Boss/KingSlime/Move/Idle.yy",
+    "path": "folders/Sprites/Entities/Enemies/Boss/KingSlime/Move/Idle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

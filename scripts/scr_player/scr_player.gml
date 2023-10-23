@@ -350,22 +350,6 @@ function DrawElementPlayer () constructor {
 }
 
 function DealDamage () {
-	if (place_meeting(x, y, obj_player.enemies) && obj_player.timer == -1 && obj_player.state != EntityState.Dash && obj_player.state != EntityState.Attack) {
-		var damage = 50;
-		
-		if ((obj_player.status.Life.Atual - damage) < 0) {
-			obj_player.status.Life.Atual -= (obj_player.status.Life.Atual - damage) + damage;
-			
-			obj_player.state = EntityState.Die;
-		}
-		else {
-			obj_player.image_alpha = .4;
-			obj_player.status.Life.Atual -= damage; 
-			
-			new Utils(obj_player).SetTimer(2);
-		}
-	}
-	
 	if (obj_player.timer == 0) {
 		obj_player.timer = -1;
 		obj_player.image_alpha = 1;
@@ -407,26 +391,38 @@ function ListenerLevel () {
 		if (obj_player.status.Level.Count >= 1 && obj_player.status.Level.Count <= 9) {
 			obj_player.status.Level.LimitXP = 150;
 			obj_player.status.Level.XP = 0;
+			
+			obj_player.status.Strenght.Atual += 2;
 		}
 		if (obj_player.status.Level.Count >= 10 && obj_player.status.Level.Count <= 19) {
 			obj_player.status.Level.LimitXP = 300;
 			obj_player.status.Level.XP = 0;
+			
+			obj_player.status.Strenght.Atual += 2;
 		}
 		if (obj_player.status.Level.Count >= 20 && obj_player.status.Level.Count <= 29) {
 			obj_player.status.Level.LimitXP = 500;
 			obj_player.status.Level.XP = 0;
+			
+			obj_player.status.Strenght.Atual += 2;
 		}
 		if (obj_player.status.Level.Count >= 30 && obj_player.status.Level.Count <= 39) {
 			obj_player.status.Level.LimitXP = 1000;
 			obj_player.status.Level.XP = 0;
+			
+			obj_player.status.Strenght.Atual += 2;
 		}
 		if (obj_player.status.Level.Count >= 40 && obj_player.status.Level.Count <= 49) {
 			obj_player.status.Level.LimitXP = 1500;
 			obj_player.status.Level.XP = 0;
+			
+			obj_player.status.Strenght.Atual += 2;
 		}
 		if (obj_player.status.Level.Count >= 50 && obj_player.status.Level.Count <= 59) {
 			obj_player.status.Level.LimitXP = 2500;
 			obj_player.status.Level.XP = 0;
+			
+			obj_player.status.Strenght.Atual += 2;
 		}
 	}
 }

@@ -33,7 +33,7 @@
   "origin": 0,
   "parent": {
     "name": "Die",
-    "path": "folders/Sprites/Entities/Enemies/Class/Boss/KingSlime/Move/Die.yy",
+    "path": "folders/Sprites/Entities/Enemies/Boss/KingSlime/Move/Die.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -8,6 +8,3 @@ attack = new ControllerMappingCommands().Combat();
 // @Controller Check [Warrior]
 if (class == PlayerClass.Warrior)
 	wieldToggle = new ControllerMappingCommands().Moves(PlayerActions.Wield);
-
-// @Controller Check [Wizard]
-//mechanics.Wizard.Teleport = new ControllerMappingCommands().Moves(PlayerActions.Teleport);

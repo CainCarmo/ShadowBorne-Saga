@@ -29,7 +29,7 @@
   "origin": 0,
   "parent": {
     "name": "Guard",
-    "path": "folders/Sprites/Entities/Enemies/Class/Minion/Skeleton/Move/Guard.yy",
+    "path": "folders/Sprites/Entities/Enemies/Minion/Skeleton/Move/Guard.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

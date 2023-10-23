@@ -4,6 +4,9 @@ randomize();
 
 alarm[0] = 1;
 
+// @Timer
+timer = -1;
+
 // @Movimentation
 
 // @Controller

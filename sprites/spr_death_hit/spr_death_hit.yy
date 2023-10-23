@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Hit",
-    "path": "folders/Sprites/Entities/Enemies/Class/Boss/Death/Move/Hit.yy",
+    "path": "folders/Sprites/Entities/Enemies/Boss/Death/Move/Hit.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -26,12 +26,12 @@ function ControllerSprite (_obj_entity) constructor {
 			case Identity.Boss:
 				var spritesBoss = new MachineSprite().Boss(_obj);
 				
-				_obj.sprite_index = spritesBoss;
+				_obj.sprite_index = spritesBoss == undefined ? _obj.sprite_index : spritesBoss;
 				break;
 			case Identity.Minion:
 				var spritesMinion = new MachineSprite().Minion(_obj);
 				
-				_obj.sprite_index = spritesMinion;
+				_obj.sprite_index = spritesMinion == undefined ? _obj.sprite_index : spritesMinion;
 				break;
 			case Identity.Obelisk:
 				_obj.sprite_index = new MachineSprite().Obelisk();

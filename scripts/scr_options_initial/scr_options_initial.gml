@@ -17,6 +17,8 @@ function OptionsInitial () constructor {
 	}
 	static Credits = function () {
 		new DrawOptionsInitial().BackToHome();
+		
+		draw_sprite(spr_banner, 0, 450, 10)
 	}
 	static Close = function () {
 		game_end();

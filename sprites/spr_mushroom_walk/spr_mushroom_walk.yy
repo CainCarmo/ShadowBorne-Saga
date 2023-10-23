@@ -33,7 +33,7 @@
   "origin": 7,
   "parent": {
     "name": "Walk",
-    "path": "folders/Sprites/Entities/Enemies/Class/Minion/Mushroom/Move/Walk.yy",
+    "path": "folders/Sprites/Entities/Enemies/Minion/Mushroom/Move/Walk.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

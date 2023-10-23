@@ -33,7 +33,7 @@
   "origin": 7,
   "parent": {
     "name": "hit",
-    "path": "folders/Sprites/Entities/Enemies/Class/Boss/DemonSkeleton/Move/hit.yy",
+    "path": "folders/Sprites/Entities/Enemies/Boss/DemonSkeleton/Move/hit.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

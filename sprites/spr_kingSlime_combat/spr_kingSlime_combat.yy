@@ -30,7 +30,7 @@
   "origin": 0,
   "parent": {
     "name": "Combat",
-    "path": "folders/Sprites/Entities/Enemies/Class/Boss/KingSlime/Combat.yy",
+    "path": "folders/Sprites/Entities/Enemies/Boss/KingSlime/Combat.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

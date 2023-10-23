@@ -33,7 +33,7 @@
   "origin": 7,
   "parent": {
     "name": "Run",
-    "path": "folders/Sprites/Entities/Enemies/Class/Minion/Goblin/Move/Run.yy",
+    "path": "folders/Sprites/Entities/Enemies/Minion/Goblin/Move/Run.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

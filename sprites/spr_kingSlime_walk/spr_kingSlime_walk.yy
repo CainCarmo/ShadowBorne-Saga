@@ -28,7 +28,7 @@
   "origin": 7,
   "parent": {
     "name": "walk",
-    "path": "folders/Sprites/Entities/Enemies/Class/Boss/KingSlime/Move/walk.yy",
+    "path": "folders/Sprites/Entities/Enemies/Boss/KingSlime/Move/walk.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

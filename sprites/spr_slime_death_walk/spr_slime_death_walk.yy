@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "death",
-    "path": "folders/Sprites/Entities/Enemies/Class/Minion/Slime/Move/death.yy",
+    "path": "folders/Sprites/Entities/Enemies/Minion/Slime/Move/death.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

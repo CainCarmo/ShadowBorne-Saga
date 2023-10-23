@@ -31,7 +31,7 @@
   "origin": 7,
   "parent": {
     "name": "Fly",
-    "path": "folders/Sprites/Entities/Enemies/Class/Boss/DemonSkeleton/Move/Fly.yy",
+    "path": "folders/Sprites/Entities/Enemies/Boss/DemonSkeleton/Move/Fly.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

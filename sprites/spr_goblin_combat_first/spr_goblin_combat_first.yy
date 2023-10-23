@@ -33,7 +33,7 @@
   "origin": 7,
   "parent": {
     "name": "Ground",
-    "path": "folders/Sprites/Entities/Enemies/Class/Minion/Goblin/Combat/Ground.yy",
+    "path": "folders/Sprites/Entities/Enemies/Minion/Goblin/Combat/Ground.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

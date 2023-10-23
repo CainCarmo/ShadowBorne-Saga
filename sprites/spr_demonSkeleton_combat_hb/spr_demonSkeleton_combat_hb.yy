@@ -37,7 +37,7 @@
   "origin": 7,
   "parent": {
     "name": "Air",
-    "path": "folders/Sprites/Entities/Enemies/Class/Boss/DemonSkeleton/Combat/Air.yy",
+    "path": "folders/Sprites/Entities/Enemies/Boss/DemonSkeleton/Combat/Air.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

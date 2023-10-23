@@ -332,19 +332,28 @@ function MachineSprite () constructor {
 						stateSpr = spr_hound_combat;
 						break;
 					case Minion.Goblin:
-						if (!_obj.attacking)
+						if (!_obj.attacking) {
 							stateSpr = choose(spr_goblin_combat_first, spr_goblin_combat_second);
+							
+							_obj.attacking = true;
+						}
 						break;
 					case Minion.Slime:
 						stateSpr = spr_slime_walk;
 						break;
 					case Minion.Skeleton:
-						if (!_obj.attacking)
+						if (!_obj.attacking) {
 							stateSpr = choose(spr_skeleton_combat_first, spr_skeleton_combat_second);
+							
+							_obj.attacking = true;
+						}
 						break;
 					case Minion.Mushroom:
-						if (!_obj.attacking)
+						if (!_obj.attacking) {
 							stateSpr = choose(spr_mushroom_combat_first, spr_mushroom_combat_second);
+							
+							_obj.attacking = true;
+						}
 						break;
 				}
 				break;

@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Idle",
-    "path": "folders/Sprites/Entities/Enemies/Class/Minion/Goblin/Move/Idle.yy",
+    "path": "folders/Sprites/Entities/Enemies/Minion/Goblin/Move/Idle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

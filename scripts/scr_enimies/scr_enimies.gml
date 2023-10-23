@@ -34,6 +34,12 @@ function EnemyState () constructor {
 					break;
 			}
 		}
+		
+		if (new ControllerSprite(_obj).ListenerSpriteIndex(1)) {
+			obj_player.status.Level.XP += irandom_range(15, 35);
+			
+			instance_destroy(_obj);
+		}
 	}
 	static Hit = function (_obj) {
 		new ControllerSprite(_obj).AssignSpriteToObject();
@@ -70,6 +76,9 @@ function EnemyState () constructor {
 					break;
 			}
 		}
+		
+		if (new ControllerSprite(_obj).ListenerSpriteIndex(1))
+			AlterEnemyDefault(_obj, 0,,, EntityState.Idle);
 	}
 	static Idle	= function (_obj) {
 		new ControllerSprite(_obj).AssignSpriteToObject();
@@ -144,8 +153,6 @@ function EnemyState () constructor {
 					break;
 			}
 		}
-		
-		AlterEnemyDefault(_obj, 1);
 	}
 	static Attack = function (_obj) {
 		new ControllerSprite(_obj).AssignSpriteToObject();
@@ -181,6 +188,14 @@ function EnemyState () constructor {
 					new MushroomState().Attack();
 					break;
 			}
+		}
+		
+		if (new ControllerSprite(_obj).ListenerSpriteIndex(1)) {
+			_obj.attacking = false;
+			
+			AlterEnemyDefault(_obj,,,, EntityState.Idle);
+			
+			new Utils(_obj).SetTimer(1);
 		}
 	}
 	static Cutscene	= function (_obj) {

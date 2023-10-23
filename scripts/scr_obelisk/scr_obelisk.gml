@@ -8,6 +8,9 @@ function ObeliskState () constructor {
 			
 			new CreateSave().Save();
 		}
+		else if (obj_obelisk.timer > 0) {
+			new Utils(obj_obelisk).SetTimer(2);
+		}
 	}
 	static Activating = function () {
 		new ControllerSprite(obj_obelisk).AssignSpriteToObject();
@@ -15,7 +18,7 @@ function ObeliskState () constructor {
 		if (new ControllerSprite(obj_obelisk).ListenerSpriteIndex(1)) {
 			obj_obelisk.state = StructState.Active;
 			
-			new Utils(obj_obelisk).SetTimer(3);
+			new Utils(obj_obelisk).SetTimer(2);
 		}
 	}
 	static Disabled = function () {
@@ -28,5 +31,5 @@ function DrawSave () {
 	var hGUI = display_get_gui_height();	
 	
 	new DrawGUI()
-		.Text("Jogo Salvo", wGUI - 420, hGUI - 30, 1, 1, ft_status,, true, c_black, fa_left, fa_top);
+		.Text("Jogo Salvo", wGUI - 200, hGUI - 150, 1, 1, ft_status,, true, c_black, fa_left, fa_top);
 }

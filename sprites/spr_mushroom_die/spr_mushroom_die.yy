@@ -29,7 +29,7 @@
   "origin": 7,
   "parent": {
     "name": "Die",
-    "path": "folders/Sprites/Entities/Enemies/Class/Minion/Mushroom/Move/Die.yy",
+    "path": "folders/Sprites/Entities/Enemies/Minion/Mushroom/Move/Die.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

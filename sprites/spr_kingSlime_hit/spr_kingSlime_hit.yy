@@ -28,7 +28,7 @@
   "origin": 7,
   "parent": {
     "name": "Hit",
-    "path": "folders/Sprites/Entities/Enemies/Class/Boss/KingSlime/Move/Hit.yy",
+    "path": "folders/Sprites/Entities/Enemies/Boss/KingSlime/Move/Hit.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
