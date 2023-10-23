@@ -13,7 +13,6 @@
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Anotações","folderPath":"folders/Anotações.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Caminhos","folderPath":"folders/Caminhos.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"KingSlime","folderPath":"folders/Caminhos/KingSlime.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Cenas","folderPath":"folders/Cenas.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Astraven's","folderPath":"folders/Cenas/Astraven's.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Interface","folderPath":"folders/Cenas/Interface.yy",},
@@ -292,7 +291,6 @@
     {"id":{"name":"scr_machineSprite","path":"scripts/scr_machineSprite/scr_machineSprite.yy",},},
     {"id":{"name":"ft_logo","path":"fonts/ft_logo/ft_logo.yy",},},
     {"id":{"name":"ts_piso","path":"tilesets/ts_piso/ts_piso.yy",},},
-    {"id":{"name":"p_kingSlime","path":"paths/p_kingSlime/p_kingSlime.yy",},},
     {"id":{"name":"spr_empty","path":"sprites/spr_empty/spr_empty.yy",},},
     {"id":{"name":"cama","path":"sprites/cama/cama.yy",},},
     {"id":{"name":"a1","path":"sprites/a1/a1.yy",},},

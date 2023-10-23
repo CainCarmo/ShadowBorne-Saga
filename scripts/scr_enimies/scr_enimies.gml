@@ -1,10 +1,9 @@
 function EnemyState () constructor {
 	static Die = function (_obj) {
-		new ControllerSprite(_obj).AssignSpriteToObject();
-		
 		if (_obj.identity == Identity.Boss) {
 			switch (_obj.name) {
 				case Boss.Death:
+					_obj.sprite_index = spr_death_die;
 					new DeathState().Die();
 					break;
 				case Boss.DemonSkeleton:
@@ -16,6 +15,8 @@ function EnemyState () constructor {
 			}
 		}
 		else if (_obj.identity == Identity.Minion) {
+			new ControllerSprite(_obj).AssignSpriteToObject();
+			
 			switch (_obj.name) {
 				case Minion.Hound:
 					new HoundState().Die();
@@ -42,11 +43,10 @@ function EnemyState () constructor {
 		}
 	}
 	static Hit = function (_obj) {
-		new ControllerSprite(_obj).AssignSpriteToObject();
-		
 		if (_obj.identity == Identity.Boss) {
 			switch (_obj.name) {
 				case Boss.Death:
+					_obj.sprite_index = spr_death_hit;
 					new DeathState().Hit();
 					break;
 				case Boss.DemonSkeleton:
@@ -58,6 +58,8 @@ function EnemyState () constructor {
 			}
 		}
 		else if (_obj.identity == Identity.Minion) {
+			new ControllerSprite(_obj).AssignSpriteToObject();
+			
 			switch (_obj.name) {
 				case Minion.Hound:
 					new HoundState().Hit();
@@ -155,11 +157,14 @@ function EnemyState () constructor {
 		}
 	}
 	static Attack = function (_obj) {
-		new ControllerSprite(_obj).AssignSpriteToObject();
-		
 		if (_obj.identity == Identity.Boss) {
 			switch (_obj.name) {
 				case Boss.Death:
+					if (!_obj.attacking) {
+						_obj.sprite_index = choose(spr_death_combat_first, spr_death_combat_second);
+						
+						_obj.attacking = true;
+					}
 					new DeathState().Attack();
 					break;
 				case Boss.DemonSkeleton:
@@ -171,6 +176,7 @@ function EnemyState () constructor {
 			}
 		}
 		else if (_obj.identity == Identity.Minion) {
+			new ControllerSprite(_obj).AssignSpriteToObject();
 			switch (_obj.name) {
 				case Minion.Hound:
 					new HoundState().Attack();

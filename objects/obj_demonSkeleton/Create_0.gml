@@ -1,9 +1,9 @@
 event_inherited();
 
 // @Information
-name     = Minion.Slime;
+name     = Boss.DemonSkeleton;
 state    = EntityState.Idle;
-identity = Identity.Minion;
+identity = Identity.Boss;
 
 // @Movimentation
 speed_horizontal = 0;

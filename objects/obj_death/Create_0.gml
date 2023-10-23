@@ -1,27 +1,27 @@
 event_inherited();
 
 // @Information
-name     = Minion.Slime;
+name     = Boss.Death;
 state    = EntityState.Idle;
-identity = Identity.Minion;
+identity = Identity.Boss;
 
 // @Movimentation
 speed_horizontal = 0;
 speed_vertical   = 0;
 
-speed_horizontal_max = 1;
+speed_horizontal_max = 3;
 speed_vertical_max   = 5;
 
 hadGroundCollised = false;
 
 // @Damage
-damage = 5;
+damage = 9;
 
 // @Status
 status = {
 	Life: {
-		Max: 25,
-		Atual: 25,
+		Max: 100,
+		Atual: 100,
 		Regen: .1
 	},
 	Bulk: 1
@@ -40,7 +40,7 @@ view_debugger = true;
 _ = undefined;
 
 // @Controller
-dist_aggro = 200;
+dist_aggro = 300;
 
 // @Draw Bars
 enemiesBar = new DrawElementEnemy(objectAtual);

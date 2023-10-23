@@ -1,8 +1,10 @@
 event_inherited();
 
+if (hadGroundCollised) speed_vertical = 0;
+
 if (distance_to_object(obj_player) <= dist_aggro) {	
 	
-	if (distance_to_object(obj_player) <= 25 && name != Minion.Slime) {
+	if (distance_to_object(obj_player) <= 20 && name != Minion.Slime) {
 		speed_horizontal = 0;
 		
 		new Utils(self).SetTimer(1);
@@ -13,11 +15,13 @@ if (distance_to_object(obj_player) <= dist_aggro) {
 			timer = -1;
 		}
 	}
-	else if (distance_to_object(obj_player) >= 5) {
+	else if (distance_to_object(obj_player) >= 5 && state != EntityState.Attack) {
 		var _dist = point_direction(x, y, obj_player.x, y);
+		
 		speed_horizontal = lengthdir_x(2, _dist);
 
-		if (state != EntityState.Walk) state = EntityState.Walk;
+		if (state != EntityState.Walk) 
+			state = EntityState.Walk;
 	}
 	
 }

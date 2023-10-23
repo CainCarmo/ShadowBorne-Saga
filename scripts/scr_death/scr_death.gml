@@ -5,6 +5,8 @@ function DeathState () constructor {
 	}
 	static Idle	= function () {
 	}
+	static Walk = function () {
+	}
 	static Attack = function () {
 	}
 	static Cutscene	= function () {

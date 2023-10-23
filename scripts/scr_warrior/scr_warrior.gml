@@ -138,7 +138,7 @@ function AlterWarrior () constructor {
 
 function WarriorHitBox () {
 	if (!instance_exists(obj_player_hitbox)) {
-		var hitbox = instance_create_layer(obj_player.x, obj_player.y, "Instances", obj_player_hitbox);
+		var hitbox = instance_create_layer(obj_player.x + 15, obj_player.y, "Instances", obj_player_hitbox);
 		
 		hitbox.image_xscale = obj_player.scale_x;
 	}

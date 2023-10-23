@@ -51,6 +51,9 @@ global.SaveData = {
 					Room: undefined,
 					_x: undefined,
 					_y: undefined
+				},
+				Rounds: {
+					Step: 1
 				}
 			},
 		},
@@ -105,6 +108,9 @@ global.SaveData = {
 					Room: undefined,
 					_x: undefined,
 					_y: undefined
+				},
+				Rounds: {
+					Step: 1
 				}
 			},
 		},
@@ -159,6 +165,9 @@ global.SaveData = {
 					Room: undefined,
 					_x: undefined,
 					_y: undefined
+				},
+				Rounds: {
+					Step: 1	
 				}
 			},
 		}
@@ -231,6 +240,9 @@ function CreateSave () constructor {
 				Room: undefined,
 				_x: undefined,
 				_y: undefined
+			},
+			Rounds: {
+				Step: 1
 			}
 		}
 	}

@@ -202,24 +202,15 @@ function MachineSprite () constructor {
 						stateSpr = spr_kingSlime_walk;
 						break;
 				}
-			case EntityState.Chase:
-				switch (_obj.name) {
-					case Boss.Death:
-						stateSpr = spr_death_idle;
-						break;
-					case Boss.DemonSkeleton:
-						stateSpr = spr_demonSkeleton_fly;
-						break;
-					case Boss.KingSlime:
-						stateSpr = spr_kingSlime_walk;
-						break;
-				}
-				break;
 			case EntityState.Attack:
 				switch (_obj.name) {
 					case Boss.Death:
-						if (!_obj.attacking)
+						if (!_obj.attacking) {
 							stateSpr = choose(spr_death_combat_first, spr_death_combat_second);
+						
+							_obj.attacking = true;
+						}
+						
 						break;
 					case Boss.DemonSkeleton:
 						stateSpr = spr_demonSkeleton_combat;

@@ -33,7 +33,10 @@ function OptionsInGame () constructor {
 				
 		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Combat.Wield = obj_player.mechanics.Warrior.Wield;
 		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Combat.Dash.Distance = obj_player.dashDistance;
-				
+		
+		if (instance_exists(obj_horde))
+			global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Rounds.Step = obj_horde.steps;
+		
 		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Local.Room = room;
 		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Local._x   = obj_player.x;
 		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Local._y   = obj_player.y;

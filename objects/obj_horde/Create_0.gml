@@ -2,7 +2,7 @@
 timer = -1;
 
 // @Steps
-steps	 = 1;
+steps	 = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Rounds.Step;
 stepsAll = 2;
 
 // @Settings

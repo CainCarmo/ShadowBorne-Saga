@@ -32,7 +32,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"68643406-85d1-498b-b753-a477063ad4ee","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 9,
+  "origin": 7,
   "parent": {
     "name": "Die",
     "path": "folders/Sprites/Entities/Enemies/Boss/Death/Move/Die.yy",
@@ -78,7 +78,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 62,
-    "yorigin": 150,
+    "yorigin": 250,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

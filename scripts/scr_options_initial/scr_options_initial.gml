@@ -303,7 +303,7 @@ function DrawOptionsInitial () constructor {
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Movimentation.Speed.Horizontal = 6;
 				
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Combat.Wield = false;
-				global.SaveData.Saves[obj_menu.saveIndex].Character.Combat.Dash.Distance = 8;
+				global.SaveData.Saves[obj_menu.saveIndex].Character.Combat.Dash.Distance = 12;
 				
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Local.Room = rm_astravens;
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Local._x   = 195;
