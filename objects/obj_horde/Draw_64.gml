@@ -32,4 +32,8 @@ else {
 		new DrawGUI()
 			.Text("Começando em: " + string(round(timer / room_speed)), wGUI - 200, 40, 1, 1, ft_status,, true, c_black, fa_left, fa_top);
 	}
+	else {
+		new DrawGUI()
+			.Text("Inimigos restantes: " + string(limit[steps - 1] - enemiesDied), wGUI - 300, 40, 1, 1, ft_status,, true, c_black, fa_left, fa_top);
+	}
 }

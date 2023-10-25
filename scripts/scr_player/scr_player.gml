@@ -367,19 +367,19 @@ function DealDamage () {
 }
 
 function RegenStatus () {
-	if (obj_player.status.Life.Atual < 100 && obj_player.status.Life.Atual - obj_player.status.Life.Regen > 100)
-		obj_player.status.Life.Atual += (obj_player.status.Life.Atual - obj_player.status.Life.Regen) + obj_player.status.Life.Regen;
+	if (obj_player.status.Life.Atual < 100 && (obj_player.status.Life.Atual + obj_player.status.Life.Regen) > 100)
+		obj_player.status.Life.Atual = 100;
 	else if (obj_player.status.Life.Atual < 100)
 		obj_player.status.Life.Atual += obj_player.status.Life.Regen;
 	
-	if (obj_player.status.Mana.Atual < 100 && obj_player.status.Mana.Atual - obj_player.status.Mana.Regen > 100)
-		obj_player.status.Mana.Atual += (obj_player.status.Mana.Atual - obj_player.status.Mana.Regen) + obj_player.status.Mana.Regen;
+	if (obj_player.status.Mana.Atual < 100 && (obj_player.status.Mana.Atual + obj_player.status.Mana.Regen) > 100)
+		obj_player.status.Mana.Atual = 100;
 	else if (obj_player.status.Mana.Atual < 100)
 		obj_player.status.Mana.Atual += obj_player.status.Mana.Regen;
 	
 	
-	if (obj_player.status.Stamina.Atual < 100 && obj_player.status.Stamina.Atual - obj_player.status.Stamina.Regen > 100)
-		obj_player.status.Stamina.Atual += (obj_player.status.Stamina.Atual - obj_player.status.Stamina.Regen) + obj_player.status.Stamina.Regen;
+	if (obj_player.status.Stamina.Atual < 100 && (obj_player.status.Stamina.Atual + obj_player.status.Stamina.Regen) > 100)
+		obj_player.status.Stamina.Atual = 100;
 	else if (obj_player.status.Stamina.Atual < 100)
 		obj_player.status.Stamina.Atual += obj_player.status.Stamina.Regen;
 }

@@ -5,4 +5,5 @@ obj_player.speed_horizontal = (obj_player.right - obj_player.left) * obj_player.
 
 DealDamage();
 ListenerLevel();
+
 new MachineState().Player();

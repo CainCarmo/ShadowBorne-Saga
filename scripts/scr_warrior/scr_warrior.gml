@@ -94,13 +94,15 @@ function WarriorCommands () constructor {
 					switch (obj_player.mechanics.Warrior.ComboIndex) {
 						case WarriorComboIndex.First:
 							AlterPlayerDefault(,,,, true);
-							
+							obj_player.status.Strenght.Buffed = 5;
 							new AlterWarrior().Attack(, WarriorComboIndex.Second);
 							break;
 						case WarriorComboIndex.Second:
 							AlterPlayerDefault(,,,, true);
 							
 							new AlterWarrior().Attack(false, WarriorComboIndex.None);
+							
+							obj_player.status.Strenght.Buffed = 0;
 							break;
 					}
 				}

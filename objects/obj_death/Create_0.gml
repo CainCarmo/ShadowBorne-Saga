@@ -15,13 +15,13 @@ speed_vertical_max   = 5;
 hadGroundCollised = false;
 
 // @Damage
-damage = 17;
+damage = 19;
 
 // @Status
 status = {
 	Life: {
-		Max: 100,
-		Atual: 100,
+		Max: 120,
+		Atual: 120,
 		Regen: .1
 	},
 	Bulk: 1

@@ -23,10 +23,12 @@ function CreateLoading () {
 		
 		var saveStruct = global.SaveData.Saves[global.SaveData.LastSavePlayed];
 		
-		if (room == rm_arena) {
+		if (room == rm_astravens && !instance_exists(obj_player))
+			instance_create_layer(saveStruct.Character.Local._x, saveStruct.Character.Local._y, "Instances", obj_player);
+		else if (room == rm_arena) {
 			if (!instance_exists(obj_player) && global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Local.Room != rm_arena)
-				instance_create_layer(95, 475, "Instances", obj_player);
-			else
+				instance_create_layer(95, 500, "Instances", obj_player);
+			else if (!instance_exists(obj_player))
 				instance_create_layer(saveStruct.Character.Local._x, saveStruct.Character.Local._y, "Instances", obj_player);
 				
 			if (!instance_exists(obj_death))
@@ -35,10 +37,6 @@ function CreateLoading () {
 			global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Local.Room = room;
 			
 			new CreateSave().Save();
-		}
-		else if (room == rm_astravens) {
-			if (!instance_exists(obj_player))
-				instance_create_layer(saveStruct.Character.Local._x, saveStruct.Character.Local._y, "Instances", obj_player);
 		}
 			
 		obj_loading.timer = -1;

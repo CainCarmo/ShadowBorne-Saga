@@ -3,6 +3,19 @@ if (!started) return;
 if (steps == 1) {
 	if (completed) {
 		
+		obj_player.status.Life.Atual = 100;
+		
+		if (obj_player.class == PlayerClass.Warrior)
+			obj_player.status.Stamina.Atual = 100;
+		else 
+			obj_player.status.Mana.Atual = 100;
+		
+		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Level.XP      = obj_player.status.Level.XP;
+		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Level.LimitXP = obj_player.status.Level.LimitXP;
+		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Level.Count   = obj_player.status.Level.Count;
+		
+		new CreateSave().Save();
+		
 		steps++;
 		completed = false;
 	}
@@ -33,6 +46,19 @@ if (steps == 1) {
 }
 if (steps == 2) {
 	if (completed) {
+		
+		obj_player.status.Life.Atual = 100;
+		
+		if (obj_player.class == PlayerClass.Warrior)
+			obj_player.status.Stamina.Atual = 100;
+		else 
+			obj_player.status.Mana.Atual = 100;
+		
+		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Level.XP      = obj_player.status.Level.XP;
+		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Level.LimitXP = obj_player.status.Level.LimitXP;
+		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Level.Count   = obj_player.status.Level.Count;
+		
+		new CreateSave().Save();
 		
 		steps++;
 		completed = false;
@@ -65,6 +91,19 @@ if (steps == 2) {
 if (steps == 3) {
 	if (completed) {
 		
+		obj_player.status.Life.Atual = 100;
+		
+		if (obj_player.class == PlayerClass.Warrior)
+			obj_player.status.Stamina.Atual = 100;
+		else 
+			obj_player.status.Mana.Atual = 100;
+		
+		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Level.XP      = obj_player.status.Level.XP;
+		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Level.LimitXP = obj_player.status.Level.LimitXP;
+		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Level.Count   = obj_player.status.Level.Count;
+		
+		new CreateSave().Save();
+		
 		steps++;
 		completed = false;
 	}
@@ -95,6 +134,19 @@ if (steps == 3) {
 }
 else if (steps == 4 && !nextRoom) {
 	if (completed) {
+		
+		obj_player.status.Life.Atual = 100;
+		
+		if (obj_player.class == PlayerClass.Warrior)
+			obj_player.status.Stamina.Atual = 100;
+		else 
+			obj_player.status.Mana.Atual = 100;
+		
+		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Level.XP      = obj_player.status.Level.XP;
+		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Level.LimitXP = obj_player.status.Level.LimitXP;
+		global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Level.Count   = obj_player.status.Level.Count;
+		
+		new CreateSave().Save();
 		
 		completed = false;
 		nextRoom  = true;

@@ -1,16 +1,20 @@
 event_inherited();
+
+if (status.Life.Atual == 0 || status.Life.Atual < 0 && state != EntityState.Hit)
+	state = EntityState.Die;
+
 if (self.state == EntityState.Die) return;
 
 if (hadGroundCollised) speed_vertical = 0;
 
-if (distance_to_object(obj_player) <= dist_aggro) {	
+if (distance_to_object(obj_player) <= dist_aggro && state != EntityState.Hit) {	
 	
 	if (distance_to_object(obj_player) <= 35 && name != Minion.Slime) {
-		speed_horizontal = 0; 
-		
 		new Utils(self).SetTimer(.4);
 		
-		if (timer == 0) {
+		if (timer == 0 && new ControllerSprite(self).ListenerSpriteIndex(1)) {
+			speed_horizontal = 0; 
+			
 			state = EntityState.Attack;
 			
 			timer = -1;
@@ -20,7 +24,7 @@ if (distance_to_object(obj_player) <= dist_aggro) {
 		var _dist = point_direction(x, y, obj_player.x, y);
 		
 		speed_horizontal = lengthdir_x(2, _dist);
-
+			
 		if (state != EntityState.Walk) 
 			state = EntityState.Walk;
 	}
@@ -45,6 +49,3 @@ if (instance_exists(obj_player) && place_meeting(x, y, obj_player) && obj_player
 		new Utils(obj_player).SetTimer(2);
 	}
 }
-
-if (status.Life.Atual == 0 || status.Life.Atual < 0)
-	state = EntityState.Die;

@@ -20,8 +20,8 @@ damage = 13;
 // @Status
 status = {
 	Life: {
-		Max: 25,
-		Atual: 25,
+		Max: 50,
+		Atual: 50,
 		Regen: .1
 	},
 	Bulk: 1

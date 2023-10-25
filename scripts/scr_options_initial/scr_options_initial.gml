@@ -277,15 +277,15 @@ function DrawOptionsInitial () constructor {
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Class = obj_menu.classSelected;
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Life.Max   = 100;
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Life.Atual = 100;
-				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Life.Regen = 2;
+				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Life.Regen = 4;
 				
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Stamina.Max   = 100;
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Stamina.Atual = 100;
-				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Stamina.Regen = 1;
+				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Stamina.Regen = 2;
 				
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Mana.Max   = 100;
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Mana.Atual = 100;
-				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Mana.Regen = 1;
+				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Mana.Regen = 5;
 				
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Armor.Atual  = obj_menu.classSelected == PlayerClass.Warrior ? 5 : 7;
 				global.SaveData.Saves[obj_menu.saveIndex].Character.Status.Armor.Buffed = 0;

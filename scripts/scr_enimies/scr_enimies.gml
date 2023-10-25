@@ -1,17 +1,19 @@
 function EnemyState () constructor {
 	static Die = function (_obj) {
+		AlterEnemyDefault(_obj, 0);
+		
 		if (_obj.identity == Identity.Boss) {
 			switch (_obj.name) {
 				case Boss.Death:
 					_obj.sprite_index = spr_death_die;
 					AlterEnemyDefault(_obj, 0, 0);
-					new DeathState().Die();
+					
 					break;
 				case Boss.DemonSkeleton:
-					new DemonSkeletonState().Die();
+					
 					break;
 				case Boss.KingSlime:
-					new KingSlimeState().Die();
+					
 					break;
 			}
 		}
@@ -20,19 +22,19 @@ function EnemyState () constructor {
 			
 			switch (_obj.name) {
 				case Minion.Hound:
-					new HoundState().Die();
+					
 					break;
 				case Minion.Goblin:
-					new GoblinState().Die();
+					
 					break;
 				case Minion.Slime:
-					new SlimeState().Die();
+					
 					break;
 				case Minion.Skeleton:
-					new SkeletonState().Die();
+					
 					break;
 				case Minion.Mushroom:
-					new MushroomState().Die();
+					
 					break;
 			}
 		}
@@ -48,17 +50,19 @@ function EnemyState () constructor {
 		}
 	}
 	static Hit = function (_obj) {
+		AlterEnemyDefault(_obj, 0);
+		
 		if (_obj.identity == Identity.Boss) {
 			switch (_obj.name) {
 				case Boss.Death:
 					_obj.sprite_index = spr_death_hit;
-					new DeathState().Hit();
+					
 					break;
 				case Boss.DemonSkeleton:
-					new DemonSkeletonState().Hit();
+					
 					break;
 				case Boss.KingSlime:
-					new KingSlimeState().Hit();
+					
 					break;
 			}
 		}
@@ -67,19 +71,19 @@ function EnemyState () constructor {
 			
 			switch (_obj.name) {
 				case Minion.Hound:
-					new HoundState().Hit();
+					
 					break;
 				case Minion.Goblin:
-					new GoblinState().Hit();
+					
 					break;
 				case Minion.Slime:
-					new SlimeState().Hit();
+					
 					break;
 				case Minion.Skeleton:
-					new SkeletonState().Hit();
+					
 					break;
 				case Minion.Mushroom:
-					new MushroomState().Hit();
+					
 					break;
 			}
 		}
@@ -93,32 +97,32 @@ function EnemyState () constructor {
 		if (_obj.identity == Identity.Boss) {
 			switch (_obj.name) {
 				case Boss.Death:
-					new DeathState().Idle();
+					
 					break;
 				case Boss.DemonSkeleton:
-					new DemonSkeletonState().Idle();
+					
 					break;
 				case Boss.KingSlime:
-					new KingSlimeState().Idle();
+					
 					break;
 			}
 		}
 		else if (_obj.identity == Identity.Minion) {
 			switch (_obj.name) {
 				case Minion.Hound:
-					new HoundState().Idle();
+					
 					break;
 				case Minion.Goblin:
-					new GoblinState().Idle();
+					
 					break;
 				case Minion.Slime:
-					new SlimeState().Idle();
+					
 					break;
 				case Minion.Skeleton:
-					new SkeletonState().Idle();
+					
 					break;
 				case Minion.Mushroom:
-					new MushroomState().Idle();
+					
 					break;
 			}
 		}
@@ -128,35 +132,39 @@ function EnemyState () constructor {
 	static Walk	= function (_obj) {
 		new ControllerSprite(_obj).AssignSpriteToObject();
 		
+		if (_obj.speed_horizontal == 0 && instance_exists(_obj) && distance_to_object(obj_player) > _obj.dist_aggro) {
+			_obj.speed_horizontal = _obj.speed_horizontal_max * irandom_range(-1, 1);
+		}
+		
 		if (_obj.identity == Identity.Boss) {
 			switch (_obj.name) {
 				case Boss.Death:
-					new DeathState().Walk();
+					
 					break;
 				case Boss.DemonSkeleton:
-					new DemonSkeletonState().Walk();
+					
 					break;
 				case Boss.KingSlime:
-					new KingSlimeState().Walk();
+					
 					break;
 			}
 		}
 		else if (_obj.identity == Identity.Minion) {
 			switch (_obj.name) {
 				case Minion.Hound:
-					new HoundState().Walk();
+					
 					break;
 				case Minion.Goblin:
-					new GoblinState().Walk();
+					
 					break;
 				case Minion.Slime:
-					new SlimeState().Walk();
+					
 					break;
 				case Minion.Skeleton:
-					new SkeletonState().Walk();
+					
 					break;
 				case Minion.Mushroom:
-					new MushroomState().Walk();
+					
 					break;
 			}
 		}
@@ -170,13 +178,13 @@ function EnemyState () constructor {
 						
 						_obj.attacking = true;
 					}
-					new DeathState().Attack();
+					
 					break;
 				case Boss.DemonSkeleton:
-					new DemonSkeletonState().Attack();
+					
 					break;
 				case Boss.KingSlime:
-					new KingSlimeState().Attack();
+					
 					break;
 			}
 		}
@@ -184,19 +192,19 @@ function EnemyState () constructor {
 			new ControllerSprite(_obj).AssignSpriteToObject();
 			switch (_obj.name) {
 				case Minion.Hound:
-					new HoundState().Attack();
+					
 					break;
 				case Minion.Goblin:
-					new GoblinState().Attack();
+					
 					break;
 				case Minion.Slime:
-					new SlimeState().Attack();
+					
 					break;
 				case Minion.Skeleton:
-					new SkeletonState().Attack();
+					
 					break;
 				case Minion.Mushroom:
-					new MushroomState().Attack();
+					
 					break;
 			}
 		}
@@ -215,13 +223,13 @@ function EnemyState () constructor {
 		if (_obj.identity == Identity.Boss) {
 			switch (_obj.name) {
 				case Boss.Death:
-					new DeathState().Cutscene();
+					
 					break;
 				case Boss.DemonSkeleton:
-					new DemonSkeletonState().Cutscene();
+					
 					break;
 				case Boss.KingSlime:
-					new KingSlimeState().Cutscene();
+					
 					break;
 			}
 		}
