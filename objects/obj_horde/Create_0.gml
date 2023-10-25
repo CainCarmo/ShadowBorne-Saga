@@ -16,5 +16,4 @@ spawned		 = false;
 porcentageAtual = 0;
 
 // @Enemies Numbers
-//limit = [12, 5, 7, 8];
-limit = [1, 1, 1, 1];
+limit = [12, 5, 7, 8];
