@@ -326,9 +326,6 @@ function DrawElementPlayer () constructor {
 				.Text("Voltando no ùltimo ponto em: " + string(round(obj_room.timer / room_speed)), wGUI - 420, hGUI - 30, 1, 1, ft_status,, true, c_black, fa_left, fa_top);
 				
 			if (obj_room.timer == 0) {
-				obj_player.x = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Local._x;
-				obj_player.y = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Local._y;
-				
 				obj_player.status.Life.Max = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Life.Max;
 				obj_player.status.Life.Atual = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Life.Atual;
 				obj_player.status.Life.Regen = global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Status.Life.Regen;
@@ -344,6 +341,8 @@ function DrawElementPlayer () constructor {
 				obj_player.state = EntityState.Idle;
 				
 				obj_room.timer = -1;
+				
+				room_restart();
 			}
 		}
 	}

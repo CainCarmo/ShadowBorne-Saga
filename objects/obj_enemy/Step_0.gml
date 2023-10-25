@@ -12,7 +12,7 @@ if (distance_to_object(obj_player) <= dist_aggro && state != EntityState.Hit) {
 	if (distance_to_object(obj_player) <= 35 && name != Minion.Slime) {
 		new Utils(self).SetTimer(.4);
 		
-		if (timer == 0 && new ControllerSprite(self).ListenerSpriteIndex(1)) {
+		if (timer == 0 && (self.attacking || new ControllerSprite(self).ListenerSpriteIndex(1))) {
 			speed_horizontal = 0; 
 			
 			state = EntityState.Attack;

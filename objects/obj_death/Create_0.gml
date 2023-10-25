@@ -40,7 +40,7 @@ view_debugger = true;
 _ = undefined;
 
 // @Controller
-dist_aggro = 500;
+dist_aggro = 3500;
 
 // @Draw Bars
 enemiesBar = new DrawElementEnemy(objectAtual);
