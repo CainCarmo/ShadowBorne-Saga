@@ -3,6 +3,9 @@ event_inherited();
 // @Struct Save
 saveStruct = global.SaveData.Saves[global.SaveData.LastSavePlayed];
 
+// @Timer Hit
+timerHit = 0;
+
 // @Alarm
 alarm[0] = 1;
 

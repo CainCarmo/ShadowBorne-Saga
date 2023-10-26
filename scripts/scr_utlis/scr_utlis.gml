@@ -16,6 +16,17 @@ function Utils (_obj_entity) constructor {
 	static ListenerTimer = function () {
 		return _obj.timer > 0 ? _obj.timer-- : _obj.timer;
 	}
+	
+	static SetTimerHit = function (time) {
+		if (_obj.timerHit == -1)
+			_obj.timerHit = room_speed * time;
+		
+		new Utils(_obj).ListenerTimerHit();
+	}
+	static ListenerTimerHit = function () {
+		return _obj.timerHit > 0 ? _obj.timerHit-- : _obj.timerHit;
+	}
+	
 	static SetTimerProjectile = function (time) {
 		if (_obj.timerProjectile == -1)
 			_obj.timerProjectile = room_speed * time;

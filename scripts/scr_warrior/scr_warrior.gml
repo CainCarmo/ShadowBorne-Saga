@@ -4,7 +4,7 @@ function WarriorState () constructor {
 	}
 	static Hit = function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
-		
+		show_debug_message(obj_player.image_index);
 		if (new ControllerSprite(obj_player).ListenerSpriteIndex(1))
 			AlterPlayerDefault(,,, EntityState.Idle, true);
 	}

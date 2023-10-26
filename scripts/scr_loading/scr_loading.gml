@@ -26,10 +26,8 @@ function CreateLoading () {
 		if (room == rm_astravens && !instance_exists(obj_player))
 			instance_create_layer(saveStruct.Character.Local._x, saveStruct.Character.Local._y, "Instances", obj_player);
 		else if (room == rm_arena) {
-			if (!instance_exists(obj_player) && global.SaveData.Saves[global.SaveData.LastSavePlayed].Character.Local.Room != rm_arena)
+			if (!instance_exists(obj_player))
 				instance_create_layer(95, 500, "Instances", obj_player);
-			else if (!instance_exists(obj_player))
-				instance_create_layer(saveStruct.Character.Local._x, saveStruct.Character.Local._y, "Instances", obj_player);
 				
 			if (!instance_exists(obj_death))
 				instance_create_layer(1500, 670, "Enemies", obj_death)

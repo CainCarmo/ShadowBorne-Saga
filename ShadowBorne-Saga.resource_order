@@ -169,7 +169,6 @@
     {"name":"Hit","order":3,"path":"folders/Sprites/Entities/Player/Wizard/Move/Hit.yy",},
     {"name":"Idle","order":4,"path":"folders/Sprites/Entities/Player/Wizard/Move/Idle.yy",},
     {"name":"Jump","order":5,"path":"folders/Sprites/Entities/Player/Wizard/Move/Jump.yy",},
-    {"name":"Teleport","order":7,"path":"folders/Sprites/Entities/Player/Wizard/Move/Teleport.yy",},
     {"name":"Walk","order":8,"path":"folders/Sprites/Entities/Player/Wizard/Move/Walk.yy",},
     {"name":"Interactions","order":4,"path":"folders/Sprites/Interactions.yy",},
     {"name":"Obelisk","order":1,"path":"folders/Sprites/Interactions/Obelisk.yy",},

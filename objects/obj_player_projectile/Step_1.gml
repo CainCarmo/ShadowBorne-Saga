@@ -14,6 +14,31 @@ if (oCollised > 0 && !executed) {
 				status.Life.Atual -= obj_player.status.Strenght.Atual + obj_player.status.Strenght.Buffed;
 				
 				state = EntityState.Hit;
+				
+				dist_aggro = 3000;
+				
+				var attack = irandom_range(0, 1);
+				
+				if (instance_exists(obj_player) && name == Boss.Death && attack == 1) {
+					state = EntityState.Attack;
+					
+					var damageOnPlayer = self.damage;
+	
+					if ((obj_player.status.Life.Atual - damageOnPlayer) < 0) {
+						obj_player.state = EntityState.Die;
+		
+						obj_player.status.Life.Atual = 0;
+					}
+					else {
+						obj_player.state = EntityState.Hit;
+		
+						obj_player.image_alpha = .4;
+						obj_player.image_index =  0;
+						obj_player.status.Life.Atual -= damageOnPlayer;
+					}
+		
+					obj_player.timerHit = -1;
+				}
 			}
 		}
 	}

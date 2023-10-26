@@ -24,6 +24,7 @@ function PlayerState () constructor {
 				new WarriorState().Hit();
 				break;
 		}
+			
 	}
 	static Dash = function () {
 		switch (obj_player.class) {
@@ -349,20 +350,10 @@ function DrawElementPlayer () constructor {
 }
 
 function DealDamage () {
-	if (obj_player.timer == 0) {
-		obj_player.timer = -1;
+	if (obj_player.timerHit == 0)
 		obj_player.image_alpha = 1;
-	}
-	else if (obj_player.timer > 0) {
-		if (obj_player.status.Life.Atual == 0) {
-			obj_player.timer = -1;
-			obj_player.image_alpha = 1;
-			
-			obj_player.state = EntityState.Die;
-		}
-		else
-			new Utils(obj_player).SetTimer(2);
-	}
+	
+	new Utils(obj_player).SetTimerHit(2);
 }
 
 function RegenStatus () {

@@ -1,51 +1,43 @@
 event_inherited();
 
-if (status.Life.Atual == 0 || status.Life.Atual < 0 && state != EntityState.Hit)
-	state = EntityState.Die;
+// @Verify Death
+if (status.Life.Atual <= 0) state = EntityState.Die;
 
-if (self.state == EntityState.Die) return;
+if (state == EntityState.Die) return;
 
 if (hadGroundCollised) speed_vertical = 0;
 
-if (distance_to_object(obj_player) <= dist_aggro && state != EntityState.Hit) {	
-	
+// @Attack and Chase
+if (distance_to_object(obj_player) <= dist_aggro && state != EntityState.Hit) {
 	if (distance_to_object(obj_player) <= 35 && name != Minion.Slime) {
-		new Utils(self).SetTimer(.4);
+		state = EntityState.Attack;
 		
-		if (timer == 0 && (self.attacking || new ControllerSprite(self).ListenerSpriteIndex(1))) {
-			speed_horizontal = 0; 
-			
-			state = EntityState.Attack;
-			
-			timer = -1;
-		}
+		speed_horizontal = 0;
 	}
-	else if (distance_to_object(obj_player) >= 5 && state != EntityState.Attack) {
-		var _dist = point_direction(x, y, obj_player.x, y);
+	else if (distance_to_object(obj_player) > 1) {
+		state = EntityState.Walk;
 		
-		speed_horizontal = lengthdir_x(2, _dist);
-			
-		if (state != EntityState.Walk) 
-			state = EntityState.Walk;
+		speed_horizontal = lengthdir_x(2, point_direction(x, y, obj_player.x, y));
 	}
-	
+	else
+		speed_horizontal = 0;
 }
 
-// @Damage
-if (instance_exists(obj_player) && place_meeting(x, y, obj_player) && obj_player.timer == -1 && obj_player.state != EntityState.Dash && obj_player.state != EntityState.Attack) {
-	var damage = self.damage;
-		
-	if ((obj_player.status.Life.Atual - damage) < 0) {
-		obj_player.status.Life.Atual -= (obj_player.status.Life.Atual - damage) + damage;
-			
+if (instance_exists(obj_player) && place_meeting(x, y, obj_player) && obj_player.timerHit == 0 && (obj_player.state != EntityState.Dash || obj_player.state != EntityState.Attack)) {
+	var damageOnPlayer = self.damage;
+	
+	if ((obj_player.status.Life.Atual - damageOnPlayer) < 0) {
 		obj_player.state = EntityState.Die;
+		
+		obj_player.status.Life.Atual = 0;
 	}
 	else {
-		obj_player.image_alpha = .4;
-		obj_player.status.Life.Atual -= damage; 
-		
 		obj_player.state = EntityState.Hit;
 		
-		new Utils(obj_player).SetTimer(2);
+		obj_player.image_alpha = .4;
+		obj_player.image_index =  0;
+		obj_player.status.Life.Atual -= damageOnPlayer;
 	}
+		
+	obj_player.timerHit = -1;
 }

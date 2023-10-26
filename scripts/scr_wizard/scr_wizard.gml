@@ -22,6 +22,9 @@ function WizardState () constructor {
 	}
 	static Jump	= function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();
+		
+		if (obj_player.speed_vertical > 0  && new ControllerSprite(obj_player).ListenerSpriteIndex(1))
+			new ControllerSprite(obj_player).StopIn(2);
 	}
 	static Walk	= function () {
 		new ControllerSprite(obj_player).AssignSpriteToObject();

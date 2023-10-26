@@ -15,3 +15,6 @@ oCollised = undefined;
 
 // @Controller
 executed = false;
+
+// 
+randomize();
